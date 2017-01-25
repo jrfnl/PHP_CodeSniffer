@@ -155,6 +155,11 @@ class Squiz_Tests_Commenting_FunctionCommentUnitTest extends AbstractSniffUnitTe
                     21 => 1,
                     33 => 1,
                     45 => 1,
+                    61 => 1,
+                    62 => 1,
+                    63 => 1,
+                    64 => 1,
+                    65 => 1,
                    );
 
         default:

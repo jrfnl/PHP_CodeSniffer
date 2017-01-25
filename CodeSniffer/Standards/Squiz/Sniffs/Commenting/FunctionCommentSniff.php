@@ -374,92 +374,98 @@ class Squiz_Sniffs_Commenting_FunctionCommentSniff extends PEAR_Sniffs_Commentin
             }
 
             // Check the param type value.
-            $typeNames = explode('|', $param['type']);
-            foreach ($typeNames as $typeName) {
+            $typeNames      = explode('|', $param['type']);
+            $suggestedNames = array();
+
+            foreach ($typeNames as $i => $typeName) {
                 $suggestedName = PHP_CodeSniffer::suggestType($typeName);
-                if ($typeName !== $suggestedName) {
-                    $error = 'Expected "%s" but found "%s" for parameter type';
-                    $data  = array(
-                              $suggestedName,
-                              $typeName,
-                             );
+                if (in_array($suggestedName, $suggestedNames) === false) {
+                    $suggestedNames[] = $suggestedName;
+                }
+            }
 
-                    $fix = $phpcsFile->addFixableError($error, $param['tag'], 'IncorrectParamVarName', $data);
-                    if ($fix === true) {
-                        $content  = $suggestedName;
-                        $content .= str_repeat(' ', $param['type_space']);
-                        $content .= $param['var'];
-                        $content .= str_repeat(' ', $param['var_space']);
-                        if (isset($param['commentLines'][0]) === true) {
-                            $content .= $param['commentLines'][0]['comment'];
-                        }
-
-                        $phpcsFile->fixer->replaceToken(($param['tag'] + 2), $content);
-                    }
-                } else if (count($typeNames) === 1) {
-                    // Check type hint for array and custom type.
-                    $suggestedTypeHint = '';
-                    if (strpos($suggestedName, 'array') !== false || substr($suggestedName, -2) === '[]') {
-                        $suggestedTypeHint = 'array';
-                    } else if (strpos($suggestedName, 'callable') !== false) {
-                        $suggestedTypeHint = 'callable';
-                    } else if (strpos($suggestedName, 'callback') !== false) {
-                        $suggestedTypeHint = 'callable';
-                    } else if (in_array($typeName, PHP_CodeSniffer::$allowedTypes) === false) {
-                        $suggestedTypeHint = $suggestedName;
-                    } else if ($this->_phpVersion >= 70000) {
-                        if ($typeName === 'string') {
-                            $suggestedTypeHint = 'string';
-                        } else if ($typeName === 'int' || $typeName === 'integer') {
-                            $suggestedTypeHint = 'int';
-                        } else if ($typeName === 'float') {
-                            $suggestedTypeHint = 'float';
-                        } else if ($typeName === 'bool' || $typeName === 'boolean') {
-                            $suggestedTypeHint = 'bool';
-                        }
+            $suggestedType = implode('|', $suggestedNames);
+            if ($param['type'] !== $suggestedType) {
+                $error = 'Expected "%s" but found "%s" for parameter type';
+                $data  = array(
+                          $suggestedType,
+                          $param['type'],
+                         );
+                $fix   = $phpcsFile->addFixableError($error, $param['tag'], 'IncorrectParamVarName', $data);
+                if ($fix === true) {
+                    $content  = $suggestedType;
+                    $content .= str_repeat(' ', $param['type_space']);
+                    $content .= $param['var'];
+                    $content .= str_repeat(' ', $param['var_space']);
+                    if (isset($param['commentLines'][0]) === true) {
+                        $content .= $param['commentLines'][0]['comment'];
                     }
 
-                    if ($suggestedTypeHint !== '' && isset($realParams[$pos]) === true) {
-                        $typeHint = $realParams[$pos]['type_hint'];
-                        if ($typeHint === '') {
-                            $error = 'Type hint "%s" missing for %s';
-                            $data  = array(
-                                      $suggestedTypeHint,
-                                      $param['var'],
-                                     );
+                    $phpcsFile->fixer->replaceToken(($param['tag'] + 2), $content);
+                }
+            } else if (count($typeNames) === 1) {
+                // Check type hint for array and custom type.
+                $suggestedTypeHint = '';
+                if (strpos($suggestedType, 'array') !== false || substr($suggestedType, -2) === '[]') {
+                    $suggestedTypeHint = 'array';
+                } else if (strpos($suggestedType, 'callable') !== false) {
+                    $suggestedTypeHint = 'callable';
+                } else if (strpos($suggestedType, 'callback') !== false) {
+                    $suggestedTypeHint = 'callable';
+                } else if (in_array($typeName, PHP_CodeSniffer::$allowedTypes) === false) {
+                    $suggestedTypeHint = $suggestedType;
+                } else if ($this->_phpVersion >= 70000) {
+                    if ($typeName === 'string') {
+                        $suggestedTypeHint = 'string';
+                    } else if ($typeName === 'int' || $typeName === 'integer') {
+                        $suggestedTypeHint = 'int';
+                    } else if ($typeName === 'float') {
+                        $suggestedTypeHint = 'float';
+                    } else if ($typeName === 'bool' || $typeName === 'boolean') {
+                        $suggestedTypeHint = 'bool';
+                    }
+                }
 
-                            $errorCode = 'TypeHintMissing';
-                            if ($suggestedTypeHint === 'string'
-                                || $suggestedTypeHint === 'int'
-                                || $suggestedTypeHint === 'float'
-                                || $suggestedTypeHint === 'bool'
-                            ) {
-                                $errorCode = 'Scalar'.$errorCode;
-                            }
+                if ($suggestedTypeHint !== '' && isset($realParams[$pos]) === true) {
+                    $typeHint = $realParams[$pos]['type_hint'];
+                    if ($typeHint === '') {
+                        $error = 'Type hint "%s" missing for %s';
+                        $data  = array(
+                                  $suggestedTypeHint,
+                                  $param['var'],
+                                 );
 
-                            $phpcsFile->addError($error, $stackPtr, $errorCode, $data);
-                        } else if ($typeHint !== substr($suggestedTypeHint, (strlen($typeHint) * -1))) {
-                            $error = 'Expected type hint "%s"; found "%s" for %s';
-                            $data  = array(
-                                      $suggestedTypeHint,
-                                      $typeHint,
-                                      $param['var'],
-                                     );
-                            $phpcsFile->addError($error, $stackPtr, 'IncorrectTypeHint', $data);
-                        }//end if
-                    } else if ($suggestedTypeHint === '' && isset($realParams[$pos]) === true) {
-                        $typeHint = $realParams[$pos]['type_hint'];
-                        if ($typeHint !== '') {
-                            $error = 'Unknown type hint "%s" found for %s';
-                            $data  = array(
-                                      $typeHint,
-                                      $param['var'],
-                                     );
-                            $phpcsFile->addError($error, $stackPtr, 'InvalidTypeHint', $data);
+                        $errorCode = 'TypeHintMissing';
+                        if ($suggestedTypeHint === 'string'
+                            || $suggestedTypeHint === 'int'
+                            || $suggestedTypeHint === 'float'
+                            || $suggestedTypeHint === 'bool'
+                        ) {
+                            $errorCode = 'Scalar'.$errorCode;
                         }
+
+                        $phpcsFile->addError($error, $stackPtr, $errorCode, $data);
+                    } else if ($typeHint !== substr($suggestedTypeHint, (strlen($typeHint) * -1))) {
+                        $error = 'Expected type hint "%s"; found "%s" for %s';
+                        $data  = array(
+                                  $suggestedTypeHint,
+                                  $typeHint,
+                                  $param['var'],
+                                 );
+                        $phpcsFile->addError($error, $stackPtr, 'IncorrectTypeHint', $data);
                     }//end if
+                } else if ($suggestedTypeHint === '' && isset($realParams[$pos]) === true) {
+                    $typeHint = $realParams[$pos]['type_hint'];
+                    if ($typeHint !== '') {
+                        $error = 'Unknown type hint "%s" found for %s';
+                        $data  = array(
+                                  $typeHint,
+                                  $param['var'],
+                                 );
+                        $phpcsFile->addError($error, $stackPtr, 'InvalidTypeHint', $data);
+                    }
                 }//end if
-            }//end foreach
+            }//end if
 
             if ($param['var'] === '') {
                 continue;

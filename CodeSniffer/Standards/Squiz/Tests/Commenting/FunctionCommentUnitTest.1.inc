@@ -48,3 +48,26 @@ function returnTypeWithDescriptionD()
 {
 
 }//end returnTypeWithDescriptionD()
+
+
+/**
+ * Issue disappearing param variable types when fixing.
+ */
+
+
+/**
+ * Mixed variable type separated by a '|'.
+ *
+ * @param string|array() $a1 Comment here.
+ * @param double|int     $a2 Comment here.
+ * @param MyClass|real   $a3 Comment here.
+ * @param MyClass|int    $a4 Comment here.
+ * @param bool|int       $a5 Comment here.
+ *
+ * @return boolean
+ */
+function mixedType($a1, $a2, $a3, $a4, $a5)
+{
+    return true;
+
+}//end mixedType()
