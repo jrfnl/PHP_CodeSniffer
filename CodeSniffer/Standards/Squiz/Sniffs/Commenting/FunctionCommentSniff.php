@@ -624,6 +624,8 @@ class Squiz_Sniffs_Commenting_FunctionCommentSniff extends PEAR_Sniffs_Commentin
                 $content .= $param['commentLines'][0]['comment'];
                 $phpcsFile->fixer->replaceToken(($param['tag'] + 2), $content);
 
+                    $newIndent = ( 8 + strlen($param['type']) + $param['type_space'] + strlen($param['var']) + $spaces );
+
                 // Fix up the indent of additional comment lines.
                 foreach ($param['commentLines'] as $lineNum => $line) {
                     if ($lineNum === 0

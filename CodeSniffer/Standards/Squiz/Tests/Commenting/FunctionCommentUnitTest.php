@@ -150,17 +150,31 @@ class Squiz_Tests_Commenting_FunctionCommentUnitTest extends AbstractSniffUnitTe
             return $errors;
 
         case 'FunctionCommentUnitTest.1.inc':
-            return array(
-                    9  => 1,
-                    21 => 1,
-                    33 => 1,
-                    45 => 1,
-                    61 => 1,
-                    62 => 1,
-                    63 => 1,
-                    64 => 1,
-                    65 => 1,
-                   );
+            $errors = array(
+                       9   => 1,
+                       21  => 1,
+                       33  => 1,
+                       45  => 1,
+                       61  => 1,
+                       62  => 1,
+                       63  => 1,
+                       64  => 1,
+                       65  => 1,
+                       84  => 2,
+                       87  => 1,
+                       89  => 1,
+                       101 => 3,
+                       104 => 2,
+                       106 => 2,
+                      );
+                      
+            // Scalar type hints only work from PHP 7 onwards.
+            if (PHP_VERSION_ID >= 70000) {
+                $errors[93]  = 3;
+                $errors[110] = 1;
+            }
+
+            return $errors;
 
         default:
             return array();

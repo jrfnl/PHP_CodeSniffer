@@ -71,3 +71,42 @@ function mixedType($a1, $a2, $a3, $a4, $a5)
     return true;
 
 }//end mixedType()
+
+
+/**
+ * Issue multi-line param comment alignment.
+ */
+
+
+/**
+ * Test fixing param description alignment with multi-line descriptions.
+ *
+ * @param boolean   $stackPtr   The position in @ @unknown
+ *          the stack of the token
+ *                           that opened the scope.
+ * @param integer $depth               How many scope levels
+ *  down we are.
+ * @param string  $index The index
+ *             and some more text.
+ * @return void
+ */
+function _functionCall($stackPtr, $depth=1, $index)
+{
+}
+
+/**
+ * Test fixing param description alignment with multi-line descriptions
+ * ànd incorrect param types (infinite loop detection).
+ *
+ * @param bool|int   $stackPtr   The position in @ @unknown
+ *          the stack of the token
+ *                           that opened the scope.
+ * @param \MyClass|real $depth               How many scope levels
+ *  down we are.
+ * @param string  $index The index
+ *             and some more text.
+ * @return void
+ */
+function _functionCall($stackPtr, $depth=1, $index)
+{
+}
