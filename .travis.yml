@@ -6,11 +6,15 @@ matrix:
   fast_finish: true
   include:
     - php: 5.4
+      env: PHPCBF=MySource
     - php: 5.5
+      env: PHPCBF=PEAR
     - php: 5.5
       env: CUSTOM_INI=1
     - php: 5.6
+      env: PHPCBF=PSR1
     - php: 7.0
+      env: PHPCBF=PSR2
     - php: 7.0
       env: CUSTOM_INI=1 XMLLINT=1
       addons:
@@ -18,7 +22,9 @@ matrix:
           packages:
             - libxml2-utils
     - php: 7.1
+      env: PHPCBF=Squiz
     - php: 7.2
+      env: PHPCBF=Zend
     - php: nightly
 
   allow_failures:
@@ -53,3 +59,8 @@ script:
   - if [[ $XMLLINT == "1" ]]; then diff -B ./src/Standards/PSR2/ruleset.xml <(xmllint --format "./src/Standards/PSR2/ruleset.xml"); fi
   - if [[ $XMLLINT == "1" ]]; then diff -B ./src/Standards/Squiz/ruleset.xml <(xmllint --format "./src/Standards/Squiz/ruleset.xml"); fi
   - if [[ $XMLLINT == "1" ]]; then diff -B ./src/Standards/Zend/ruleset.xml <(xmllint --format "./src/Standards/Zend/ruleset.xml"); fi
+  # Test for fixer conflicts by running the auto-fixers of each standard over all test case files.
+  # This is not an exhaustive test, but should give an early indication for typical fixer conflicts.
+  # For the first run, the exit code will be 1 (= all fixable errors fixed).
+  # `travis_retry` should then kick in to run the fixer again which should now return 0 (= no fixable errors found).
+  - if [[ $PHPCBF ]]; then travis_retry php bin/phpcbf -p ./src/Standards/ --standard=${PHPCBF} --ignore-annotations --extensions=inc,js,css --report=summary --basepath=./src/Standards/ --no-cache --parallel=50; fi
