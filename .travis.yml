@@ -63,4 +63,4 @@ script:
   # This is not an exhaustive test, but should give an early indication for typical fixer conflicts.
   # For the first run, the exit code will be 1 (= all fixable errors fixed).
   # `travis_retry` should then kick in to run the fixer again which should now return 0 (= no fixable errors found).
-  - if [[ $PHPCBF ]]; then travis_retry php bin/phpcbf -p ./src/Standards/ --standard=${PHPCBF} --ignore-annotations --extensions=inc,js,css --report=summary --basepath=./src/Standards/ --no-cache --parallel=50; fi
+  - if [[ $PHPCBF ]]; then travis_retry php bin/phpcbf -p ./src/Standards/ --standard=${PHPCBF} --ignore-annotations --extensions=inc,js,css --report=summary --basepath=./src/Standards/ --no-cache --parallel=50 --ignore=/src/Standards/Squiz/Tests/PHP/HeredocUnitTest.inc,/src/Standards/Generic/Tests/Arrays/DisallowLongArraySyntaxUnitTest.inc; fi
