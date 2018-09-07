@@ -163,3 +163,29 @@ class C2
 {
 
 } // phpcs:ignore Standard.Category.Sniff
+
+// Note: there is (and should be) a space + newline char behind the final keyword on the next line.
+final 
+class Something
+{
+}
+
+	final
+
+	class Something
+	{
+	}
+
+	final // For reasons.
+	class Something
+	{
+	}
+
+	final // phpcs:ignore Standard.Category.SniffName
+	class Something
+	{
+	}
+
+	final/*comment*/class Something
+	{
+	}
