@@ -163,8 +163,11 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
             $keyword = $phpcsFile->findNext(constant('T_'.strtoupper($keywordType)), ($stackPtr + 1), $openingBrace);
             if ($keyword !== false) {
                 if ($tokens[$keyword]['line'] !== $tokens[$stackPtr]['line']) {
-                    $error = 'The '.$keywordType.' keyword must be on the same line as the %s name';
-                    $data  = [$stackPtrType];
+                    $error = 'The %s keyword must be on the same line as the %s name';
+                    $data  = [
+                        $keywordType,
+                        $stackPtrType,
+                    ];
                     $fix   = $phpcsFile->addFixableError($error, $keyword, ucfirst($keywordType).'Line', $data);
                     if ($fix === true) {
                         $phpcsFile->fixer->beginChangeset();
@@ -183,8 +186,11 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                     // in the list.
                     $gap = strlen($tokens[($keyword - 1)]['content']);
                     if ($gap !== 1) {
-                        $error = 'Expected 1 space before '.$keywordType.' keyword; %s found';
-                        $data  = [$gap];
+                        $error = 'Expected 1 space before %s keyword; %s found';
+                        $data  = [
+                            $keywordType,
+                            $gap,
+                        ];
                         $fix   = $phpcsFile->addFixableError($error, $keyword, 'SpaceBefore'.ucfirst($keywordType), $data);
                         if ($fix === true) {
                             $phpcsFile->fixer->replaceToken(($keyword - 1), ' ');
