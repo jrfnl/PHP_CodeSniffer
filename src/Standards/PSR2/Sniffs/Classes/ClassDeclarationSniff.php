@@ -65,44 +65,71 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
         $stackPtrType = strtolower($tokens[$stackPtr]['content']);
 
         // Check alignment of the keyword and braces.
-        if ($tokens[($stackPtr - 1)]['code'] === T_WHITESPACE) {
-            $prevContent = $tokens[($stackPtr - 1)]['content'];
-            if ($prevContent !== $phpcsFile->eolChar) {
-                $blankSpace = substr($prevContent, strpos($prevContent, $phpcsFile->eolChar));
-                $spaces     = strlen($blankSpace);
+        $prevNonEmpty = $phpcsFile->findPrevious(Tokens::$emptyTokens, ($stackPtr - 1), null, true);
+        if ($prevNonEmpty !== false
+            && ($tokens[$prevNonEmpty]['code'] === T_ABSTRACT
+            || $tokens[$prevNonEmpty]['code'] === T_FINAL)
+        ) {
+            $prevContent       = strtolower($tokens[$prevNonEmpty]['content']);
+            $prevNonWhitespace = $phpcsFile->findPrevious(T_WHITESPACE, ($stackPtr - 1), null, true);
+            $fixable           = false;
+            if ($prevNonWhitespace === $prevNonEmpty) {
+                // Only make this fixable when no comments or annotations have been found.
+                $fixable = true;
+            }
 
-                if (in_array($tokens[($stackPtr - 2)]['code'], [T_ABSTRACT, T_FINAL]) === true
-                    && $spaces !== 1
-                ) {
-                    $prevContent = strtolower($tokens[($stackPtr - 2)]['content']);
-                    $error       = 'Expected 1 space between %s and %s keywords; %s found';
-                    $data        = [
+            if ($tokens[$stackPtr]['line'] === $tokens[$prevNonEmpty]['line']) {
+                $errorCode = 'SpaceBeforeKeyword';
+                if ($fixable === true) {
+                    if ($tokens[($stackPtr - 1)]['length'] !== 1) {
+                        $error = 'Expected 1 space between %s and %s keywords; %s found';
+                        $data  = [
+                            $prevContent,
+                            $stackPtrType,
+                            $tokens[($stackPtr - 1)]['length'],
+                        ];
+
+                        $fix = $phpcsFile->addFixableError($error, $stackPtr, $errorCode, $data);
+                        if ($fix === true) {
+                            $phpcsFile->fixer->replaceToken(($stackPtr - 1), ' ');
+                        }
+                    }
+                } else {
+                    // If it's non-fixable, we know there is an unexpected comment.
+                    $error = 'Expected 1 space between %s and %s keywords; comment found';
+                    $data  = [
                         $prevContent,
                         $stackPtrType,
-                        $spaces,
                     ];
 
-                    $fix = $phpcsFile->addFixableError($error, $stackPtr, 'SpaceBeforeKeyword', $data);
-                    if ($fix === true) {
-                        $phpcsFile->fixer->replaceToken(($stackPtr - 1), ' ');
-                    }
-                }
-            } else if ($tokens[($stackPtr - 2)]['code'] === T_ABSTRACT
-                || $tokens[($stackPtr - 2)]['code'] === T_FINAL
-            ) {
-                $prevContent = strtolower($tokens[($stackPtr - 2)]['content']);
-                $error       = 'Expected 1 space between %s and %s keywords; newline found';
-                $data        = [
+                    $phpcsFile->addError($error, $stackPtr, $errorCode, $data);
+                }//end if
+            } else {
+                $error     = 'Expected 1 space between %s and %s keywords; newline found';
+                $errorCode = 'NewlineBeforeKeyword';
+                $data      = [
                     $prevContent,
                     $stackPtrType,
                 ];
 
-                $fix = $phpcsFile->addFixableError($error, $stackPtr, 'NewlineBeforeKeyword', $data);
-                if ($fix === true) {
-                    $phpcsFile->fixer->replaceToken(($stackPtr - 1), ' ');
+                if ($fixable === false) {
+                    $phpcsFile->addError($error, $stackPtr, $errorCode, $data);
+                } else {
+                    $fix = $phpcsFile->addFixableError($error, $stackPtr, $errorCode, $data);
+                    if ($fix === true) {
+                        $phpcsFile->fixer->beginChangeset();
+                        for ($i = ($prevNonWhitespace + 1); $i < ($stackPtr - 1); $i++) {
+                            $phpcsFile->fixer->replaceToken($i, '');
+                        }
+
+                        $phpcsFile->fixer->replaceToken(($stackPtr - 1), ' ');
+                        $phpcsFile->fixer->endChangeset();
+                    }
                 }
             }//end if
+            unset($prevContent, $prevNonWhitespace, $fixable, $errorCode, $error, $data, $fix);
         }//end if
+        unset($prevNonEmpty);
 
         // We'll need the indent of the class/interface declaration for later.
         $classIndent = 0;
