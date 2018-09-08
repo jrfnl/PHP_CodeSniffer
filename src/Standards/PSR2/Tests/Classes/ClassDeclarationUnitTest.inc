@@ -189,3 +189,10 @@ class Something
 	final/*comment*/class Something
 	{
 	}
+
+
+class ABC extends \ MyNamespace \ /* comment */ Something \    Other \
+    Deeper \ ClassName implements \ MyNamespace \ /* comment */ Something \    Other \
+    Deeper \ InterfaceName
+{
+}

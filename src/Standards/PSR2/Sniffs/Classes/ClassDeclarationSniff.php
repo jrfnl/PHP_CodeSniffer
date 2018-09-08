@@ -140,7 +140,7 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
 
             // We changed lines.
             if ($tokens[($i + 1)]['code'] === T_WHITESPACE) {
-                $classIndent = strlen($tokens[($i + 1)]['content']);
+                $classIndent = $tokens[($i + 1)]['length'];
             }
 
             break;
@@ -149,9 +149,9 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
         $className = $phpcsFile->findNext(T_STRING, $stackPtr);
 
         // Spacing of the keyword.
-        $gap = $tokens[($stackPtr + 1)]['content'];
-        if (strlen($gap) !== 1) {
-            $found = strlen($gap);
+        $gapSize = $tokens[($stackPtr + 1)]['length'];
+        if ($gapSize !== 1) {
+            $found = $gapSize;
             $error = 'Expected 1 space between %s keyword and %s name; %s found';
             $data  = [
                 $stackPtrType,
@@ -167,9 +167,9 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
 
         // Check after the class/interface name.
         if ($tokens[($className + 2)]['line'] === $tokens[$className]['line']) {
-            $gap = $tokens[($className + 1)]['content'];
-            if (strlen($gap) !== 1) {
-                $found = strlen($gap);
+            $gapSize = $tokens[($className + 1)]['length'];
+            if ($gapSize !== 1) {
+                $found = $gapSize;
                 $error = 'Expected 1 space after %s name; %s found';
                 $data  = [
                     $stackPtrType,
@@ -211,12 +211,12 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                     // Check the whitespace before. Whitespace after is checked
                     // later by looking at the whitespace before the first class name
                     // in the list.
-                    $gap = strlen($tokens[($keyword - 1)]['content']);
-                    if ($gap !== 1) {
+                    $gapSize = $tokens[($keyword - 1)]['length'];
+                    if ($gapSize !== 1) {
                         $error = 'Expected 1 space before %s keyword; %s found';
                         $data  = [
                             $keywordType,
-                            $gap,
+                            $gapSize,
                         ];
                         $fix   = $phpcsFile->addFixableError($error, $keyword, 'SpaceBefore'.ucfirst($keywordType), $data);
                         if ($fix === true) {
@@ -260,7 +260,12 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
             $classNames[] = $nextClass;
             $nextClass    = $phpcsFile->findNext($find, ($nextClass + 1), ($openingBrace - 1));
         }
-
+ini_set( 'xdebug.overload_var_dump', 1 );
+$temp_fordisplay = array();
+foreach($classNames as $_token ) {
+    $temp_fordisplay[] = $tokens[$_token]['line'].':'.$tokens[$_token]['content'];
+}
+var_dump($temp_fordisplay);
         $classCount         = count($classNames);
         $checkingImplements = false;
         $implementsToken    = null;
@@ -335,7 +340,7 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                     if ($tokens[$prev]['line'] !== $tokens[$className]['line']) {
                         $found = 0;
                     } else {
-                        $found = strlen($tokens[$prev]['content']);
+                        $found = $tokens[$prev]['length'];
                     }
 
                     $expected = ($classIndent + $this->indent);
@@ -377,7 +382,7 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                         $prev = ($className - 1);
                     }
 
-                    $spaceBefore = strlen($tokens[$prev]['content']);
+                    $spaceBefore = $tokens[$prev]['length'];
                     if ($spaceBefore !== 1) {
                         $error = 'Expected 1 space before "%s"; %s found';
                         $data  = [
@@ -404,7 +409,7 @@ class ClassDeclarationSniff extends PEARClassDeclarationSniff
                         $error = 'Expected 0 spaces between "%s" and comma; %s found';
                         $data  = [
                             $tokens[$className]['content'],
-                            strlen($tokens[($className + 1)]['content']),
+                            $tokens[($className + 1)]['length'],
                         ];
 
                         $fix = $phpcsFile->addFixableError($error, $className, 'SpaceBeforeComma', $data);

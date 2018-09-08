@@ -119,3 +119,8 @@ class IncorrectCodeBeforeClosingBrace
 {
 
 echo phpinfo();}
+
+class ABC extends \ MyNamespace \ /* comment */ Something \    Other \
+    Deeper \ ClassName implements \ MyNamespace \ /* comment */ Something \    Other \
+    Deeper \ InterfaceName
+{}
