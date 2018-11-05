@@ -1216,6 +1216,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
        <dir name="Classes">
         <file baseinstalldir="PHP/CodeSniffer" name="ClassInstantiationStandard.xml" role="php" />
        </dir>
+       <dir name="Formatting">
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderStandard.xml" role="php" />
+       </dir>
        <dir name="Functions">
         <file baseinstalldir="PHP/CodeSniffer" name="NullableTypeDeclarationStandard.xml" role="php" />
        </dir>
@@ -1245,6 +1248,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
         <file baseinstalldir="PHP/CodeSniffer" name="FileHeaderSniff.php" role="php" />
         <file baseinstalldir="PHP/CodeSniffer" name="ImportStatementSniff.php" role="php" />
         <file baseinstalldir="PHP/CodeSniffer" name="OpenTagSniff.php" role="php" />
+       </dir>
+       <dir name="Formatting">
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderSniff.php" role="php" />
        </dir>
        <dir name="Functions">
         <file baseinstalldir="PHP/CodeSniffer" name="NullableTypeDeclarationSniff.php" role="php" />
@@ -1327,6 +1333,20 @@ http://pear.php.net/dtd/package-2.0.xsd">
         <file baseinstalldir="PHP/CodeSniffer" name="OpenTagUnitTest.4.inc" role="test" />
         <file baseinstalldir="PHP/CodeSniffer" name="OpenTagUnitTest.5.inc" role="test" />
         <file baseinstalldir="PHP/CodeSniffer" name="OpenTagUnitTest.php" role="test" />
+       </dir>
+       <dir name="Formatting">
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.1.inc" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.2.inc" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.2.inc.fixed" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.3.inc" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.3.inc.fixed" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.4.inc" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.4.inc.fixed" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.5.inc" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.5.inc.fixed" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.6.inc" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.6.inc.fixed" role="test" />
+        <file baseinstalldir="PHP/CodeSniffer" name="NamespaceUseStatementorderUnitTest.php" role="test" />
        </dir>
        <dir name="Functions">
         <file baseinstalldir="PHP/CodeSniffer" name="NullableTypeDeclarationUnitTest.inc" role="test" />
