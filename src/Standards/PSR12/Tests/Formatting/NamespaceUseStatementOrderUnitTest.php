@@ -69,7 +69,7 @@ class NamespaceUseStatementOrderUnitTest extends AbstractSniffUnitTest {
 	public function getErrorList( $testFile = '' ) {
 
 		switch ( $testFile ) {
-			case 'NamespaceUseStatementOrderUnitTest.1.inc':
+			case 'NamespaceUseStatementOrderUnitTest.2.inc':
 				return array(
 					10 => 1,
 					12 => 1,
@@ -78,7 +78,7 @@ class NamespaceUseStatementOrderUnitTest extends AbstractSniffUnitTest {
 					18 => 1,
 				);
 
-			case 'NamespaceUseStatementOrderUnitTest.2.inc':
+			case 'NamespaceUseStatementOrderUnitTest.3.inc':
 				return array(
 					9  => 1,
 					11 => 2,
@@ -88,7 +88,7 @@ class NamespaceUseStatementOrderUnitTest extends AbstractSniffUnitTest {
 					16 => 3,
 				);
 
-			case 'NamespaceUseStatementOrderUnitTest.3.inc':
+			case 'NamespaceUseStatementOrderUnitTest.4.inc':
 				return array(
 					7  => 1,
 					8  => 2,
@@ -99,7 +99,7 @@ class NamespaceUseStatementOrderUnitTest extends AbstractSniffUnitTest {
 					13 => 2,
 				);
 
-			case 'NamespaceUseStatementOrderUnitTest.4.inc':
+			case 'NamespaceUseStatementOrderUnitTest.5.inc':
 				return array(
 					13 => 2,
 					16 => 1,
@@ -109,7 +109,7 @@ class NamespaceUseStatementOrderUnitTest extends AbstractSniffUnitTest {
 					48 => 7,
 				);
 
-			case 'NamespaceUseStatementOrderUnitTest.5.inc':
+			case 'NamespaceUseStatementOrderUnitTest.6.inc':
 				return array(
 					7  => 1,
 					8  => 1,

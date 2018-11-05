@@ -1,6 +1,6 @@
 <?php
 /*
- * Incorrect order and no blank lines.
+ * Incorrect order and blank lines.
  */
 
 namespace A\B\C;
@@ -14,3 +14,6 @@ use function Another\Vendor\functionName as D;
 
 use const Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
 use const Another\Vendor\CONSTANT_D;
+
+
+// Not a blank line.

@@ -1,17 +1,19 @@
 <?php
 /*
- * Incorrect order and blank lines.
+ * Correct order, incorrect blank lines and first use statement not following namespace statement.
  */
 
 namespace A\B\C;
 
+class ABC {}
+
 use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
-use function Vendor\Package\{functionA, functionB, functionC};
-
 use Vendor\Package\Name\ClassD as D;
-use const Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
-
 use Vendor\Package\AnotherNamespace\ClassE as E;
-use const Another\Vendor\CONSTANT_D;
+use function Vendor\Package\{functionA, functionB, functionC};
 use function Another\Vendor\functionName as D;
-// Not a blank line.
+
+
+
+use const Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
+use const Another\Vendor\CONSTANT_D;

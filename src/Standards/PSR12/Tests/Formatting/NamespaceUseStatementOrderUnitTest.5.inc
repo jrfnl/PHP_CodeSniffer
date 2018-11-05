@@ -1,54 +1,48 @@
 <?php
 /*
- * Deal with multiple namespaces - scoped and non-scoped in one file.
+ * Incorrect order with multi-line statements, weird whitespace, comments and
+ * seriously bad code order.
  */
 
-namespace A\B\C {
-	use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
-	use function Vendor\Package\{functionA, functionB, functionC};
+namespace A\B\C;
 
-	use Vendor\Package\Name\ClassD as D;
-	use const Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
+use function Vendor\Package\{
+	// Some comment.
+	functionA, functionB, functionC
+	};
+use Vendor\Package\AnotherNamespace\{ // Something.
+	ClassE as E
+	}; /* Else. */
+/* Silly*/ use function Another\Vendor\functionName as D;
 
-	use Vendor\Package\AnotherNamespace\ClassE as E;
-	use const Another\Vendor\CONSTANT_D;
-	use function Another\Vendor\functionName as D;
+use const Vendor\Package\{
+	/* Another comment. */
+	CONSTANT_A,
+	CONSTANT_B,
+	CONSTANT_C
+}; // Testing this.
+use Vendor\Package\Name\ClassD
+	as D; // More commenting.
+
+
+class EF {
 }
 
-namespace D\E\F;
+/**
+ * Docblock test.
+ */
+use const Another\Vendor\CONSTANT_D;
 
-use D\Vendor\Package\{ClassA as A, ClassB, ClassC as C};
-use function D\Vendor\Package\{functionA, functionB, functionC};
+function Something() {}
 
-use D\Vendor\Package\Name\ClassD as D;
-use const D\Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
+	/*
+	 * Importing from package B.
+	 */
+	use Vendor\Package\{
+		ClassA as A
+		, ClassB,
+		ClassC as C};
 
-use D\Vendor\Package\AnotherNamespace\ClassE as E;
-use const D\Another\Vendor\CONSTANT_D;
-use function D\Another\Vendor\functionName as D;
-
-
-namespace G\H\I;
-
-use G\Vendor\Package\{ClassA as A, ClassB, ClassC as C};
-use function G\Vendor\Package\{functionA, functionB, functionC};
-
-use G\Vendor\Package\Name\ClassD as D;
-use const G\Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
-
-use G\Vendor\Package\AnotherNamespace\ClassE as E;
-use const G\Another\Vendor\CONSTANT_D;
-use function G\Another\Vendor\functionName as D;
-
-namespace {
-	use GlobalNS\Vendor\Package\{ClassA as A, ClassB, ClassC as C};
-	use function GlobalNS\Vendor\Package\{functionA, functionB, functionC};
-
-	use GlobalNS\Vendor\Package\Name\ClassD as D;
-	use const GlobalNS\Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
-
-	use GlobalNS\Vendor\Package\AnotherNamespace\ClassE as E;
-	use const GlobalNS\Another\Vendor\CONSTANT_D;
-	use function GlobalNS\Another\Vendor\functionName as D;
-
-}
+// Multiple use statements on the same line.
+// Second comment line.
+use const Vendor\Package\CONSTANT_E; use Vendor\Package\Something; /* comment */ use function Vendor\Package\functionD;
