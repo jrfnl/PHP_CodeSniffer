@@ -45,4 +45,4 @@ function Something() {}
 
 // Multiple use statements on the same line.
 // Second comment line.
-use const Vendor\Package\CONSTANT_E; use Vendor\Package\Something; /* comment */ use function Vendor\Package\functionD;
+use const Vendor\Package\CONSTANT_E;use Vendor\Package\Something; /* comment */ use function Vendor\Package\functionD;

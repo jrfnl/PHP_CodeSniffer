@@ -1,19 +1,6 @@
 <?php
 /**
- * WordPress Coding Standard.
- *
- * @package WPCS\WordPressCodingStandards
- * @link    https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards
- * @license https://opensource.org/licenses/MIT MIT
- */
-
-namespace WordPress\Sniffs\Formatting;
-
-use WordPress\Sniff;
-use PHP_CodeSniffer_Tokens as Tokens;
-
-/**
- * Enforce ordering of namespace `use` statements as per the draft PSR-12.
+ * Enforce ordering of namespace `use` statements.
  *
  * "If present, each of the blocks below MUST be separated by a single blank line,
  *  and MUST NOT contain a blank line.
@@ -24,11 +11,7 @@ use PHP_CodeSniffer_Tokens as Tokens;
  * - One or more function-based use import statements.
  * - One or more constant-based use import statements.
  *
- * @link    https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md
- *
- * @package WPCS\WordPressCodingStandards
- *
- * @since   0.14.0
+ * @link      https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#3-declare-statements-namespace-and-import-statements
  *
  * {@internal Note: all the order related error messages have the same error code.
  *            As the fixer has to batch fix everything in one go as the new positions
@@ -36,32 +19,45 @@ use PHP_CodeSniffer_Tokens as Tokens;
  *            disabling parts of the sniff via error codes would not work when using
  *            the fixer. Having the same errorcode prevents confusion about this.}}
  *
- * {@internal This sniff is a candidate for pulling upstream.}}
+ * @author    Juliette Reinders Folmer <phpcs_nospam@adviesenzo.nl>
+ * @copyright 2017-2018 Juliette Reinders Folmer. All rights reserved.
+ * @license   https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD Licence
  */
-class NamespaceUseStatementOrderSniff extends Sniff {
+
+namespace PHP_CodeSniffer\Standards\PSR12\Sniffs\Formatting;
+
+use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Common\Tokens;
+
+class NamespaceUseStatementOrderSniff implements Sniff
+{
 
 	/**
 	 * Returns an array of tokens this test wants to listen for.
 	 *
-	 * @since 0.14.0
-	 *
 	 * @return array
 	 */
-	public function register() {
-		return array(
-			T_USE,
-		);
-	}
+	public function register()
+	{
+		return array(T_USE);
 
-	/**
-	 * Processes this test, when one of its tokens is encountered.
-	 *
-	 * @param int $stackPtr The position of the current token in the stack.
-	 *
+    }//end register()
+
+
+    /**
+     * Processes this test, when one of its tokens is encountered.
+     *
+     * @param \PHP_CodeSniffer\Files\File $phpcsFile The file being scanned.
+     * @param integer                     $stackPtr  The position of the current token in the
+     *                                               stack passed in $tokens.
+     *
 	 * @return int|void Integer stack pointer to skip forward or void to continue
 	 *                  normal file processing.
-	 */
-	public function process_token( $stackPtr ) {
+     */
+    public function process(File $phpcsFile, $stackPtr)
+    {
+		$tokens = $phpcsFile->getTokens();
+
 		/*
 		 * Find all namespace use statements and examine them.
 		 */
@@ -114,8 +110,8 @@ class NamespaceUseStatementOrderSniff extends Sniff {
 			/*
 			 * Find the start and end tokens for the use statement.
 			 */
-			$start = $this->find_start_of_use_statement( $usePtr );
-			$end   = $this->find_end_of_use_statement( $usePtr );
+			$start = $this->findStartOfUseStatement($phpcsFile, $usePtr );
+			$end   = $this->findEndOfUseStatement($phpcsFile, $usePtr );
 
 			if ( false === $end ) {
 				$usePtr = $this->phpcsFile->findNext( T_USE, ( $usePtr + 1 ) );
@@ -218,34 +214,34 @@ class NamespaceUseStatementOrderSniff extends Sniff {
 		 * fixes together looks to be the only way to avoid fixer conflicts
 		 * and/or running out of fixer loops.
 		 */
-		$fixes = array_filter( $fixes ); // Remove 'false's.
-		if ( $errors > 0 && count( $fixes ) === $errors ) {
-			$this->batch_fix_statement_order( $use_statements, $expected_start_pos );
+		$fixes = array_filter($fixes); // Remove 'false's.
+		if ($errors > 0 && count($fixes) === $errors) {
+			$this->batchFixStatementOrder($phpcsFile, $use_statements, $expected_start_pos);
 
 			// Fix the blank lines in the next fixer round as they would be incorrect/conflicting now anyhow.
-			return $this->phpcsFile->numTokens;
+			return $phpcsFile->numTokens;
 		}
 
 		/*
 		 * Check for a blank line before the first and after the last use statement in each block.
 		 *
-		 * If the uase statement order was changed too, the fixers here will run in a subsequent loop.
+		 * If the use statement order was changed too, the fixers here will run in a subsequent loop.
 		 */
-		foreach ( $use_statements as $ns_token => $types ) {
+		foreach ($use_statements as $ns_token => $types) {
 
-			foreach ( $types as $type => $statements ) {
-				if ( empty( $statements ) ) {
+			foreach ($types as $type => $statements) {
+				if (empty($statements) === true) {
 					continue;
 				}
 
-				$this->check_blank_line_before_group( $statements, $type );
-				$this->check_blank_line_after_group( $statements, $type );
+				$this->checkBlankLineBeforeGroup($phpcsFile, $statements, $type);
+				$this->checkBlankLineAfterGroup($phpcsFile, $statements, $type);
 			}
 		}
 
 		return $this->phpcsFile->numTokens;
 
-	} // End process_token().
+	}//end process().
 
 
 	/**
@@ -255,26 +251,31 @@ class NamespaceUseStatementOrderSniff extends Sniff {
 	 * all fixes together looks to be the only way to avoid fixer conflicts
 	 * and/or running out of fixer loops.
 	 *
-	 * @param array $use_statements     Array with info on all namespace use statements
-	 *                                  found in the file.
-	 * @param array $expected_start_pos Array with expected start position of use
-	 *                                  statements per namespace.
+     * @param \PHP_CodeSniffer\Files\File $phpcsFile        The file being scanned.
+	 * @param array                       $useStatements    Array with info on all
+	 *                                                      namespace use statements
+	 *                                                      found in the file.
+	 * @param array                       $expectedStartPos Array with expected start
+	 *                                                      position of use statements
+	 *                                                      per namespace.
 	 */
-	protected function batch_fix_statement_order( $use_statements, $expected_start_pos ) {
+	protected function batchFixStatementOrder(File $phpcsFile, $useStatements, $expectedStartPos)
+	{
+		$tokens = $phpcsFile->getTokens();
 
-		$this->phpcsFile->fixer->beginChangeset();
+		$phpcsFile->fixer->beginChangeset();
 
-		foreach ( $use_statements as $ns_token => $types ) {
+		foreach ($useStatements as $nsToken => $types) {
 
 			$replace     = false;
 			$replacement = '';
 
-			foreach ( $types as $type => $statements ) {
-				if ( empty( $statements ) ) {
+			foreach ($types as $type => $statements) {
+				if (empty($statements) === true) {
 					continue;
 				}
 
-				foreach ( $statements as $start => $end ) {
+				foreach ($statements as $start => $end) {
 					/*
 					 * {@internal Once upstream PR #1674 has been merged and the WPCS minimum
 					 * PHPCS requirement has gone up to the version which contains that change,
@@ -283,98 +284,94 @@ class NamespaceUseStatementOrderSniff extends Sniff {
 					 * Setting the tab-width in the unit test file can then also be removed.}}
 					 * @link https://github.com/squizlabs/PHP_CodeSniffer/pull/1674
 					 */
-					$replacement .= $this->phpcsFile->getTokensAsString( $start, ( ( $end - $start ) + 1 ) );
+					$replacement .= $phpcsFile->getTokensAsString($start, (($end - $start) + 1), true);
 
-					if ( false === strpos( $this->tokens[ $end ]['content'], $this->phpcsFile->eolChar ) ) {
-						$replacement .= $this->phpcsFile->eolChar;
+					if (strpos($tokens[$end]['content'], $phpcsFile->eolChar) === false) {
+						$replacement .= $phpcsFile->eolChar;
 					}
 
-					for ( $i = $start; $i <= $end; $i++ ) {
-						if ( $i === $expected_start_pos[ $ns_token ] ) {
+					for ($i = $start; $i <= $end; $i++) {
+						if ($i === $expectedStartPos[$nsToken]) {
 							$replace = true;
 							continue;
 						}
 
-						$this->phpcsFile->fixer->replaceToken( $i, '' );
+						$phpcsFile->fixer->replaceToken($i, '');
 					}
-					unset( $i );
 				}
 			}
 
 			// Add the complete block of use statements in the correct order below the namespace declaration.
-			if ( true === $replace ) {
-				$this->phpcsFile->fixer->replaceToken( $expected_start_pos[ $ns_token ], $replacement );
+			if ($replace === true) {
+				$phpcsFile->fixer->replaceToken($expectedStartPos[$nsToken], $replacement);
 			} else {
-				$this->phpcsFile->fixer->addContentBefore( $expected_start_pos[ $ns_token ], $replacement );
+				$phpcsFile->fixer->addContentBefore($expectedStartPos[$nsToken], $replacement);
 			}
 		}
 
-		$this->phpcsFile->fixer->endChangeset();
-	}
+		$phpcsFile->fixer->endChangeset();
+
+	}//end batchFixStatementOrder()
 
 	/**
 	 * Check for a blank line before the first statement in a block.
 	 *
-	 * @param array  $statements Array with start/end pointers of each use statement in a group.
-	 * @param string $type       Use statement group type.
+     * @param \PHP_CodeSniffer\Files\File $phpcsFile  The file being scanned.
+	 * @param array                       $statements Array with start/end pointers
+	 *                                                of each use statement in a group.
+	 * @param string                      $type       Use statement group type.
 	 */
-	protected function check_blank_line_before_group( $statements, $type ) {
-		reset( $statements );
+	protected function checkBlankLineBeforeGroup(File $phpcsFile, $statements, $type)
+	{
+		reset($statements);
 
-		$start        = key( $statements );
-		$prev_content = $this->phpcsFile->findPrevious( T_WHITESPACE, ( $start - 1 ), null, true );
-		if ( false === $prev_content ) {
+		$tokens      = $phpcsFile->getTokens();
+		$start       = key($statements);
+		$prevContent = $phpcsFile->findPrevious(T_WHITESPACE, ($start - 1), null, true);
+		if ($prevContent === false) {
 			return;
 		}
 
-		$diff = ( $this->tokens[ $start ]['line'] - $this->tokens[ $prev_content ]['line'] );
-		if ( 2 === $diff ) {
+		$diff = ($tokens[$start]['line'] - $tokens[$prevContent]['line']);
+		if ($diff === 2) {
 			return;
 		}
-		if ( $diff < 0 ) {
+
+		if ($diff < 0) {
 			$diff = 0;
 		}
 
 		$error = 'There must be exactly one blank line before a "use %s" statement group.';
-		$data  = array( $type );
-		$fix   = $this->phpcsFile->addFixableError( $error, $start, 'BlankLineBeforeGroup', $data );
+		$data  = array($type);
+		$fix   = $phpcsFile->addFixableError($error, $start, 'BlankLineBeforeGroup', $data);
 
-		if ( true === $fix ) {
-			switch ( $diff ) {
-				case 0:
-					$this->phpcsFile->fixer->addContentBefore(
-						$start,
-						$this->phpcsFile->eolChar . $this->phpcsFile->eolChar
-					);
-					break;
+		if ($fix === true) {
+			switch ($diff) {
+			case 0:
+				$phpcsFile->fixer->addContentBefore($start, $phpcsFile->eolChar.$phpcsFile->eolChar);
+				break;
 
-				case 1:
-					$this->phpcsFile->fixer->addContentBefore(
-						$start,
-						$this->phpcsFile->eolChar
-					);
-					break;
+			case 1:
+				$phpcsFile->fixer->addContentBefore($start, $phpcsFile->eolChar);
+				break;
 
-				default:
-					$this->phpcsFile->fixer->beginChangeset();
-					for ( $i = ( $prev_content + 1 ); $i < $start; $i++ ) {
-						if ( $this->tokens[ $i ]['line'] === $this->tokens[ $start ]['line'] ) {
-							break;
-						}
-
-						$this->phpcsFile->fixer->replaceToken( $i, '' );
+			default:
+				$phpcsFile->fixer->beginChangeset();
+				for ($i = ($prevContent + 1); $i < $start; $i++) {
+					if ($tokens[$i]['line'] === $tokens[$start]['line']) {
+						break;
 					}
-					unset( $i );
 
-					$this->phpcsFile->fixer->addContentBefore(
-						$start,
-						$this->phpcsFile->eolChar . $this->phpcsFile->eolChar
-					);
-					$this->phpcsFile->fixer->endChangeset();
-					break;
+					$phpcsFile->fixer->replaceToken($i, '');
+				}
+
+				$phpcsFile->fixer->addContentBefore($start, $phpcsFile->eolChar.$phpcsFile->eolChar);
+				$phpcsFile->fixer->endChangeset();
+				break;
 			}
 		}
-	}
+
+	}//end checkBlankLineBeforeGroup()
 
 	/**
 	 * Check for a blank line after the last statement in a block.
@@ -386,52 +383,53 @@ class NamespaceUseStatementOrderSniff extends Sniff {
 	 * than one blank line will prevent conflicts with standards demanding
 	 * two blank lines before classes/functions.
 	 *
-	 * @param array  $statements Array with start/end pointers of each use statement in a group.
-	 * @param string $type       Use statement group type.
+     * @param \PHP_CodeSniffer\Files\File $phpcsFile  The file being scanned.
+	 * @param array                       $statements Array with start/end pointers
+	 *                                                of each use statement in a group.
+	 * @param string                      $type       Use statement group type.
 	 */
-	protected function check_blank_line_after_group( $statements, $type ) {
-		$end          = end( $statements );
-		$next_content = $this->phpcsFile->findNext(
-			T_WHITESPACE,
-			( $end + 1 ),
-			$this->phpcsFile->numTokens,
-			true
-		);
-		if ( false === $next_content ) {
+	protected function checkBlankLineAfterGroup(File $phpcsFile, $statements, $type)
+	{
+		$tokens      = $phpcsFile->getTokens();
+		$end         = end($statements);
+		$nextContent = $phpcsFile->findNext(T_WHITESPACE, ($end + 1), $phpcsFile->numTokens, true);
+		if ($nextContent === false) {
 			return;
 		}
 
-		$diff = ( $this->tokens[ $next_content ]['line'] - $this->tokens[ ( $end + 1 ) ]['line'] );
-		if ( 1 === $diff || 2 === $diff ) {
+		$diff = ($tokens[$nextContent]['line'] - $tokens[($end + 1)]['line']);
+		if ($diff === 1 || $diff === 2) {
 			return;
 		}
-		if ( $diff < 0 ) {
+
+		if ($diff < 0) {
 			$diff = 0;
 		}
 
 		$error = 'There must be a blank line after the last statement in a "use %s" statement group.';
-		$data  = array( $type );
-		$fix   = $this->phpcsFile->addFixableError( $error, $end, 'BlankLineAfterGroup', $data );
+		$data  = array($type);
+		$fix   = $phpcsFile->addFixableError($error, $end, 'BlankLineAfterGroup', $data);
 
-		if ( true === $fix ) {
-			if ( 0 === $diff ) {
-				$this->phpcsFile->fixer->addNewlineBefore( $end + 1 );
+		if ($fix === true) {
+			if ($diff === 0) {
+				$phpcsFile->fixer->addNewlineBefore($end + 1);
 			} else {
-				$this->phpcsFile->fixer->beginChangeset();
+				$phpcsFile->fixer->beginChangeset();
 
-				for ( $i = ( $end + 1 ); $i < $next_content; $i++ ) {
-					if ( $this->tokens[ $i ]['line'] === $this->tokens[ $next_content ]['line'] ) {
+				for ($i = ($end + 1); $i < $nextContent; $i++) {
+					if ($tokens[$i]['line'] === $tokens[$next_content]['line']) {
 						break;
 					}
 
-					$this->phpcsFile->fixer->replaceToken( $i, '' );
+					$phpcsFile->fixer->replaceToken($i, '');
 				}
 
-				$this->phpcsFile->fixer->addNewline( $end );
-				$this->phpcsFile->fixer->endChangeset();
+				$phpcsFile->fixer->addNewline($end);
+				$phpcsFile->fixer->endChangeset();
 			}
 		}
-	}
+
+	}//end checkBlankLineAfterGroup()
 
 	/**
 	 * Find what should be regarded as the start of the statement.
@@ -439,77 +437,81 @@ class NamespaceUseStatementOrderSniff extends Sniff {
 	 * Comments directly before or above the statement should be included.
 	 * Same goes for indentation before the use statement.
 	 *
-	 * @param int $usePtr Stack pointer to the use keyword.
+     * @param \PHP_CodeSniffer\Files\File $phpcsFile The file being scanned.
+	 * @param int                         $usePtr    Stack pointer to the use keyword.
 	 *
 	 * @return int
 	 */
-	protected function find_start_of_use_statement( $usePtr ) {
-		$last_newline = null;
+	private function findStartOfUseStatement(File $phpcsFile, $usePtr)
+	{
+		$tokens      = $phpcsFile->getTokens();
+		$lastNewline = null;
 
-		for ( $i = ( $usePtr - 1 ); $i >= 0; $i-- ) {
-
-			if ( isset( Tokens::$emptyTokens[ $this->tokens[ $i ]['code'] ] ) ) {
-				if ( false !== strpos( $this->tokens[ $i ]['content'], $this->phpcsFile->eolChar ) ) {
-					if ( 1 === $this->tokens[ $i ]['column']
-						&& T_WHITESPACE === $this->tokens[ $i ]['code']
-						&& isset( $this->tokens[ ( $i - 1 ) ] )
-						&& $this->tokens[ $i ]['line'] !== $this->tokens[ ( $i - 1 ) ]['line']
+		for ($i = ($usePtr - 1); $i >= 0; $i--) {
+			if (isset(Tokens::$emptyTokens[$tokens[$i]['code']]) === true) {
+				if (strpos($tokens[$i]['content'], $phpcsFile->eolChar ) !== false) {
+					if ($tokens[$i]['column'] === 1
+						&& $tokens[$i]['code'] === T_WHITESPACE
+						&& isset($tokens[($i - 1)]) === true
+						&& $tokens[$i]['line'] !== $tokens[($i - 1)]['line']
 					) {
 						// Blank line found.
 						break;
 					}
-					$last_newline = $i;
+					$lastNewline = $i;
 				}
 				continue;
 			}
-
-			/*
-			 * Non empty token found.
-			 */
-			if ( ! isset( $last_newline )
-				&& $this->tokens[ $i ]['line'] === $this->tokens[ ( $i + 1 ) ]['line']
-				&& T_WHITESPACE === $this->tokens[ ( $i + 1 ) ]['code']
+// TODO: check if this deals correctly with multi-statement without whitespace ...;use ...
+			// Non empty token found.
+			if (isset($lastNewline) === false
+				&& $tokens[$i]['line'] === $tokens[($i + 1)]['line']
+				&& $tokens[($i + 1)]['code'] === T_WHITESPACE
 			) {
 				// Deal with multiple statements on one line.
 				++$i;
 				break;
 			}
 
-			if ( isset( $last_newline ) ) {
-				$i = $last_newline;
+			if (isset($lastNewline) === true) {
+				$i = $lastNewline;
 			}
 			break;
 		}
 
 		return ++$i;
-	}
+
+	}//end findStartOfUseStatement()
 
 	/**
-	 * Find the last token for the complete statement, including trailing comments
+	 * Find the last token for the complete use statement, including trailing comments
 	 * and the new line token.
 	 *
-	 * @param int $usePtr Stack pointer to the use keyword.
+     * @param \PHP_CodeSniffer\Files\File $phpcsFile The file being scanned.
+	 * @param int                         $usePtr    Stack pointer to the use keyword.
 	 *
 	 * @return int|bool Integer stack pointer or false when it couldn't be determined.
 	 */
-	protected function find_end_of_use_statement( $usePtr ) {
-		$semicolon = $this->phpcsFile->findNext( T_SEMICOLON, ( $usePtr + 1 ), null, false, null, true );
-		if ( false === $semicolon ) {
+	private function findEndOfUseStatement(File $phpcsFile,  $usePtr)
+	{
+		$tokens    = $phpcsFile->getTokens();
+		$semicolon = $phpcsFile->findNext(T_SEMICOLON, ($usePtr + 1), null, false, null, true);
+		if ($semicolon === false) {
 			// Live coding.
 			return false;
 		}
 
-		for ( $end = ( $semicolon + 1 ); $end < $this->phpcsFile->numTokens; $end++ ) {
-			if ( isset( Tokens::$emptyTokens[ $this->tokens[ $end ]['code'] ] )
-				&& strpos( $this->tokens[ $end ]['content'], $this->phpcsFile->eolChar ) === false
-				&& $this->tokens[ $end ]['line'] === $this->tokens[ ( $end - 1 ) ]['line']
+		for ($end = ($semicolon + 1); $end < $phpcsFile->numTokens; $end++) {
+			if (isset( Tokens::$emptyTokens[$tokens[$end]['code']]) === true
+				&& strpos($tokens[$end]['content'], $phpcsFile->eolChar) === false
+				&& $tokens[$end]['line'] === $tokens[($end - 1)]['line']
 			) {
 				continue;
 			}
 
 			// Deal with multiple statements on one line.
-			if ( ! isset( Tokens::$emptyTokens[ $this->tokens[ $end ]['code'] ] )
-				&& $this->tokens[ $end ]['line'] === $this->tokens[ ( $end - 1 ) ]['line']
+			if (isset(Tokens::$emptyTokens[$tokens[$end ]['code']]) === false
+				&& $tokens[$end]['line'] === $tokens[($end - 1)]['line']
 			) {
 				$end = $semicolon;
 			}
@@ -518,6 +520,7 @@ class NamespaceUseStatementOrderSniff extends Sniff {
 		}
 
 		return $end;
-	}
+
+	}//end findEndOfUseStatement()
 
 } // End class.
