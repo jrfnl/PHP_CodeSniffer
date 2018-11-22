@@ -105,6 +105,13 @@ class Fixer
      */
     private $numFixes = 0;
 
+    /**
+     * The maximum number of loops to use to try and fix a file.
+     *
+     * @var integer
+     */
+    private $maxLoops = 50;
+
 
     /**
      * Starts fixing a new file.
@@ -148,7 +155,7 @@ class Fixer
         $this->enabled = true;
 
         $this->loops = 0;
-        while ($this->loops < 50) {
+        while ($this->loops < $this->maxLoops) {
             ob_start();
 
             // Only needed once file content has changed.
@@ -196,7 +203,7 @@ class Fixer
 
         $this->enabled = false;
 
-        if ($this->numFixes > 0) {
+        if ($this->numFixes > 0 || $this->loops === $this->maxLoops) {
             if (PHP_CODESNIFFER_VERBOSITY > 1) {
                 if (ob_get_level() > 0) {
                     ob_end_clean();
