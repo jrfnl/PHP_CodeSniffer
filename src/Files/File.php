@@ -1215,40 +1215,12 @@ class File
      * @throws \PHP_CodeSniffer\Exceptions\RuntimeException If the specified token is not of type
      *                                                      T_FUNCTION, T_CLASS, T_ANON_CLASS,
      *                                                      T_CLOSURE, T_TRAIT, or T_INTERFACE.
+     *
+     * @deprecated 3.5.0 Use PHP_CodeSniffer\Util\NameUtils::getDeclarationName() instead.
      */
     public function getDeclarationName($stackPtr)
     {
-        $tokenCode = $this->tokens[$stackPtr]['code'];
-
-        if ($tokenCode === T_ANON_CLASS || $tokenCode === T_CLOSURE) {
-            return null;
-        }
-
-        if ($tokenCode !== T_FUNCTION
-            && $tokenCode !== T_CLASS
-            && $tokenCode !== T_INTERFACE
-            && $tokenCode !== T_TRAIT
-        ) {
-            throw new RuntimeException('Token type "'.$this->tokens[$stackPtr]['type'].'" is not T_FUNCTION, T_CLASS, T_INTERFACE or T_TRAIT');
-        }
-
-        if ($tokenCode === T_FUNCTION
-            && strtolower($this->tokens[$stackPtr]['content']) !== 'function'
-        ) {
-            // This is a function declared without the "function" keyword.
-            // So this token is the function name.
-            return $this->tokens[$stackPtr]['content'];
-        }
-
-        $content = null;
-        for ($i = $stackPtr; $i < $this->numTokens; $i++) {
-            if ($this->tokens[$i]['code'] === T_STRING) {
-                $content = $this->tokens[$i]['content'];
-                break;
-            }
-        }
-
-        return $content;
+        return Util\NameUtils::getDeclarationName($this, $stackPtr);
 
     }//end getDeclarationName()
 

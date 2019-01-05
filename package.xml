@@ -138,6 +138,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
      <dir name="File">
       <file baseinstalldir="" name="FindEndOfStatementTest.inc" role="test" />
       <file baseinstalldir="" name="FindEndOfStatementTest.php" role="test" />
+      <dir name="NameUtils">
+       <file baseinstalldir="" name="IsCamelCapsTest.php" role="test" />
+      </dir>
       <file baseinstalldir="" name="FindExtendedClassNameTest.inc" role="test" />
       <file baseinstalldir="" name="FindExtendedClassNameTest.php" role="test" />
       <file baseinstalldir="" name="FindImplementedInterfaceNamesTest.inc" role="test" />
@@ -153,7 +156,6 @@ http://pear.php.net/dtd/package-2.0.xsd">
      </dir>
      <file baseinstalldir="" name="AllTests.php" role="test" />
      <file baseinstalldir="" name="ErrorSuppressionTest.php" role="test" />
-     <file baseinstalldir="" name="IsCamelCapsTest.php" role="test" />
     </dir>
     <dir name="Standards">
      <file baseinstalldir="" name="AbstractSniffUnitTest.php" role="test" />
@@ -1816,6 +1818,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
     <dir name="Util">
      <file baseinstalldir="PHP/CodeSniffer" name="Cache.php" role="php" />
      <file baseinstalldir="PHP/CodeSniffer" name="Common.php" role="php" />
+     <file baseinstalldir="PHP/CodeSniffer" name="NameUtils.php" role="php" />
      <file baseinstalldir="PHP/CodeSniffer" name="Standards.php" role="php" />
      <file baseinstalldir="PHP/CodeSniffer" name="Timing.php" role="php" />
      <file baseinstalldir="PHP/CodeSniffer" name="Tokens.php" role="php" />
@@ -1862,7 +1865,6 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <install as="TestSuite7.php" name="tests/TestSuite7.php" />
    <install as="tests/bootstrap.php" name="tests/bootstrap.php" />
    <install as="CodeSniffer/Core/AllTests.php" name="tests/Core/AllTests.php" />
-   <install as="CodeSniffer/Core/IsCamelCapsTest.php" name="tests/Core/IsCamelCapsTest.php" />
    <install as="CodeSniffer/Core/ErrorSuppressionTest.php" name="tests/Core/ErrorSuppressionTest.php" />
    <install as="CodeSniffer/Core/File/FindEndOfStatementTest.php" name="tests/Core/File/FindEndOfStatementTest.php" />
    <install as="CodeSniffer/Core/File/FindEndOfStatementTest.inc" name="tests/Core/File/FindEndOfStatementTest.inc" />
@@ -1878,6 +1880,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <install as="CodeSniffer/Core/File/GetMethodPropertiesTest.inc" name="tests/Core/File/GetMethodPropertiesTest.inc" />
    <install as="CodeSniffer/Core/File/IsReferenceTest.php" name="tests/Core/File/IsReferenceTest.php" />
    <install as="CodeSniffer/Core/File/IsReferenceTest.inc" name="tests/Core/File/IsReferenceTest.inc" />
+   <install as="CodeSniffer/Core/Util/NameUtils/IsCamelCapsTest.php" name="tests/Core/Util/NameUtils/IsCamelCapsTest.php" />
    <install as="CodeSniffer/Standards/AllSniffs.php" name="tests/Standards/AllSniffs.php" />
    <install as="CodeSniffer/Standards/AbstractSniffUnitTest.php" name="tests/Standards/AbstractSniffUnitTest.php" />
   </filelist>
@@ -1895,7 +1898,6 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <install as="tests/TestSuite.php" name="tests/TestSuite.php" />
    <install as="tests/TestSuite7.php" name="tests/TestSuite7.php" />
    <install as="CodeSniffer/Core/AllTests.php" name="tests/Core/AllTests.php" />
-   <install as="CodeSniffer/Core/IsCamelCapsTest.php" name="tests/Core/IsCamelCapsTest.php" />
    <install as="CodeSniffer/Core/ErrorSuppressionTest.php" name="tests/Core/ErrorSuppressionTest.php" />
    <install as="CodeSniffer/Core/File/FindEndOfStatementTest.php" name="tests/Core/File/FindEndOfStatementTest.php" />
    <install as="CodeSniffer/Core/File/FindEndOfStatementTest.inc" name="tests/Core/File/FindEndOfStatementTest.inc" />
@@ -1911,6 +1913,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <install as="CodeSniffer/Core/File/GetMethodPropertiesTest.inc" name="tests/Core/File/GetMethodPropertiesTest.inc" />
    <install as="CodeSniffer/Core/File/IsReferenceTest.php" name="tests/Core/File/IsReferenceTest.php" />
    <install as="CodeSniffer/Core/File/IsReferenceTest.inc" name="tests/Core/File/IsReferenceTest.inc" />
+   <install as="CodeSniffer/Core/Util/NameUtils/IsCamelCapsTest.php" name="tests/Core/Util/NameUtils/IsCamelCapsTest.php" />
    <install as="CodeSniffer/Standards/AllSniffs.php" name="tests/Standards/AllSniffs.php" />
    <install as="CodeSniffer/Standards/AbstractSniffUnitTest.php" name="tests/Standards/AbstractSniffUnitTest.php" />
    <ignore name="bin/phpcs.bat" />
