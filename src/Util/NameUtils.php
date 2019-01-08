@@ -189,4 +189,109 @@ class NameUtils
     }//end isUnderscoreName()
 
 
+
+
+
+
+
+
+/*
+ * - PascalCase = the first letter of every word in the identifier is upper case
+ *                (called Proper case), the rest lower case and merged without space.
+ *                Two consequtive capitals allowed.
+ *                Also called StudlyCaps or UpperCamelCase
+ *
+ * - camelCase  = the first letter of the first word in the identifier is lower case,
+ *                and all subsequent words use proper case.
+ * - WikiCase   = Initial letters capitalized and words run together (like PascalCase),
+ *                but each capital letter must be followed by a lower case letter
+ *                (hence one-letter words are not accommodated).
+ * - snake_case = All letters lowercase, words separated by underscores.
+ * - MACRO_CASE = UpperCase with underscores
+ *                All letters capitalized, words separated by underscores.
+ * - StudlyCaps = Same as UpperCamelCase, but may be carried out in a more random fashion,
+ *                or to its extreme. (alternating every letter). Originates from bulletin-board
+ *                systems, where it was used along with numeric or symbolic substitution (l1|<3 th15)
+ *                and other devices to convey apparent coolness. Now generally used only facetiously.
+ *                tHiS iS aN eXaMpLe.
+ * - kebab-case = All letters lowercase, words separated by hyphen.
+ * - COBOL-CASE = All letters uppercase, words separated by hyphen.
+ *
+ *
+ * Need to know for each:
+ * - consecutive capitals allowed ? limited to a max number of subsequent capitals ?
+ * - numbers allowed ?
+ * - underscores allowed ?
+ * - consecutive underscores allowed ?
+ * - space allowed ?
+ * - hyphen allowed ? (CSS)
+ */
+
+
+    public static function toCamelCase($name)
+    {
+    }
+
+    public static function isCamelCase($name)
+    {
+    }
+
+    public static function toPascalCase($name)
+    {
+    }
+
+    public static function isPascalCase($name)
+    {
+    }
+
+
+    public static function toCamelCaps($name)
+    {
+    }
+/*
+    public static function isCamelCaps($name)
+    {
+    }
+*/
+
+    public static function toUpperCaseUnderscores($name)
+    {
+    }
+
+    public static function isUpperCaseUnderscores($name)
+    {
+        return (bool) preg_match('`^[A-Z0-9_]+$`', $name);
+    }
+
+
+    /**
+     * Return whether the variable is in snake_case.
+     *
+     * @param string $name The construct name to examine.
+     *
+     * @return bool
+     */
+    public static function isSnakeCase($name) {
+        return (bool) preg_match('`^[a-z0-9_]+$`', $name);
+    }
+
+    /**
+     * Transform the name of a PHP construct (function, variable etc) to one in snake_case.
+     *
+     * @param string $name The construct name to transform.
+     *
+     * @return string
+     */
+    public static function toSnakeCase($name)
+    {
+        $name = preg_replace('`([A-Z])`', '_$1', $name);
+        $name = strtolower($name);
+        $name = str_replace('__', '_', $name);
+        $name = trim($name, '_');
+
+        return $name;
+
+    }
+
+
 }//end class
