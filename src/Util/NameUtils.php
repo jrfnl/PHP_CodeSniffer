@@ -13,6 +13,7 @@ namespace PHP_CodeSniffer\Util;
 
 use PHP_CodeSniffer\Exceptions\RuntimeException;
 use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Util\Tokens;
 
 class NameUtils
 {
@@ -56,15 +57,12 @@ class NameUtils
             return $tokens[$stackPtr]['content'];
         }
 
-        $content = null;
-        for ($i = $stackPtr; $i < $phpcsFile->numTokens; $i++) {
-            if ($tokens[$i]['code'] === T_STRING) {
-                $content = $tokens[$i]['content'];
-                break;
-            }
+        $nextNonEmpty = $phpcsFile->findNext(Tokens::$emptyTokens, ($stackPtr + 1), null, true);
+        if ($nextNonEmpty !== false && $tokens[$nextNonEmpty]['code'] === T_STRING) {
+            return $tokens[$nextNonEmpty]['content'];
         }
 
-        return $content;
+        return null;
 
     }//end getDeclarationName()
 

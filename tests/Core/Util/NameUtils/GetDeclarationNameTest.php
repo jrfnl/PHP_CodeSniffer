@@ -72,6 +72,14 @@ class GetDeclarationNameTest extends AbstractMethodUnitTest
                 '/* testAnonClass */',
                 T_ANON_CLASS,
             ],
+            [
+                '/* testMissingInterfaceName */',
+                T_INTERFACE,
+            ],
+            [
+                '/* testLiveCoding */',
+                T_CLASS,
+            ],
         ];
 
     }//end dataGetDeclarationNameNull()

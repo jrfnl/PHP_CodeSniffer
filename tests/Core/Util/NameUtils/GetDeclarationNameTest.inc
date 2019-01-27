@@ -35,3 +35,11 @@ class /* comment */
 
 // phpcs:ignore Standard.Cat.SniffName -- for reasons
     ClassWithCommentsAndNewLines {}
+
+/* testMissingInterfaceName */
+interface { // Intentional parse error.
+    public function someFunction();
+}
+
+/* testLiveCoding */
+abstract class // Intentional parse error.
