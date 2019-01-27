@@ -29,8 +29,7 @@ class NameUtils
      * @return string|null The name of the class, interface, trait, or function;
      *                     or NULL if the function or class is anonymous.
      * @throws \PHP_CodeSniffer\Exceptions\RuntimeException If the specified token is not of type
-     *                                                      T_FUNCTION, T_CLASS, T_ANON_CLASS,
-     *                                                      T_CLOSURE, T_TRAIT, or T_INTERFACE.
+     *                                                      T_FUNCTION, T_CLASS, T_TRAIT, or T_INTERFACE.
      */
     public static function getDeclarationName(File $phpcsFile, $stackPtr)
     {
