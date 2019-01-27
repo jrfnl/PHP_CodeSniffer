@@ -139,6 +139,10 @@ http://pear.php.net/dtd/package-2.0.xsd">
       <file baseinstalldir="" name="FindEndOfStatementTest.inc" role="test" />
       <file baseinstalldir="" name="FindEndOfStatementTest.php" role="test" />
       <dir name="NameUtils">
+       <file baseinstalldir="" name="GetDeclarationNameTest.inc" role="test" />
+       <file baseinstalldir="" name="GetDeclarationNameTest.php" role="test" />
+       <file baseinstalldir="" name="GetDeclarationNameJSTest.js" role="test" />
+       <file baseinstalldir="" name="GetDeclarationNameJSTest.php" role="test" />
        <file baseinstalldir="" name="IsCamelCapsTest.php" role="test" />
       </dir>
       <file baseinstalldir="" name="FindExtendedClassNameTest.inc" role="test" />
@@ -1880,6 +1884,10 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <install as="CodeSniffer/Core/File/GetMethodPropertiesTest.inc" name="tests/Core/File/GetMethodPropertiesTest.inc" />
    <install as="CodeSniffer/Core/File/IsReferenceTest.php" name="tests/Core/File/IsReferenceTest.php" />
    <install as="CodeSniffer/Core/File/IsReferenceTest.inc" name="tests/Core/File/IsReferenceTest.inc" />
+   <install as="CodeSniffer/Core/Util/NameUtils/GetDeclarationNameTest.php" name="tests/Core/Util/NameUtils/GetDeclarationNameTest.php" />
+   <install as="CodeSniffer/Core/Util/NameUtils/GetDeclarationNameTest.inc" name="tests/Core/Util/NameUtils/GetDeclarationNameTest.inc" />
+   <install as="CodeSniffer/Core/Util/NameUtils/GetDeclarationNameJSTest.php" name="tests/Core/Util/NameUtils/GetDeclarationNameJSTest.php" />
+   <install as="CodeSniffer/Core/Util/NameUtils/GetDeclarationNameJSTest.js" name="tests/Core/Util/NameUtils/GetDeclarationNameJSTest.js" />
    <install as="CodeSniffer/Core/Util/NameUtils/IsCamelCapsTest.php" name="tests/Core/Util/NameUtils/IsCamelCapsTest.php" />
    <install as="CodeSniffer/Standards/AllSniffs.php" name="tests/Standards/AllSniffs.php" />
    <install as="CodeSniffer/Standards/AbstractSniffUnitTest.php" name="tests/Standards/AbstractSniffUnitTest.php" />
@@ -1913,6 +1921,10 @@ http://pear.php.net/dtd/package-2.0.xsd">
    <install as="CodeSniffer/Core/File/GetMethodPropertiesTest.inc" name="tests/Core/File/GetMethodPropertiesTest.inc" />
    <install as="CodeSniffer/Core/File/IsReferenceTest.php" name="tests/Core/File/IsReferenceTest.php" />
    <install as="CodeSniffer/Core/File/IsReferenceTest.inc" name="tests/Core/File/IsReferenceTest.inc" />
+   <install as="CodeSniffer/Core/Util/NameUtils/GetDeclarationNameTest.php" name="tests/Core/Util/NameUtils/GetDeclarationNameTest.php" />
+   <install as="CodeSniffer/Core/Util/NameUtils/GetDeclarationNameTest.inc" name="tests/Core/Util/NameUtils/GetDeclarationNameTest.inc" />
+   <install as="CodeSniffer/Core/Util/NameUtils/GetDeclarationNameJSTest.php" name="tests/Core/Util/NameUtils/GetDeclarationNameJSTest.php" />
+   <install as="CodeSniffer/Core/Util/NameUtils/GetDeclarationNameJSTest.js" name="tests/Core/Util/NameUtils/GetDeclarationNameJSTest.js" />
    <install as="CodeSniffer/Core/Util/NameUtils/IsCamelCapsTest.php" name="tests/Core/Util/NameUtils/IsCamelCapsTest.php" />
    <install as="CodeSniffer/Standards/AllSniffs.php" name="tests/Standards/AllSniffs.php" />
    <install as="CodeSniffer/Standards/AbstractSniffUnitTest.php" name="tests/Standards/AbstractSniffUnitTest.php" />

@@ -20,6 +20,8 @@ require_once 'File/GetMemberPropertiesTest.php';
 require_once 'File/GetMethodParametersTest.php';
 require_once 'File/GetMethodPropertiesTest.php';
 require_once 'File/IsReferenceTest.php';
+require_once 'Util/NameUtils/GetDeclarationNameTest.php';
+require_once 'Util/NameUtils/GetDeclarationNameJSTest.php';
 require_once 'Util/NameUtils/IsCamelCapsTest.php';
 
 class AllTests
@@ -54,6 +56,8 @@ class AllTests
         $suite->addTestSuite('PHP_CodeSniffer\Tests\Core\File\GetMethodParametersTest');
         $suite->addTestSuite('PHP_CodeSniffer\Tests\Core\File\GetMethodPropertiesTest');
         $suite->addTestSuite('PHP_CodeSniffer\Tests\Core\File\IsReferenceTest');
+        $suite->addTestSuite('PHP_CodeSniffer\Tests\Core\Util\NameUtils\GetDeclarationNameTest');
+        $suite->addTestSuite('PHP_CodeSniffer\Tests\Core\Util\NameUtils\GetDeclarationNameJSTest');
         $suite->addTestSuite('PHP_CodeSniffer\Tests\Core\Util\NameUtils\IsCamelCapsTest');
         return $suite;
 
