@@ -266,16 +266,6 @@ class NameUtils
     }
 */
 
-    public static function toUpperCaseUnderscores($name)
-    {
-    }
-
-    public static function isUpperCaseUnderscores($name)
-    {
-        return (bool) preg_match('`^[A-Z0-9_]+$`', $name);
-    }
-
-
     /**
      * Return whether the variable is in snake_case.
      *
@@ -284,7 +274,7 @@ class NameUtils
      * @return bool
      */
     public static function isSnakeCase($name) {
-        return (bool) preg_match('`^[a-z0-9_]+$`', $name);
+        return (bool) preg_match('`^[a-z0-9]+(?:_[a-z0-9]+)*$`', $name);
     }
 
     /**
@@ -296,6 +286,7 @@ class NameUtils
      */
     public static function toSnakeCase($name)
     {
+        $name = str_replace('-', '_', $name);
         $name = preg_replace('`([A-Z])`', '_$1', $name);
         $name = strtolower($name);
         $name = str_replace('__', '_', $name);
@@ -304,6 +295,117 @@ class NameUtils
         return $name;
 
     }
+
+	/**
+	 *
+     * @param string  $name      The string the verify.
+     * @param boolean $strict      If true, the string must not have two capital
+     *                             letters next to each other.
+     *                             If false, acronyms are allowed.
+     *                             Defaults to false.
+     *
+     * @return bool
+	 */
+    public static function isUpperSnakeCase($name, $strict=false)
+    {
+		if ($strict === false) {
+			return (preg_match('`^[A-Z][A-Za-z0-9]*(?:_[A-Z][A-Za-z0-9]*)*$`', $name) === 1);
+		}
+		
+        return (preg_match('`^[A-Z][a-z0-9]*(?:_[A-Z][a-z0-9]*)*$`', $name) === 1);
+    }
+
+    public static function toUpperSnakeCase($name)
+    {
+    }
+
+
+
+	/**
+	 *
+	 * MACRO_CASE = Uppercase with words separated with underscores.
+	 *
+	 */
+    public static function isMacroCase($name)
+    {
+        return (preg_match('`^[A-Z0-9]+(?:_[A-Z0-9]+)*$`', $name) === 1);
+    }
+
+    public static function toMacroCase($name)
+    {
+    }
+
+
+
+    /**
+     * Return whether the name, like a CSS selector, is in kebab-case.
+     *
+     * @param string $name The name to examine.
+     *
+     * @return bool
+     */
+    public static function isKebabCase($name) {
+        return (preg_match('`^[a-z0-9]+(?:-[a-z0-9]+)*$`', $name) === 1);
+    }
+
+    /**
+     * Transform a name to one in kebab-case.
+     *
+     * @param string $name The name to transform.
+     *
+     * @return string
+     */
+    public static function toKebabCase($name)
+    {
+        $name = str_replace('_', '-', $name);
+        $name = preg_replace('`([A-Z])`', '-$1', $name);
+        $name = strtolower($name);
+        $name = str_replace('--', '-', $name);
+        $name = trim($name, '-');
+
+        return $name;
+
+    }
+
+	/**
+	 *
+     * @param string  $name      The string the verify.
+     * @param boolean $strict      If true, the string must not have two capital
+     *                             letters next to each other.
+     *                             If false, acronyms are allowed.
+     *                             Defaults to false.
+     *
+     * @return bool
+	 */
+    public static function isTrainCase($name, $strict=false)
+    {
+		if ($strict === false) {
+			return (preg_match('`^[A-Z][A-Za-z0-9]*(?:-[A-Z][A-Za-z0-9]*)*$`', $name) === 1);
+		}
+		
+        return (preg_match('`^[A-Z][a-z0-9]*(?:-[A-Z][a-z0-9]*)*$`', $name) === 1);
+    }
+
+    public static function toTrainCase($name)
+    {
+    }
+
+
+
+	/**
+	 *
+	 * MACRO_CASE = Uppercase with words separated with underscores.
+	 *
+	 */
+    public static function isCobolCase($name)
+    {
+        return (preg_match('`^[A-Z0-9]+(?:-[A-Z0-9]+)*$`', $name) === 1);
+    }
+
+    public static function toCobolCase($name)
+    {
+    }
+
 
 
 }//end class
