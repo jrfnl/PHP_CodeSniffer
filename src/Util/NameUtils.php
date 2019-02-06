@@ -17,6 +17,18 @@ use PHP_CodeSniffer\Util\Tokens;
 
 class NameUtils
 {
+	
+	/**
+	 * Regular expression to check if a given structure name is valid for use in PHP.
+	 *
+	 * @var string
+	 *
+	 * @link http://php.net/manual/en/language.variables.basics.php
+	 * @link http://php.net/manual/en/language.constants.php
+	 * @link http://php.net/manual/en/functions.user-defined.php
+	 * @link http://php.net/manual/en/language.oop5.basic.php
+	 */
+	const PHP_LABEL_REGEX = '`^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$`';
 
 
     /**
