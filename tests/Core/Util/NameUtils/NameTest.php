@@ -2,6 +2,11 @@ NOTES FOR THE METHODS:
 
 https://github.com/outsideris/popularconvention/blob/master/src/parser/php-parser.coffee#L480 and down for regexes.
 
+* Transform methods should do cross-check at end to make sure they return something valid.
+* If not return empty string.
+
+
+
 NOTES FOR UNIT TESTS:
 
 Set up a large set of names with info about them
@@ -85,12 +90,23 @@ function randomString($length = 6) {
 	return $str;
 }
 
+For the random test, use below in combination with a Travis specific ENV variable to skip it on travis:
+https://docs.travis-ci.com/user/environment-variables/#default-environment-variables
+    $travis = getenv('TRAVIS');
+    if (getenv('TRAVIS') === true) {
+        $this->markTestSkipped(
+           'Test skipped on Travis.'
+        );
+	}
+
+
+
 
 Tests are also needed for all types with:
-* numbers
+* numbers within the string
 * double underscores
 * double hyphens
-* Acronyms
+* Acronyms (consecutive caps)
 * Starting with underscore
 * Ending with underscore
 * Starting with hyphen
@@ -100,38 +116,57 @@ Tests are also needed for all types with:
 
 
 
-function testSnakeCase($name, $expectedIs, $expectedTransform=null) {
-	$this->assertSame($expected, NameUtils::isSnakeCase($name), 'Name check failed');
+// Both methods use same dataprovider ?
 
-	if ($expectedIs === false) {
-		$transformed = NameUtils::toSnakeCase($name);
-		$this->assertSame($expectedTransform, $transformed, 'Transformation test failed');
-		$this->assertTrue(NameUtils::isSnakeCase($transformed), 'Transformation does not comply with format');
-	}
+function testIsSnakeCase($name, $expectedIs, $notUsed) {
+	$this->assertSame($expected, NameUtils::isSnakeCase($name));
 }
 
-function dataSnakeCase() {
-	return self::dataProviderHelper('snakecase');
+function testToSnakeCase($name, $notUsed, $expectedTransform=null) {
+	$this->assertSame($expectedTransform, NameUtils::toSnakeCase($name));
 }
 
 
-protected static function dataProviderHelper($standard) {
+public static function dataIsSnakeCase() {
+	return self::dataProviderHelperIs('snakecase');
+}
+
+public static function dataToSnakeCase() {
+	return self::dataProviderHelperTo('snakecase');
+}
+
+
+protected static function dataProviderHelperIs($standard) {
 	$data = [];
 	foreach (self::$names as $info) {
 		$dataset = [$info['name']];
-		
+
+		if (isset($info['valid'][$standard]) === true) {
+			$dataset[] = true;
+		} else {
+			$dataset[] = false;
+		}
+
+		$data[$info['name']] = $dataset;
+	}
+	
+	return $data;
+}
+
+protected static function dataProviderHelperTo($standard) {
+	$data = [];
+	foreach (self::$names as $info) {
 		$valid = false;
 		if (isset($info['valid'][$standard]) === true) {
 			$valid = true;
 		}
 
-		$dataset[] = $valid;
-
 		if ($valid === false) {
-			$dataset[] = $info['transform'][$standard];
+  		    $data[$info['name']] = [
+			    $info['name'],
+			    $info['transform'][$standard],
+			];
 		}
-		
-		$data[] = $dataset;
 	}
 	
 	return $data;

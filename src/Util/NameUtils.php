@@ -240,6 +240,25 @@ class NameUtils
  */
 
 
+    // This function should always be used by naming sniffs to check that the suggested
+    // alternative name is valid PHP!
+    // The is/to naming methods can also be used for JS/CSS and other syntax, so those
+    // don't take this into account.
+
+    public static function isValidPHPName($name)
+	{
+        return (preg_match(self::PHP_LABEL_REGEX, $name) === 1);
+	}
+	
+	public static function isValidJSName($name)
+	{
+	}
+
+	public static function isValidCSSSelectorName($name)
+	{
+	}
+
+
     public static function toCamelCase($name)
     {
     }
@@ -353,7 +372,8 @@ class NameUtils
      *
      * @param string $name The name to transform.
      *
-     * @return string
+     * @return string Transformed name or an empty string if no reliable transformation
+     *                could be executed.
      */
     public static function toKebabCase($name)
     {
@@ -362,8 +382,12 @@ class NameUtils
         $name = strtolower($name);
         $name = str_replace('--', '-', $name);
         $name = trim($name, '-');
+        
+        if (self::isKebabCase($name) === true) {
+			return $name;
+		}
 
-        return $name;
+        return '';
 
     }
 
@@ -407,5 +431,25 @@ class NameUtils
     }
 
 
+
+	// Transform helper functions
+	public static function ltrimNumbers($name)
+	{
+		return ltrim($name, '0123456789');
+	}
+	
+	public static function lowerConsecutiveCaps($name)
+	{
+		// Needs testing!
+		$name = preg_replace_callback(
+			'`([A-Z])([A-Z]+)([A-Z]|\b|$)`',
+			function($matches) {
+				return $matches[1].strtolower($matches[2]).$matches[3];
+            },
+			$name
+		);
+
+		return $name;
+	}
 
 }//end class
