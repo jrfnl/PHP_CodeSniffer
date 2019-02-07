@@ -1,0 +1,18 @@
+From https://github.com/squizlabs/PHP_CodeSniffer/pull/2409/files
+
+File: tests/Core/File/FindExtendedClassNameTest.php
+Line: 66
+Change `preceeds` to `precedes`
+
+File: tests/Core/File/FindImplementedInterfaceNamesTest.php
+Line: 65
+Change `preceeds` to `precedes`
+
+File: tests/Core/File/GetMemberPropertiesTest.php
+Line: 65 + 328
+Change `preceeds` to `precedes`
+
+File: tests/Core/File/IsReferenceTest.php
+Line: 65
+Change `preceeds` to `precedes`
+
