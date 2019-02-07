@@ -113,6 +113,7 @@ Tests are also needed for all types with:
 * Ending with hyphen
 * Starting with number
 * Ending with number
+* Tests with one or more of the \x7f-\xff characters !!! Also make sure that the is methods can deal with these!
 
 
 
