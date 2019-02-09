@@ -293,7 +293,7 @@ class NameUtils
      * @return bool
      */
     public static function isSnakeCase($name) {
-        return (bool) preg_match('`^[a-z0-9]+(?:_[a-z0-9]+)*$`', $name);
+        return (bool) preg_match('`^[\p{Ll}\p{Lo}\p{Lm}\pN]+(?:_[\p{Ll}\p{Lo}\p{Lm}\pN]+)*$`u', $name);
     }
 
     /**
@@ -306,12 +306,20 @@ class NameUtils
     public static function toSnakeCase($name)
     {
         $name = str_replace('-', '_', $name);
-        $name = preg_replace('`([A-Z])`', '_$1', $name);
-        $name = strtolower($name);
+        $name = preg_replace('`([\p{Lt}\p{Lu}]+)`u', '_$1', $name);
+        if ( function_exists('mb_strtolower') === true) {
+            $name = mb_strtolower($name);
+		} else {
+            $name = strtolower($name);
+		}
         $name = str_replace('__', '_', $name);
         $name = trim($name, '_');
 
-        return $name;
+        if (self::isSnakeCase($name) === true) {
+			return $name;
+		}
+
+        return '';
 
     }
 
@@ -328,10 +336,10 @@ class NameUtils
     public static function isUpperSnakeCase($name, $strict=false)
     {
 		if ($strict === false) {
-			return (preg_match('`^[A-Z][A-Za-z0-9]*(?:_[A-Z][A-Za-z0-9]*)*$`', $name) === 1);
+			return (preg_match('`^[\p{Lt}\p{Lu}\p{Lo}][\pL\pN]*(?:_[\p{Lt}\p{Lu}\p{Lo}][\pL\pN]*)*$u`', $name) === 1);
 		}
 		
-        return (preg_match('`^[A-Z][a-z0-9]*(?:_[A-Z][a-z0-9]*)*$`', $name) === 1);
+        return (preg_match('`^[\p{Lt}\p{Lu}\p{Lo}][\p{Ll}\p{Lm}\p{Lo}\pN]*(?:_[\p{Lt}\p{Lu}\p{Lo}][\p{Ll}\p{Lm}\p{Lo}\pN]*)*$u`', $name) === 1);
     }
 
     public static function toUpperSnakeCase($name)
@@ -347,11 +355,28 @@ class NameUtils
 	 */
     public static function isMacroCase($name)
     {
-        return (preg_match('`^[A-Z0-9]+(?:_[A-Z0-9]+)*$`', $name) === 1);
+        return (preg_match('`^[\p{Lt}\p{Lu}\p{Lo}\pN]+(?:_[\p{Lt}\p{Lu}\p{Lo}\pN]+)*$`u', $name) === 1);
     }
 
     public static function toMacroCase($name)
     {
+        $name = str_replace('-', '_', $name);
+        $name = preg_replace('`(?<=[\p{Ll}])([\p{Lt}\p{Lu}]+)`u', '_$1', $name);
+        if ( function_exists('mb_strtoupper') === true) {
+            $name = mb_strtoupper($name);
+		} else {
+            $name = strtoupper($name);
+		}
+        $name = str_replace('__', '_', $name);
+        $name = trim($name, '_');
+
+        if (self::isMacroCase($name) === true) {
+			return $name;
+		}
+
+        return '';
+
+
     }
 
 
@@ -364,7 +389,7 @@ class NameUtils
      * @return bool
      */
     public static function isKebabCase($name) {
-        return (preg_match('`^[a-z0-9]+(?:-[a-z0-9]+)*$`', $name) === 1);
+        return (preg_match('`^[\p{Ll}\p{Lo}\p{Lm}\pN]+(?:-[\p{Ll}\p{Lo}\p{Lm}\pN]+)*$`u', $name) === 1);
     }
 
     /**
@@ -378,8 +403,12 @@ class NameUtils
     public static function toKebabCase($name)
     {
         $name = str_replace('_', '-', $name);
-        $name = preg_replace('`([A-Z])`', '-$1', $name);
-        $name = strtolower($name);
+        $name = preg_replace('`([\p{Lt}\p{Lu}]+)`u', '-$1', $name);
+        if ( function_exists('mb_strtolower') === true) {
+            $name = mb_strtolower($name);
+		} else {
+            $name = strtolower($name);
+		}
         $name = str_replace('--', '-', $name);
         $name = trim($name, '-');
         
@@ -404,10 +433,10 @@ class NameUtils
     public static function isTrainCase($name, $strict=false)
     {
 		if ($strict === false) {
-			return (preg_match('`^[A-Z][A-Za-z0-9]*(?:-[A-Z][A-Za-z0-9]*)*$`', $name) === 1);
+			return (preg_match('`^[\p{Lt}\p{Lu}\p{Lo}][\pL\pN]*(?:-[\p{Lt}\p{Lu}\p{Lo}][\pL\pN]*)*$`u', $name) === 1);
 		}
 		
-        return (preg_match('`^[A-Z][a-z0-9]*(?:-[A-Z][a-z0-9]*)*$`', $name) === 1);
+        return (preg_match('`^[\p{Lt}\p{Lu}\p{Lo}][\p{Ll}\p{Lo}\p{Lm}\pN]*(?:-[\p{Lt}\p{Lu}\p{Lo}][\p{Ll}\p{Lo}\p{Lm}\pN]*)*$`u', $name) === 1);
     }
 
     public static function toTrainCase($name)
@@ -418,12 +447,12 @@ class NameUtils
 
 	/**
 	 *
-	 * MACRO_CASE = Uppercase with words separated with underscores.
+	 * COBOL-CASE = Uppercase with words separated with hyphens.
 	 *
 	 */
     public static function isCobolCase($name)
     {
-        return (preg_match('`^[A-Z0-9]+(?:-[A-Z0-9]+)*$`', $name) === 1);
+        return (preg_match('`^[\p{Lt}\p{Lu}\p{Lo}\pN]+(?:-[\p{Lt}\p{Lu}\p{Lo}\pN]+)*$`u', $name) === 1);
     }
 
     public static function toCobolCase($name)
@@ -435,16 +464,22 @@ class NameUtils
 	// Transform helper functions
 	public static function ltrimNumbers($name)
 	{
-		return ltrim($name, '0123456789');
+		return preg_replace('`^[\pN]+(\X*)`u', '$2', $name);
 	}
 	
 	public static function lowerConsecutiveCaps($name)
 	{
 		// Needs testing!
 		$name = preg_replace_callback(
-			'`([A-Z])([A-Z]+)([A-Z]|\b|$)`',
+			'`([\p{Lt}\p{Lu}])([\p{Lt}\p{Lu}]+)([\p{Lt}\p{Lu}](?=[^\p{Lt}\p{Lu}])|\b|$)`u',
 			function($matches) {
-				return $matches[1].strtolower($matches[2]).$matches[3];
+		        if ( function_exists('mb_strtolower') === true) {
+		            $consecutiveChars = mb_strtolower($matches[2]);
+				} else {
+		            $consecutiveChars = strtolower($matches[2]);
+				}
+
+				return $matches[1].$consecutiveChars.$matches[3];
             },
 			$name
 		);
