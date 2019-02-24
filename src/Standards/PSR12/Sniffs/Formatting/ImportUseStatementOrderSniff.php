@@ -29,7 +29,7 @@ namespace PHP_CodeSniffer\Standards\PSR12\Sniffs\Formatting;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Common\Tokens;
 
-class NamespaceUseStatementOrderSniff implements Sniff
+class ImportUseStatementOrderSniff implements Sniff
 {
 
 	/**

@@ -23,7 +23,7 @@ use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
  * it will no longer be necessary to set the tab-width for these unit tests.
  * {@link https://github.com/squizlabs/PHP_CodeSniffer/pull/1674} }}
  */
-class NamespaceUseStatementOrderUnitTest extends AbstractSniffUnitTest {
+class ImportUseStatementOrderUnitTest extends AbstractSniffUnitTest {
 
 	/**
 	 * The tab width to use during testing.
