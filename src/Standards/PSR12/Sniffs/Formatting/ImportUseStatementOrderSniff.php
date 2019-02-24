@@ -58,6 +58,9 @@ class ImportUseStatementOrderSniff implements Sniff
     {
 		$tokens = $phpcsFile->getTokens();
 
+// TODO: verify how mixed group use statements should be handled ? Where should those be placed ?
+// Or should the sniff just not be auto-fixable if a mixed group use statement is found ?
+
 		/*
 		 * Find all namespace use statements and examine them.
 		 */
@@ -78,6 +81,12 @@ class ImportUseStatementOrderSniff implements Sniff
 		$expected_start_pos = array();
 
 		do {
+
+// TODO: implement use of PHPCS native TokenIsUtils utility methods for this.
+
+// TODO: implement skipping over OO structures, functions, closures, arrays as they won't contain import
+// use statements anyway and should make the sniff faster as it walks the complete file.
+
 			$use_type = $this->get_use_type( $usePtr );
 
 			if ( 'class' !== $use_type ) {
@@ -482,6 +491,8 @@ class ImportUseStatementOrderSniff implements Sniff
 		return ++$i;
 
 	}//end findStartOfUseStatement()
+
+// TODO: account for situations where the use statement ends with a T_CLOSE_TAG!!!!
 
 	/**
 	 * Find the last token for the complete use statement, including trailing comments
