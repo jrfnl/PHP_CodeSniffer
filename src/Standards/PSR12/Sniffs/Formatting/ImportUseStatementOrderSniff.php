@@ -1,6 +1,6 @@
 <?php
 /**
- * Enforce ordering of namespace `use` statements.
+ * Enforce ordering of import `use` statements.
  *
  * "If present, each of the blocks below MUST be separated by a single blank line,
  *  and MUST NOT contain a blank line.
@@ -11,7 +11,7 @@
  * - One or more function-based use import statements.
  * - One or more constant-based use import statements.
  *
- * @link      https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#3-declare-statements-namespace-and-import-statements
+ * @link https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md#3-declare-statements-namespace-and-import-statements
  *
  * {@internal Note: all the order related error messages have the same error code.
  *            As the fixer has to batch fix everything in one go as the new positions
@@ -20,7 +20,7 @@
  *            the fixer. Having the same errorcode prevents confusion about this.}}
  *
  * @author    Juliette Reinders Folmer <phpcs_nospam@adviesenzo.nl>
- * @copyright 2017-2018 Juliette Reinders Folmer. All rights reserved.
+ * @copyright 2017-2019 Juliette Reinders Folmer. All rights reserved.
  * @license   https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD Licence
  */
 

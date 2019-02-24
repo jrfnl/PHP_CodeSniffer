@@ -1,13 +1,13 @@
 <?php
 /**
- * Unit test class for WordPress Coding Standard.
+ * Unit test class for the PSR12 ImportUseStatementOrder sniff.
  *
- * @package WPCS\WordPressCodingStandards
- * @link    https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards
- * @license https://opensource.org/licenses/MIT MIT
+ * @author    Juliette Reinders Folmer <phpcs_nospam@adviesenzo.nl>
+ * @copyright 2017-2019 Juliette Reinders Folmer. All rights reserved.
+ * @license   https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD Licence
  */
 
-namespace WordPress\Tests\Formatting;
+namespace PHP_CodeSniffer\Standards\PSR12\Tests\Formatting;
 
 use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
 
