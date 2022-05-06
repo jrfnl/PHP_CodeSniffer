@@ -40,10 +40,18 @@ class RequireStrictTypesSniff implements Sniff
     public function process(File $phpcsFile, $stackPtr)
     {
         $tokens  = $phpcsFile->getTokens();
-        $declare = $phpcsFile->findNext(T_DECLARE, $stackPtr);
-        $found   = false;
+        $declare = $phpcsFile->findNext(Tokens::$emptyTokens, ($stackPtr + 1), null, true);
+        
+        /*
+         - Run through potentially multiple declare statements at start of file, don't scan the whole bloody file
+         - Within a declare, check each T_STRING as one declare can have comma-separated multiple directives.
+         - Once strict_types is found, verify that it is set to 1
+         -> if set to 0, fix to 1
+         -> if not set, add it
+         */
 
-        if ($declare !== false) {
+
+        if ($declare !== false && $tokens[$declare]['code'] === T_DECLARE) {
             $nextString = $phpcsFile->findNext(T_STRING, $declare);
 
             if ($nextString !== false) {
@@ -52,11 +60,22 @@ class RequireStrictTypesSniff implements Sniff
                     $found = true;
                 }
             }
+		}
+
+        $found   = false;
+
+        if ($declare !== false) {
         }
 
         if ($found === false) {
             $error = 'Missing required strict_types declaration';
-            $phpcsFile->addError($error, $stackPtr, 'MissingDeclaration');
+            $fix   = $phpcsFile->addFixableError($error, $stackPtr, 'MissingDeclaration');
+            
+            if ($fix === true) {
+			    $phpcsFile->fixer->beginChangeset();
+				$phpcsFile->fixer->addContentBefore($stackPtr, "declare(strict_types=1);\n");
+			    $phpcsFile->fixer->endChangeset();
+			}
         }
 
         // Skip the rest of the file so we don't pick up additional
