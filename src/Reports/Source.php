@@ -106,7 +106,7 @@ class Source implements Report
             $parts   = explode('>>', $line);
             $source  = $parts[0];
             $fixable = (bool) $parts[1];
-            $count   = $parts[2];
+            $count   = (int) $parts[2];
 
             if (isset($sources[$source]) === false) {
                 if ($showSources === true) {

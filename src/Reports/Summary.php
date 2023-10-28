@@ -88,8 +88,8 @@ class Summary implements Report
             $parts   = explode('>>', $line);
             $fileLen = strlen($parts[0]);
             $reportFiles[$parts[0]] = [
-                'errors'   => $parts[1],
-                'warnings' => $parts[2],
+                'errors'   => (int) $parts[1],
+                'warnings' => (int) $parts[2],
                 'strlen'   => $fileLen,
             ];
 

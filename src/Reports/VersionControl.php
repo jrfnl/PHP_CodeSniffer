@@ -181,9 +181,9 @@ abstract class VersionControl implements Report
             switch ($parts[0]) {
             case 'AUTHOR':
                 if (isset($authorCache[$parts[1]]) === false) {
-                    $authorCache[$parts[1]] = $parts[2];
+                    $authorCache[$parts[1]] = (int) $parts[2];
                 } else {
-                    $authorCache[$parts[1]] += $parts[2];
+                    $authorCache[$parts[1]] += (int) $parts[2];
                 }
                 break;
             case 'PRAISE':
@@ -204,7 +204,7 @@ abstract class VersionControl implements Report
 
                 if (isset($sourceCache[$parts[1]][$parts[2]]) === false) {
                     $sourceCache[$parts[1]][$parts[2]] = [
-                        'count'   => $parts[3],
+                        'count'   => (int) $parts[3],
                         'fixable' => (bool) $parts[4],
                     ];
                 } else {
