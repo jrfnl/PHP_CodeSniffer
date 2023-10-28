@@ -2,7 +2,7 @@ includes:
 	- phpstan-baseline.neon
 parameters:
     phpVersion: 70100 # Should be 50400, but PHPStan only accepts 70100 or higher...
-    level: 3
+    level: 4
     paths:
         - bin/phpcbf
         - bin/phpcs
@@ -15,6 +15,7 @@ parameters:
         - PHP_CODESNIFFER_IN_TESTS
         - PHP_CODESNIFFER_CBF
         - PHP_CODESNIFFER_VERBOSITY
+    treatPhpDocTypesAsCertain: false
 
     ignoreErrors:
         ################
