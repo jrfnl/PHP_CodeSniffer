@@ -10,7 +10,7 @@
 namespace PHP_CodeSniffer\Generators;
 
 use DOMDocument;
-use DOMNode;
+use DOMElement;
 use PHP_CodeSniffer\Config;
 
 class Markdown extends Generator
@@ -77,13 +77,13 @@ class Markdown extends Generator
     /**
      * Process the documentation for a single sniff.
      *
-     * @param \DOMNode $doc The DOMNode object for the sniff.
-     *                      It represents the "documentation" tag in the XML
-     *                      standard file.
+     * @param \DOMElement $doc The DOMElement object for the sniff.
+     *                         It represents the "documentation" tag in the XML
+     *                         standard file.
      *
      * @return void
      */
-    protected function processSniff(DOMNode $doc)
+    protected function processSniff(DOMElement $doc)
     {
         $title = $this->getTitle($doc);
         echo PHP_EOL."## $title".PHP_EOL;
@@ -102,11 +102,11 @@ class Markdown extends Generator
     /**
      * Print a text block found in a standard.
      *
-     * @param \DOMNode $node The DOMNode object for the text block.
+     * @param \DOMElement $node The DOMElement object for the text block.
      *
      * @return void
      */
-    protected function printTextBlock(DOMNode $node)
+    protected function printTextBlock(DOMElement $node)
     {
         $content = trim($node->nodeValue);
         $content = htmlspecialchars($content);
@@ -122,11 +122,11 @@ class Markdown extends Generator
     /**
      * Print a code comparison block found in a standard.
      *
-     * @param \DOMNode $node The DOMNode object for the code comparison block.
+     * @param \DOMElement $node The DOMElement object for the code comparison block.
      *
      * @return void
      */
-    protected function printCodeComparisonBlock(DOMNode $node)
+    protected function printCodeComparisonBlock(DOMElement $node)
     {
         $codeBlocks = $node->getElementsByTagName('code');
 

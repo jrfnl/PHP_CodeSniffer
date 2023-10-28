@@ -13,7 +13,7 @@
 namespace PHP_CodeSniffer\Generators;
 
 use DOMDocument;
-use DOMNode;
+use DOMElement;
 use PHP_CodeSniffer\Autoload;
 use PHP_CodeSniffer\Ruleset;
 
@@ -64,15 +64,15 @@ abstract class Generator
 
 
     /**
-     * Retrieves the title of the sniff from the DOMNode supplied.
+     * Retrieves the title of the sniff from the DOMElement supplied.
      *
-     * @param \DOMNode $doc The DOMNode object for the sniff.
-     *                      It represents the "documentation" tag in the XML
-     *                      standard file.
+     * @param \DOMElement $doc The DOMElement object for the sniff.
+     *                         It represents the "documentation" tag in the XML
+     *                         standard file.
      *
      * @return string
      */
-    protected function getTitle(DOMNode $doc)
+    protected function getTitle(DOMElement $doc)
     {
         return $doc->getAttribute('title');
 
@@ -106,14 +106,14 @@ abstract class Generator
      *
      * Doc generators must implement this function to produce output.
      *
-     * @param \DOMNode $doc The DOMNode object for the sniff.
-     *                      It represents the "documentation" tag in the XML
-     *                      standard file.
+     * @param \DOMElement $doc The DOMElement object for the sniff.
+     *                         It represents the "documentation" tag in the XML
+     *                         standard file.
      *
      * @return void
      * @see    generate()
      */
-    abstract protected function processSniff(DOMNode $doc);
+    abstract protected function processSniff(DOMElement $doc);
 
 
 }//end class

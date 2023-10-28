@@ -11,7 +11,7 @@
 
 namespace PHP_CodeSniffer\Generators;
 
-use DOMNode;
+use DOMElement;
 
 class Text extends Generator
 {
@@ -20,13 +20,13 @@ class Text extends Generator
     /**
      * Process the documentation for a single sniff.
      *
-     * @param \DOMNode $doc The DOMNode object for the sniff.
-     *                      It represents the "documentation" tag in the XML
-     *                      standard file.
+     * @param \DOMElement $doc The DOMElement object for the sniff.
+     *                         It represents the "documentation" tag in the XML
+     *                         standard file.
      *
      * @return void
      */
-    public function processSniff(DOMNode $doc)
+    public function processSniff(DOMElement $doc)
     {
         $this->printTitle($doc);
 
@@ -44,13 +44,13 @@ class Text extends Generator
     /**
      * Prints the title area for a single sniff.
      *
-     * @param \DOMNode $doc The DOMNode object for the sniff.
-     *                      It represents the "documentation" tag in the XML
-     *                      standard file.
+     * @param \DOMElement $doc The DOMElement object for the sniff.
+     *                         It represents the "documentation" tag in the XML
+     *                         standard file.
      *
      * @return void
      */
-    protected function printTitle(DOMNode $doc)
+    protected function printTitle(DOMElement $doc)
     {
         $title    = $this->getTitle($doc);
         $standard = $this->ruleset->name;
@@ -67,11 +67,11 @@ class Text extends Generator
     /**
      * Print a text block found in a standard.
      *
-     * @param \DOMNode $node The DOMNode object for the text block.
+     * @param \DOMElement $node The DOMElement object for the text block.
      *
      * @return void
      */
-    protected function printTextBlock(DOMNode $node)
+    protected function printTextBlock(DOMElement $node)
     {
         $text = trim($node->nodeValue);
         $text = str_replace('<em>', '*', $text);
@@ -121,11 +121,11 @@ class Text extends Generator
     /**
      * Print a code comparison block found in a standard.
      *
-     * @param \DOMNode $node The DOMNode object for the code comparison block.
+     * @param \DOMElement $node The DOMElement object for the code comparison block.
      *
      * @return void
      */
-    protected function printCodeComparisonBlock(DOMNode $node)
+    protected function printCodeComparisonBlock(DOMElement $node)
     {
         $codeBlocks = $node->getElementsByTagName('code');
         $first      = trim($codeBlocks->item(0)->nodeValue);
