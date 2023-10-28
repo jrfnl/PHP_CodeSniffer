@@ -657,10 +657,10 @@ class File
      */
     public function cleanUp()
     {
-        $this->listenerTimes = null;
-        $this->content       = null;
-        $this->tokens        = null;
-        $this->metricTokens  = null;
+        $this->listenerTimes = [];
+        $this->content       = '';
+        $this->tokens        = [];
+        $this->metricTokens  = [];
         $this->tokenizer     = null;
         $this->fixer         = null;
         $this->config        = null;
