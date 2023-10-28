@@ -1,0 +1,71 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$basepath \\(string\\) does not accept null\\.$#"
+			count: 2
+			path: src/Config.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$cacheFile \\(string\\) does not accept null\\.$#"
+			count: 1
+			path: src/Config.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$filter \\(string\\) does not accept null\\.$#"
+			count: 1
+			path: src/Config.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$generator \\(string\\) does not accept null\\.$#"
+			count: 1
+			path: src/Config.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$reportFile \\(string\\) does not accept null\\.$#"
+			count: 1
+			path: src/Config.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$stdinContent \\(string\\) does not accept null\\.$#"
+			count: 1
+			path: src/Config.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$stdinPath \\(string\\) does not accept null\\.$#"
+			count: 1
+			path: src/Config.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Files\\\\File\\:\\:\\$config \\(PHP_CodeSniffer\\\\Config\\) does not accept null\\.$#"
+			count: 1
+			path: src/Files/File.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Files\\\\File\\:\\:\\$fixer \\(PHP_CodeSniffer\\\\Fixer\\) does not accept null\\.$#"
+			count: 1
+			path: src/Files/File.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Files\\\\File\\:\\:\\$ruleset \\(PHP_CodeSniffer\\\\Ruleset\\) does not accept null\\.$#"
+			count: 1
+			path: src/Files/File.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Files\\\\File\\:\\:\\$tokenizer \\(PHP_CodeSniffer\\\\Tokenizers\\\\Tokenizer\\) does not accept null\\.$#"
+			count: 1
+			path: src/Files/File.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Ruleset\\:\\:\\$sniffs \\(array\\<string, PHP_CodeSniffer\\\\Sniffs\\\\Sniff\\>\\) does not accept array\\<string, string\\>\\.$#"
+			count: 1
+			path: src/Ruleset.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$generator \\(string\\) does not accept null\\.$#"
+			count: 1
+			path: src/Runner.php
+
+		-
+			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$reportFile \\(string\\) does not accept null\\.$#"
+			count: 1
+			path: src/Runner.php
