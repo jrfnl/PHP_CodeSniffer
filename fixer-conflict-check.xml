@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PHP_CodeSniffer" xsi:noNamespaceSchemaLocation="phpcs.xsd">
+    <description>File selection for the fixer conflict check.</description>
+
+    <!--
+    #############################################################################
+    COMMAND LINE ARGUMENTS
+    #############################################################################
+    -->
+
+    <arg name="colors"/>
+    <arg name="no-cache"/>
+    <arg name="parallel" value="15"/>
+    <arg value="p"/>
+    <arg name="suffix" value=".conflictcheck"/>
+    <arg name="basepath" value="."/>
+
+    <!-- Ignore inline annotation ??? -->
+    <!--<arg name="ignore-annotations"/>-->
+
+    <!-- Only running against the PHP test files as JS/CSS will be removed soon anyhow. -->
+    <arg name="extensions" value="inc"/>
+
+    <!--
+    #############################################################################
+    FILE SELECTION
+    #############################################################################
+    -->
+    <file>./src/</file>
+    <file>./tests/</file>
+
+    <!-- SKIP test fixtures which are not related to sniffs/tokenizer. -->
+    <exclude-pattern>/tests/Core/*/Fixtures/*\.inc$</exclude-pattern>
+
+    <!-- SKIP TESTS WITH GIT MERGE CONFLICTS.
+         Exclude test case files which contain git merge conflict markers for testing purposes.
+         If fixers fail on that, that's to be expected.
+         Typically, it is the `PSR12.Functions.ReturnTypeDeclaration` sniff which has problems with these.
+    -->
+    <exclude-pattern>/src/Standards/Generic/Tests/Arrays/DisallowLongArraySyntaxUnitTest\.2\.inc$</exclude-pattern>
+    <exclude-pattern>/src/Standards/Generic/Tests/VersionControl/GitMergeConflictUnitTest\.[0-9]+\.inc$</exclude-pattern>
+    <exclude-pattern>/src/Standards/Squiz/Tests/PHP/HeredocUnitTest\.2\.inc$</exclude-pattern>
+    <exclude-pattern>/tests/Core/Tokenizers/PHP/HeredocParseErrorTest\.inc$</exclude-pattern>
+
+</ruleset>
