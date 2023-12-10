@@ -84,7 +84,12 @@ abstract class AbstractSniffUnitTest extends TestCase
         foreach ($di as $file) {
             $path = $file->getPathname();
             if (substr($path, 0, strlen($testFileBase)) === $testFileBase) {
-                if ($path !== $testFileBase.'php' && substr($path, -5) !== 'fixed' && substr($path, -4) !== '.bak') {
+                if ($path !== $testFileBase.'php'
+                    && substr($path, -5) !== 'fixed'
+                    && substr($path, -14) !== '.conflictcheck'
+                    && substr($path, -4) !== '.bak'
+                    && substr($path, -5) !== '.orig'
+                ) {
                     $testFiles[] = $path;
                 }
             }
