@@ -418,3 +418,11 @@ $closure = function ()
     echo 'foo';
     return; // This return should be flagged as not required.
 };
+
+// Safeguard against an "Undefined array key "scope_condition"" notice.
+if (foo(<<<EOD
+foobar!
+EOD
+)) {
+    return;
+}
