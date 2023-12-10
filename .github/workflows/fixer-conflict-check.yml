@@ -1,0 +1,76 @@
+name: Fixer Conflict Check
+
+on:
+  # Run on all pushes and on all pull requests.
+  # Prevent the build from running when there are only irrelevant changes.
+  push:
+    paths-ignore:
+      - '**.md'
+      - '**.css'
+      - '**.js'
+  pull_request:
+  # Allow manually triggering the workflow.
+  workflow_dispatch:
+
+# Cancels all previous workflow runs for the same branch that have not yet completed.
+concurrency:
+  # The concurrency group contains the workflow name and the branch name.
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Check predefined rulesets don't have conflicting rules which can lead to fixer conflicts.
+  fixer-conflicts:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - standard: "PEAR"
+          - standard: "PSR1"
+          - standard: "PSR2"
+          - standard: "PSR12"
+          - standard: "Squiz"
+            # Should be re-enabled once issue #149 has been resolved.
+            ignore: "/src/Standards/PSR12/Tests/ControlStructures/ControlStructureSpacingUnitTest.inc"
+          - standard: "Zend"
+
+    name: "Fixer conflict check: ${{ matrix.standard }}"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 'latest'
+          # Allow for PHP deprecation notices. That's not what this check is about.
+          ini-values: "error_reporting=E_ALL & ~E_DEPRECATED"
+          coverage: none
+
+      # Test for fixer conflicts by running the auto-fixers of a complete standard over all the test case files.
+      # This is not an exhaustive test, but should give an early indication for typical fixer conflicts.
+      # If only fixable errors are found, the exit code will be 0 or 1, which can be interpreted as success.
+      # If a fixer conflict was found, the exit code will be 2.
+      # If a PHP error was encountered, the exit code will be non-0 (normally 255).
+      - name: Test for fixer conflicts (fixes expected)
+        id: phpcbf
+        continue-on-error: true
+        run: |
+          set +e
+          $(pwd)/bin/phpcbf --standard=fixer-conflict-check.xml,${{ matrix.standard }} --ignore=${{ matrix.ignore }}
+          exitcode="$?"
+          echo "EXITCODE=$exitcode" >> $GITHUB_OUTPUT
+          exit "$exitcode"
+
+      - name: Fail the build on fixer conflicts and other errors
+        if: ${{ steps.phpcbf.outputs.EXITCODE != 0 && steps.phpcbf.outputs.EXITCODE != 1 }}
+        run: exit ${{ steps.phpcbf.outputs.EXITCODE }}
+
+      - name: Post comment on PR
+        // if: this is a PR ?
+        // run: do something to post a comment on the PR with instructions on how to handle this failure
+        // i.e.: open a new issue about the fixer conflict
+        // and add an ignore for the standard which failed to this workflow.
