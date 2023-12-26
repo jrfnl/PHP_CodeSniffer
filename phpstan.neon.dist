@@ -1,6 +1,6 @@
 parameters:
     phpVersion: 70100 # Should be 50400, but PHPStan only accepts 70100 or higher...
-    level: 1
+    level: 2
     paths:
         - bin/phpcbf
         - bin/phpcs
@@ -96,3 +96,17 @@ parameters:
             message: '~^Variable \$oldIgnore might not be defined\.$~'
             count: 1
             path: src/Tokenizers/Tokenizer.php
+
+        ################
+        # Level 2
+        ################
+        -
+            # Property is declared on all children of this iterator. This is fine.
+            message: '~^Access to an undefined property RecursiveIterator::\$(dis)?allowedFiles\.$~'
+            count: 2
+            path: src/Filters/ExactMatch.php
+        -
+            # This comparison will always have a string value, which will be juggled. This is fine.
+            message: '~^Comparison operation ">" between \(array<int, string>\|string\) and 2147483647\|9223372036854775807 results in an error\.$~'
+            count: 1
+            path: src/Tokenizers/PHP.php
