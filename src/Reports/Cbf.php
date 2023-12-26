@@ -162,10 +162,10 @@ class Cbf implements Report
             $parts   = explode('>>', $line);
             $fileLen = strlen($parts[0]);
             $reportFiles[$parts[0]] = [
-                'errors'   => $parts[1],
-                'warnings' => $parts[2],
-                'fixable'  => $parts[3],
-                'fixed'    => $parts[4],
+                'errors'   => (int) $parts[1],
+                'warnings' => (int) $parts[2],
+                'fixable'  => (int) $parts[3],
+                'fixed'    => (int) $parts[4],
                 'strlen'   => $fileLen,
             ];
 
