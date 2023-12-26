@@ -6,6 +6,7 @@ parameters:
         - bin/phpcs
         - scripts
         - src
+#        - tests # Only activate for PHPCS 4.x due to current need to support old PHPUnit.
     bootstrapFiles:
         - tests/bootstrap.php
 
