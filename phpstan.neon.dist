@@ -2,6 +2,9 @@ parameters:
     phpVersion: 70100 # Should be 50400, but PHPStan only accepts 70100 or higher...
     level: 0
     paths:
+        - bin/phpcbf
+        - bin/phpcs
+        - scripts
         - src
     bootstrapFiles:
         - tests/bootstrap.php
