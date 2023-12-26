@@ -356,7 +356,7 @@ class Config
      */
     public function setSettings($settings)
     {
-        return $this->settings = $settings;
+        $this->settings = $settings;
 
     }//end setSettings()
 
