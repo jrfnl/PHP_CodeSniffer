@@ -1,6 +1,6 @@
 parameters:
     phpVersion: 70100 # Should be 50400, but PHPStan only accepts 70100 or higher...
-    level: 0
+    level: 1
     paths:
         - bin/phpcbf
         - bin/phpcs
@@ -9,8 +9,90 @@ parameters:
 #        - tests # Only activate for PHPCS 4.x due to current need to support old PHPUnit.
     bootstrapFiles:
         - tests/bootstrap.php
-
     dynamicConstantNames:
         - PHP_CODESNIFFER_IN_TESTS
         - PHP_CODESNIFFER_CBF
         - PHP_CODESNIFFER_VERBOSITY
+
+    ignoreErrors:
+        ################
+        # Level 1
+        ################
+
+        # These variables are defined conditionally and used conditionally using the same condition. This is fine.
+        -
+            message: '~^Variable \$phpCodeSnifferConfig might not be defined\.$~'
+            count: 1
+            path: src/Config.php
+        -
+            message: '~^Variable \$(excluding|startTime|timeTaken) might not be defined\.$~'
+            count: 4
+            path: src/Files/File.php
+        -
+            message: '~^Variable \$startTime might not be defined\.$~'
+            count: 1
+            path: src/Reports/Cbf.php
+        -
+            message: '~^Variable \$maxLineNumLength might not be defined\.$~'
+            count: 2
+            path: src/Reports/Code.php
+        -
+            message: '~^Variable \$standardName might not be defined\.$~'
+            count: 1
+            path: src/Ruleset.php
+        -
+            message: '~^Variable \$scope might not be defined\.$~'
+            count: 1
+            path: src/Sniffs/AbstractVariableSniff.php
+        -
+            message: '~^Variable \$endLine might not be defined\.$~'
+            count: 5
+            path: src/Standards/Generic/Sniffs/ControlStructures/InlineControlStructureSniff.php
+        -
+            message: '~^Variable \$next might not be defined\.$~'
+            count: 1
+            path: src/Standards/Generic/Sniffs/PHP/RequireStrictTypesSniff.php
+        -
+            message: '~^Variable \$tokenIndent might not be defined\.$~'
+            count: 10
+            path: src/Standards/Generic/Sniffs/WhiteSpace/ScopeIndentSniff.php
+        -
+            message: '~^Variable \$funcName might not be defined\.$~'
+            count: 1
+            path: src/Standards/MySource/Sniffs/Channels/DisallowSelfActionsSniff.php
+        -
+            message: '~^Variable \$tag might not be defined\.$~'
+            count: 1
+            path: src/Standards/MySource/Sniffs/Commenting/FunctionCommentSniff.php
+        -
+            message: '~^Variable \$endBracket might not be defined\.$~'
+            count: 2
+            path: src/Standards/MySource/Sniffs/Objects/CreateWidgetTypeCallbackSniff.php
+        -
+            message: '~^Variable \$nextComma might not be defined\.$~'
+            count: 2
+            path: src/Standards/PSR2/Sniffs/Classes/ClassDeclarationSniff.php
+        -
+            message: '~^Variable \$hasTerminator might not be defined\.$~'
+            count: 1
+            path: src/Standards/PSR2/Sniffs/ControlStructures/SwitchDeclarationSniff.php
+        -
+            message: '~^Variable \$conditionToken might not be defined\.$~'
+            count: 1
+            path: src/Standards/Squiz/Sniffs/Classes/SelfMemberReferenceSniff.php
+        -
+            message: '~^Variable \$nextContent might not be defined\.$~'
+            count: 1
+            path: src/Standards/Squiz/Sniffs/WhiteSpace/FunctionSpacingSniff.php
+        -
+            message: '~^Variable \$owner might not be defined\.$~'
+            count: 1
+            path: src/Standards/Squiz/Sniffs/WhiteSpace/SemicolonSpacingSniff.php
+        -
+            message: '~^Variable \$(preserveKeyword|type) might not be defined\.$~'
+            count: 3
+            path: src/Tokenizers/PHP.php
+        -
+            message: '~^Variable \$oldIgnore might not be defined\.$~'
+            count: 1
+            path: src/Tokenizers/Tokenizer.php
