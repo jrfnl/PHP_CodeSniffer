@@ -56,6 +56,11 @@ parameters:
 			path: src/Files/File.php
 
 		-
+			message: "#^Comparison operation \"\\>\" between 1 and 2 is always false\\.$#"
+			count: 1
+			path: src/Ruleset.php
+
+		-
 			message: "#^Property PHP_CodeSniffer\\\\Ruleset\\:\\:\\$sniffs \\(array\\<string, PHP_CodeSniffer\\\\Sniffs\\\\Sniff\\>\\) does not accept array\\<string, string\\>\\.$#"
 			count: 1
 			path: src/Ruleset.php
@@ -69,3 +74,68 @@ parameters:
 			message: "#^Property PHP_CodeSniffer\\\\Config\\:\\:\\$reportFile \\(string\\) does not accept null\\.$#"
 			count: 1
 			path: src/Runner.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between \\(float\\|int\\) and false will always evaluate to false\\.$#"
+			count: 1
+			path: src/Standards/Generic/Sniffs/Functions/OpeningFunctionBraceBsdAllmanSniff.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 1
+			path: src/Standards/Generic/Sniffs/NamingConventions/ConstructorNameSniff.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between \\(float\\|int\\) and false will always evaluate to false\\.$#"
+			count: 1
+			path: src/Standards/Generic/Sniffs/WhiteSpace/ScopeIndentSniff.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between mixed and null will always evaluate to false\\.$#"
+			count: 2
+			path: src/Standards/PEAR/Sniffs/Functions/FunctionDeclarationSniff.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between mixed and null will always evaluate to false\\.$#"
+			count: 2
+			path: src/Standards/PSR12/Sniffs/Functions/ReturnTypeDeclarationSniff.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between int and 'PHPCS_T_MATCH' will always evaluate to false\\.$#"
+			count: 1
+			path: src/Standards/Squiz/Sniffs/Commenting/LongConditionClosingCommentSniff.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between mixed and false will always evaluate to false\\.$#"
+			count: 1
+			path: src/Standards/Squiz/Sniffs/Commenting/VariableCommentSniff.php
+
+		-
+			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			count: 1
+			path: src/Standards/Squiz/Sniffs/Formatting/OperatorBracketSniff.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between mixed and null will always evaluate to false\\.$#"
+			count: 2
+			path: src/Standards/Squiz/Sniffs/Functions/FunctionDeclarationArgumentSpacingSniff.php
+
+		-
+			message: "#^Variable \\$msg might not be defined\\.$#"
+			count: 1
+			path: src/Standards/Zend/Sniffs/Debug/CodeAnalyzerSniff.php
+
+		-
+			message: "#^Result of && is always true\\.$#"
+			count: 1
+			path: src/Tokenizers/JS.php
+
+		-
+			message: "#^Result of && is always false\\.$#"
+			count: 1
+			path: src/Tokenizers/Tokenizer.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between mixed and null will always evaluate to false\\.$#"
+			count: 1
+			path: src/Tokenizers/Tokenizer.php
