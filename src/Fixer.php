@@ -106,6 +106,8 @@ class Fixer
      */
     private $numFixes = 0;
 
+    private $sniffsSeenLastLoops = [];
+
 
     /**
      * Starts fixing a new file.
@@ -199,6 +201,24 @@ class Fixer
         }//end while
 
         $this->enabled = false;
+
+        if (PHP_CODESNIFFER_VERBOSITY > 0 && !empty($this->sniffsSeenLastLoops)) {
+            if (ob_get_level() > 0) {
+                ob_end_clean();
+            }
+
+            echo PHP_EOL,PHP_EOL,'FAILED TO FIX FILE: ',PHP_EOL;
+            echo $this->currentFile->getFilename(),PHP_EOL;
+            echo 'SNIFFS SEEN IN LAST TEN LOOPS',PHP_EOL;
+            echo '==================================================',PHP_EOL;
+
+            $uniqueSeen = array_unique($this->sniffsSeenLastLoops);
+            natcasesort($uniqueSeen);
+            var_export(array_values($uniqueSeen));
+            echo '==================================================',PHP_EOL;
+
+            ob_start();
+        }
 
         if ($this->numFixes > 0) {
             if (PHP_CODESNIFFER_VERBOSITY > 1) {
@@ -534,7 +554,7 @@ class Fixer
             return false;
         }
 
-        if (PHP_CODESNIFFER_VERBOSITY > 1) {
+        if (PHP_CODESNIFFER_VERBOSITY > 0) {
             $bt = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
             if ($bt[1]['class'] === 'PHP_CodeSniffer\Fixer') {
                 $sniff = $bt[2]['class'];
@@ -546,6 +566,12 @@ class Fixer
 
             $sniff = Common::getSniffCode($sniff);
 
+            if ($this->loops >= 40) {
+                $this->sniffsSeenLastLoops[] = $sniff;
+            }
+      }
+
+        if (PHP_CODESNIFFER_VERBOSITY > 1) {
             $tokens     = $this->currentFile->getTokens();
             $type       = $tokens[$stackPtr]['type'];
             $tokenLine  = $tokens[$stackPtr]['line'];
