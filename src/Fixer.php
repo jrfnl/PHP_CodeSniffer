@@ -202,7 +202,7 @@ class Fixer
 
         $this->enabled = false;
 
-        if (PHP_CODESNIFFER_VERBOSITY > 0 && !empty($this->sniffsSeenLastLoops)) {
+        if (/*PHP_CODESNIFFER_VERBOSITY > 0 &&*/ !empty($this->sniffsSeenLastLoops)) {
             if (ob_get_level() > 0) {
                 ob_end_clean();
             }
@@ -554,7 +554,7 @@ class Fixer
             return false;
         }
 
-        if (PHP_CODESNIFFER_VERBOSITY > 0) {
+//        if (PHP_CODESNIFFER_VERBOSITY > 0) {
             $bt = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
             if ($bt[1]['class'] === 'PHP_CodeSniffer\Fixer') {
                 $sniff = $bt[2]['class'];
@@ -569,7 +569,7 @@ class Fixer
             if ($this->loops >= 40) {
                 $this->sniffsSeenLastLoops[] = $sniff;
             }
-      }
+//      }
 
         if (PHP_CODESNIFFER_VERBOSITY > 1) {
             $tokens     = $this->currentFile->getTokens();
