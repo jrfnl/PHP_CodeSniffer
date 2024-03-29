@@ -1,0 +1,2073 @@
+PHP 7.2.11 (cli) (built: Oct 10 2018 02:39:52) ( ZTS MSVC15 (Visual C++ 2017) x86 )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Xdebug v2.6.0, Copyright (c) 2002-2018, by Derick Rethans
+
+PHP_CodeSniffer version 3.4.0 (stable) by Squiz (http://www.squiz.net)
+
+Processing ruleset D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR12\ruleset.xml
+	Adding sniff files from D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR12\Sniffs directory
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR12\Sniffs\Classes\ClassInstantiationSniff.php
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR12\Sniffs\Functions\NullableTypeDeclarationSniff.php
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR12\Sniffs\Keywords\ShortFormTypeKeywordsSniff.php
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR12\Sniffs\Namespaces\CompoundNamespaceDepthSniff.php
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR12\Sniffs\Operators\OperatorSpacingSniff.php
+	Processing rule "PSR1"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR1\ruleset.xml
+		* rule is referencing a standard using ruleset path; processing *
+		Processing ruleset D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR1\ruleset.xml
+			Adding sniff files from D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR1\Sniffs directory
+				=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR1\Sniffs\Classes\ClassDeclarationSniff.php
+				=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR1\Sniffs\Files\SideEffectsSniff.php
+				=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR1\Sniffs\Methods\CamelCapsMethodNameSniff.php
+			Processing rule "Generic.PHP.DisallowShortOpenTag"
+				=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\PHP\DisallowShortOpenTagSniff.php
+			Processing rule "Generic.PHP.DisallowShortOpenTag.EchoFound"
+				=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\PHP\DisallowShortOpenTagSniff.php
+				=> severity set to 0
+			Processing rule "Generic.Files.ByteOrderMark"
+				=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\Files\ByteOrderMarkSniff.php
+			Processing rule "Squiz.Classes.ValidClassName"
+				=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\Classes\ValidClassNameSniff.php
+			Processing rule "Generic.NamingConventions.UpperCaseConstantName"
+				=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\NamingConventions\UpperCaseConstantNameSniff.php
+		=> Ruleset processing complete; included 7 sniffs and excluded 0
+	Processing rule "Generic.Files.LineEndings"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\Files\LineEndingsSniff.php
+		=> property "eolChar" set to "\n"
+	Processing rule "PSR2.Files.EndFileNewline"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Files\EndFileNewlineSniff.php
+	Processing rule "PSR2.Files.ClosingTag"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Files\ClosingTagSniff.php
+	Processing rule "Generic.Files.LineLength"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\Files\LineLengthSniff.php
+		=> property "lineLimit" set to "120"
+		=> property "absoluteLineLimit" set to "0"
+	Processing rule "Squiz.WhiteSpace.SuperfluousWhitespace"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\WhiteSpace\SuperfluousWhitespaceSniff.php
+		=> property "ignoreBlankLines" set to "true"
+	Processing rule "Squiz.WhiteSpace.SuperfluousWhitespace.StartFile"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\WhiteSpace\SuperfluousWhitespaceSniff.php
+		=> severity set to 0
+	Processing rule "Squiz.WhiteSpace.SuperfluousWhitespace.EndFile"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\WhiteSpace\SuperfluousWhitespaceSniff.php
+		=> severity set to 0
+	Processing rule "Squiz.WhiteSpace.SuperfluousWhitespace.EmptyLines"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\WhiteSpace\SuperfluousWhitespaceSniff.php
+		=> severity set to 0
+	Processing rule "Generic.Formatting.DisallowMultipleStatements"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff.php
+	Processing rule "Generic.WhiteSpace.ScopeIndent"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff.php
+		=> array property "ignoreIndentationTokens" set to "T_COMMENT,T_DOC_COMMENT_OPEN_TAG"
+	Processing rule "Generic.WhiteSpace.DisallowTabIndent"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff.php
+	Processing rule "Generic.PHP.LowerCaseKeyword"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\PHP\LowerCaseKeywordSniff.php
+	Processing rule "Generic.PHP.LowerCaseConstant"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\PHP\LowerCaseConstantSniff.php
+	Processing rule "Generic.PHP.LowerCaseType"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\PHP\LowerCaseTypeSniff.php
+	Processing rule "PSR2.Classes.ClassDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Classes\ClassDeclarationSniff.php
+	Processing rule "PSR2.Classes.PropertyDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Classes\PropertyDeclarationSniff.php
+	Processing rule "Squiz.Scope.MethodScope"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\Scope\MethodScopeSniff.php
+	Processing rule "Squiz.WhiteSpace.ScopeKeywordSpacing"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\WhiteSpace\ScopeKeywordSpacingSniff.php
+	Processing rule "PSR2.Methods.MethodDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Methods\MethodDeclarationSniff.php
+	Processing rule "PSR2.Methods.MethodDeclaration.Underscore"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Methods\MethodDeclarationSniff.php
+		=> message type set to error
+		=> message set to Method name "%s" must not be prefixed with an underscore to indicate visibility
+	Processing rule "PSR2.Methods.FunctionClosingBrace"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Methods\FunctionClosingBraceSniff.php
+	Processing rule "Squiz.Functions.FunctionDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\Functions\FunctionDeclarationSniff.php
+	Processing rule "Squiz.Functions.LowercaseFunctionKeywords"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\Functions\LowercaseFunctionKeywordsSniff.php
+	Processing rule "Squiz.Functions.FunctionDeclarationArgumentSpacing"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\Functions\FunctionDeclarationArgumentSpacingSniff.php
+		=> property "equalsSpacing" set to "1"
+	Processing rule "Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterHint"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\Functions\FunctionDeclarationArgumentSpacingSniff.php
+		=> severity set to 0
+	Processing rule "PEAR.Functions.ValidDefaultValue"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PEAR\Sniffs\Functions\ValidDefaultValueSniff.php
+	Processing rule "Squiz.Functions.MultiLineFunctionDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\Functions\MultiLineFunctionDeclarationSniff.php
+	Processing rule "Generic.Functions.FunctionCallArgumentSpacing"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\Functions\FunctionCallArgumentSpacingSniff.php
+	Processing rule "PSR2.Methods.FunctionCallSignature"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Methods\FunctionCallSignatureSniff.php
+	Processing rule "PSR2.Methods.FunctionCallSignature.SpaceAfterCloseBracket"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Methods\FunctionCallSignatureSniff.php
+		=> severity set to 0
+	Processing rule "PSR2.Methods.FunctionCallSignature.OpeningIndent"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\Methods\FunctionCallSignatureSniff.php
+		=> severity set to 0
+	Processing rule "Squiz.ControlStructures.ControlSignature"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff.php
+	Processing rule "Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff.php
+		Excluding sniff "Squiz.WhiteSpace.ControlStructureSpacing" except for "SpacingAfterOpen"
+	Processing rule "Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff.php
+		* disabling sniff exclusion for specific message code *
+		=> severity set to 5
+	Processing rule "Squiz.WhiteSpace.ScopeClosingBrace"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff.php
+	Processing rule "Squiz.ControlStructures.ForEachLoopDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\ControlStructures\ForEachLoopDeclarationSniff.php
+	Processing rule "Squiz.ControlStructures.ForLoopDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\ControlStructures\ForLoopDeclarationSniff.php
+	Processing rule "Squiz.ControlStructures.LowercaseDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\ControlStructures\LowercaseDeclarationSniff.php
+	Processing rule "PSR2.ControlStructures.ControlStructureSpacing"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\ControlStructures\ControlStructureSpacingSniff.php
+	Processing rule "Generic.ControlStructures.InlineControlStructure"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Sniffs\ControlStructures\InlineControlStructureSniff.php
+	Processing rule "Squiz.ControlStructures.ForEachLoopDeclaration.AsNotLower"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Sniffs\ControlStructures\ForEachLoopDeclarationSniff.php
+		=> severity set to 0
+	Processing rule "PSR2.ControlStructures.ElseIfDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\ControlStructures\ElseIfDeclarationSniff.php
+	Processing rule "PSR2.ControlStructures.SwitchDeclaration"
+		=> D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Sniffs\ControlStructures\SwitchDeclarationSniff.php
+	=> set command line value --tab-width=4
+=> Ruleset processing complete; included 46 sniffs and excluded 0
+	*** START PHP TOKENIZING ***
+	Process token [0]: T_OPEN_TAG => <?php 
+	Process token [1]: T_FUNCTION => function
+	Process token [2]: T_WHITESPACE =>  
+	Process token [3]: T_STRING => ?>
+	*** END PHP TOKENIZING ***
+	*** START PHP TOKENIZING ***
+	Process token [0]: T_OPEN_TAG => <?php 
+	Process token  1 : T_OPEN_PARENTHESIS => (
+	Process token [2]: T_CLOSE_TAG => ?>
+	*** END PHP TOKENIZING ***
+	*** START PHP TOKENIZING ***
+	Process token [0]: T_OPEN_TAG => <?php 
+	Process token  1 : T_SEMICOLON => ;
+	Process token [2]: T_CLOSE_TAG => ?>
+	*** END PHP TOKENIZING ***
+	*** START PHP TOKENIZING ***
+	Process token [0]: T_OPEN_TAG => <?php 
+	Process token [1]: T_FUNCTION => function
+	Process token [2]: T_WHITESPACE =>  
+	Process token [3]: T_STRING => ?>
+	*** END PHP TOKENIZING ***
+	*** START PHP TOKENIZING ***
+	Process token [0]: T_OPEN_TAG => <?php 
+	Process token  1 : T_OPEN_PARENTHESIS => (
+	Process token [2]: T_CLOSE_TAG => ?>
+	*** END PHP TOKENIZING ***
+	*** START PHP TOKENIZING ***
+	Process token [0]: T_OPEN_TAG => <?php 
+	Process token [1]: T_ABSTRACT => abstract
+	Process token [2]: T_WHITESPACE =>  
+	Process token [3]: T_FUNCTION => function
+	Process token [4]: T_WHITESPACE =>  
+	Process token [5]: T_STRING => ?>
+	*** END PHP TOKENIZING ***
+	*** START PHP TOKENIZING ***
+	Process token [0]: T_OPEN_TAG => <?php 
+	Process token  1 : T_OPEN_PARENTHESIS => (
+	Process token [2]: T_CLOSE_TAG => ?>
+	*** END PHP TOKENIZING ***
+	*** START PHP TOKENIZING ***
+	Process token [0]: T_OPEN_TAG => <?php 
+	Process token  1 : T_SEMICOLON => ;
+	Process token [2]: T_CLOSE_TAG => ?>
+	*** END PHP TOKENIZING ***
+Creating file list... DONE (1 files in queue)
+Changing into directory D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\Files
+Processing LineLengthUnitTest.1.inc 
+	*** START PHP TOKENIZING ***
+	Process token [0]: T_OPEN_TAG => <?php\n
+	Process token [1]: T_WHITESPACE => \n
+	Process token [2]: T_COMMENT => // This line is okay... just!\n
+	Process token [3]: T_IF => if
+	Process token [4]: T_WHITESPACE =>  
+	Process token  5 : T_OPEN_PARENTHESIS => (
+	Process token  6 : T_OPEN_PARENTHESIS => (
+	Process token [7]: T_VARIABLE => $reallyLongVarName
+	Process token [8]: T_WHITESPACE =>  
+	Process token [9]: T_IS_IDENTICAL => ===
+	Process token [10]: T_WHITESPACE =>  
+	Process token [11]: T_STRING => true
+	Process token  12 : T_CLOSE_PARENTHESIS => )
+	Process token [13]: T_WHITESPACE =>  
+	Process token [14]: T_BOOLEAN_OR => ||
+	Process token [15]: T_WHITESPACE =>  
+	Process token  16 : T_OPEN_PARENTHESIS => (
+	Process token [17]: T_STRING => is_array
+	Process token  18 : T_OPEN_PARENTHESIS => (
+	Process token [19]: T_VARIABLE => $anotherLongVarName
+	Process token  20 : T_CLOSE_PARENTHESIS => )
+	Process token [21]: T_WHITESPACE =>  
+	Process token [22]: T_IS_EQUAL => ==
+	Process token [23]: T_WHITESPACE =>  
+	Process token [24]: T_STRING => false
+	Process token  25 : T_CLOSE_PARENTHESIS => )
+	Process token  26 : T_CLOSE_PARENTHESIS => )
+	Process token [27]: T_WHITESPACE =>  
+	Process token  28 : T_OPEN_CURLY_BRACKET => {
+	Process token [29]: T_WHITESPACE => \n    
+	Process token [30]: T_COMMENT => // Do something.\n
+	Process token  31 : T_CLOSE_CURLY_BRACKET => }
+	Process token [32]: T_WHITESPACE => \n\n
+	Process token [33]: T_COMMENT => // This line is not okay... just!\n
+	Process token [34]: T_IF => if
+	Process token [35]: T_WHITESPACE =>  
+	Process token  36 : T_OPEN_PARENTHESIS => (
+	Process token  37 : T_OPEN_PARENTHESIS => (
+	Process token [38]: T_VARIABLE => $reallyLongVarName
+	Process token [39]: T_WHITESPACE =>  
+	Process token [40]: T_IS_IDENTICAL => ===
+	Process token [41]: T_WHITESPACE =>  
+	Process token [42]: T_STRING => true
+	Process token  43 : T_CLOSE_PARENTHESIS => )
+	Process token [44]: T_WHITESPACE =>  
+	Process token [45]: T_BOOLEAN_OR => ||
+	Process token [46]: T_WHITESPACE =>  
+	Process token  47 : T_OPEN_PARENTHESIS => (
+	Process token [48]: T_STRING => is_array
+	Process token  49 : T_OPEN_PARENTHESIS => (
+	Process token [50]: T_VARIABLE => $anotherLongVarName
+	Process token  51 : T_CLOSE_PARENTHESIS => )
+	Process token [52]: T_WHITESPACE =>  
+	Process token [53]: T_IS_IDENTICAL => ===
+	Process token [54]: T_WHITESPACE =>  
+	Process token [55]: T_STRING => false
+	Process token  56 : T_CLOSE_PARENTHESIS => )
+	Process token  57 : T_CLOSE_PARENTHESIS => )
+	Process token [58]: T_WHITESPACE =>  
+	Process token  59 : T_OPEN_CURLY_BRACKET => {
+	Process token [60]: T_WHITESPACE => \n    
+	Process token [61]: T_COMMENT => // Do something.\n
+	Process token  62 : T_CLOSE_CURLY_BRACKET => }
+	Process token [63]: T_WHITESPACE => \n\n\n
+	Process token [64]: T_COMMENT => // This line is is too long.\n
+	Process token [65]: T_IF => if
+	Process token [66]: T_WHITESPACE =>  
+	Process token  67 : T_OPEN_PARENTHESIS => (
+	Process token  68 : T_OPEN_PARENTHESIS => (
+	Process token [69]: T_VARIABLE => $anotherReallyLongVarName
+	Process token [70]: T_WHITESPACE =>  
+	Process token [71]: T_IS_IDENTICAL => ===
+	Process token [72]: T_WHITESPACE =>  
+	Process token [73]: T_STRING => true
+	Process token  74 : T_CLOSE_PARENTHESIS => )
+	Process token [75]: T_WHITESPACE =>  
+	Process token [76]: T_BOOLEAN_OR => ||
+	Process token [77]: T_WHITESPACE =>  
+	Process token  78 : T_OPEN_PARENTHESIS => (
+	Process token [79]: T_STRING => is_array
+	Process token  80 : T_OPEN_PARENTHESIS => (
+	Process token [81]: T_VARIABLE => $anotherReallyLongVarName
+	Process token  82 : T_CLOSE_PARENTHESIS => )
+	Process token [83]: T_WHITESPACE =>  
+	Process token [84]: T_IS_IDENTICAL => ===
+	Process token [85]: T_WHITESPACE =>  
+	Process token [86]: T_STRING => false
+	Process token  87 : T_CLOSE_PARENTHESIS => )
+	Process token  88 : T_CLOSE_PARENTHESIS => )
+	Process token [89]: T_WHITESPACE =>  
+	Process token  90 : T_OPEN_CURLY_BRACKET => {
+	Process token [91]: T_WHITESPACE => \n    
+	Process token [92]: T_COMMENT => // Do something.\n
+	Process token  93 : T_CLOSE_CURLY_BRACKET => }
+	Process token [94]: T_WHITESPACE => \n\n
+	Process token [95]: T_COMMENT => // This is a really really long comment that is going to go to exactly 80 chars.\n
+	Process token [96]: T_WHITESPACE => \n
+	Process token [97]: T_COMMENT => // This is another really really long comment that is going to go well over 80 characters.\n
+	Process token [98]: T_WHITESPACE => \n
+	Process token [99]: T_COMMENT => // And here is just a bunch of spaces that exceeds the line length.\n
+	Process token [100]: T_WHITESPACE =>                                                                                     \n\n
+	Process token [101]: T_COMMENT => // And here are some spaces exactly 80 chars long.\n
+	Process token [102]: T_WHITESPACE =>                                                                                 \n\n
+	Process token [103]: T_COMMENT => // This is a really really really really long long comment that is going to go to exactly 100 chars.\n
+	Process token [104]: T_WHITESPACE => \n
+	Process token [105]: T_COMMENT => // This is another really really really really really long comment that is going to go well over 100 characters.\n
+	Process token [106]: T_WHITESPACE => \n
+	Process token [107]: T_COMMENT => // And here is just a bunch of spaces that exceeds the max line length.\n
+	Process token [108]: T_WHITESPACE =>                                                                                                            \n\n
+	Process token [109]: T_COMMENT => // And here are some spaces exactly 100 chars long.\n
+	Process token [110]: T_WHITESPACE =>                                                                                                     \n
+	Process token [111]: T_CLOSE_TAG => ?>\n
+	Process token [112]: T_INLINE_HTML => <b>Hello</b>b>\n
+	Process token [113]: T_OPEN_TAG => <?php\n
+	Process token [114]: T_ECHO => echo
+	Process token [115]: T_WHITESPACE =>  
+	Process token [116]: T_CONSTANT_ENCAPSED_STRING => 'hi'
+	Process token  117 : T_SEMICOLON => ;
+	Process token [118]: T_WHITESPACE => \n
+	Process token [119]: T_CLOSE_TAG => ?>\n
+	Process token [120]: T_INLINE_HTML => \n
+	Process token [121]: T_OPEN_TAG => <?php\n
+	Process token [122]: T_COMMENT => // This is another really long comment that is going to go well over 100 characters, with no closing php tag after it.\n
+	Process token [123]: T_WHITESPACE => \n
+	Process token [124]: T_DOC_COMMENT => /**\n * Does something cool, blah blah, not so long line.\n *\n * We're using Wilson scoring because blah blah, see:\n * http://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval\n */
+		*** START COMMENT TOKENIZING ***
+		Create comment token: T_DOC_COMMENT_OPEN_TAG => /**
+		Create comment token: T_DOC_COMMENT_WHITESPACE => \n
+		Create comment token: T_DOC_COMMENT_WHITESPACE =>  
+		Create comment token: T_DOC_COMMENT_STAR => *
+		Create comment token: T_DOC_COMMENT_WHITESPACE =>  
+		Create comment token: T_DOC_COMMENT_STRING => Does something cool, blah blah, not so long line.
+		Create comment token: T_DOC_COMMENT_WHITESPACE => \n
+		Create comment token: T_DOC_COMMENT_WHITESPACE =>  
+		Create comment token: T_DOC_COMMENT_STAR => *
+		Create comment token: T_DOC_COMMENT_WHITESPACE => \n
+		Create comment token: T_DOC_COMMENT_WHITESPACE =>  
+		Create comment token: T_DOC_COMMENT_STAR => *
+		Create comment token: T_DOC_COMMENT_WHITESPACE =>  
+		Create comment token: T_DOC_COMMENT_STRING => We're using Wilson scoring because blah blah, see:
+		Create comment token: T_DOC_COMMENT_WHITESPACE => \n
+		Create comment token: T_DOC_COMMENT_WHITESPACE =>  
+		Create comment token: T_DOC_COMMENT_STAR => *
+		Create comment token: T_DOC_COMMENT_WHITESPACE =>  
+		Create comment token: T_DOC_COMMENT_STRING => http://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval
+		Create comment token: T_DOC_COMMENT_WHITESPACE => \n
+		Create comment token: T_DOC_COMMENT_WHITESPACE =>  
+		Create comment token: T_DOC_COMMENT_CLOSE_TAG => */
+		*** END COMMENT TOKENIZING ***
+	Process token [125]: T_WHITESPACE => \n\n
+	Process token [126]: T_COMMENT => // Go here:\n
+	Process token [127]: T_COMMENT => // http://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval\n
+	Process token [128]: T_WHITESPACE => \n
+	Process token [129]: T_COMMENT => # http://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval\n
+	Process token [130]: T_WHITESPACE => \n
+	Process token [131]: T_IF => if
+	Process token [132]: T_WHITESPACE =>  
+	Process token  133 : T_OPEN_PARENTHESIS => (
+	Process token [134]: T_VARIABLE => $foo
+	Process token  135 : T_CLOSE_PARENTHESIS => )
+	Process token [136]: T_WHITESPACE =>  
+	Process token  137 : T_OPEN_CURLY_BRACKET => {
+	Process token [138]: T_WHITESPACE => \n    
+	Process token [139]: T_IF => if
+	Process token [140]: T_WHITESPACE =>  
+	Process token  141 : T_OPEN_PARENTHESIS => (
+	Process token [142]: T_VARIABLE => $bar
+	Process token  143 : T_CLOSE_PARENTHESIS => )
+	Process token [144]: T_WHITESPACE =>  
+	Process token  145 : T_OPEN_CURLY_BRACKET => {
+	Process token [146]: T_WHITESPACE => \n        
+	Process token [147]: T_IF => if
+	Process token [148]: T_WHITESPACE =>  
+	Process token  149 : T_OPEN_PARENTHESIS => (
+	Process token [150]: T_VARIABLE => $baz
+	Process token  151 : T_CLOSE_PARENTHESIS => )
+	Process token [152]: T_WHITESPACE =>  
+	Process token  153 : T_OPEN_CURLY_BRACKET => {
+	Process token [154]: T_WHITESPACE => \n            
+	Process token [155]: T_COMMENT => // Next line can be broken:\n
+	Process token [156]: T_WHITESPACE =>             
+	Process token [157]: T_COMMENT => // foo bar baz http://en.wikipedia.org/wiki/Binomial_proportion#blahblahblahblah\n
+	Process token [158]: T_WHITESPACE =>             
+	Process token [159]: T_COMMENT => // But this one is just too long to break with this indent:\n
+	Process token [160]: T_WHITESPACE =>             
+	Process token [161]: T_COMMENT => // foo bar baz http://en.wikipedia.org/wiki/Binomial_proportion#blahblahblahblahblah\n
+	Process token [162]: T_WHITESPACE =>         
+	Process token  163 : T_CLOSE_CURLY_BRACKET => }
+	Process token [164]: T_WHITESPACE => \n    
+	Process token  165 : T_CLOSE_CURLY_BRACKET => }
+	Process token [166]: T_WHITESPACE => \n
+	Process token  167 : T_CLOSE_CURLY_BRACKET => }
+	Process token [168]: T_WHITESPACE => \n\n
+	Process token [169]: T_COMMENT => /* -------------------------------- 80 chars -------------------------------- */
+	Process token [170]: T_WHITESPACE => \n
+	Process token [171]: T_VARIABLE => $ab
+	Process token [172]: T_WHITESPACE => \t
+	Process token  173 : T_EQUAL => =
+	Process token [174]: T_WHITESPACE =>  
+	Process token [175]: T_FUNCTION => function
+	Process token [176]: T_WHITESPACE =>  
+	Process token  177 : T_OPEN_PARENTHESIS => (
+	Process token  178 : T_CLOSE_PARENTHESIS => )
+	Process token [179]: T_WHITESPACE =>  
+	Process token  180 : T_OPEN_CURLY_BRACKET => {
+	Process token [181]: T_WHITESPACE =>  
+	Process token [182]: T_COMMENT => /* comment */
+	Process token [183]: T_WHITESPACE =>  
+	Process token [184]: T_IF => if
+	Process token [185]: T_WHITESPACE =>  
+	Process token  186 : T_OPEN_PARENTHESIS => (
+	Process token [187]: T_VARIABLE => $foo
+	Process token [188]: T_WHITESPACE =>  
+	Process token [189]: T_IS_IDENTICAL => ===
+	Process token [190]: T_WHITESPACE =>  
+	Process token [191]: T_STRING => true
+	Process token  192 : T_CLOSE_PARENTHESIS => )
+	Process token [193]: T_WHITESPACE =>  
+	Process token  194 : T_OPEN_CURLY_BRACKET => {
+	Process token [195]: T_WHITESPACE =>  
+	Process token [196]: T_RETURN => return
+	Process token [197]: T_WHITESPACE =>  
+	Process token [198]: T_INT_CAST => (int)
+	Process token [199]: T_WHITESPACE =>  
+	Process token [200]: T_VARIABLE => $foo
+	Process token  201 : T_SEMICOLON => ;
+	Process token [202]: T_WHITESPACE =>  
+	Process token  203 : T_CLOSE_CURLY_BRACKET => }
+	Process token [204]: T_WHITESPACE =>  
+	Process token  205 : T_CLOSE_CURLY_BRACKET => }
+	Process token  206 : T_SEMICOLON => ;
+	Process token [207]: T_WHITESPACE => \n
+	Process token [208]: T_VARIABLE => $ab
+	Process token [209]: T_WHITESPACE => \t
+	Process token  210 : T_EQUAL => =
+	Process token [211]: T_WHITESPACE =>  
+	Process token [212]: T_FUNCTION => function
+	Process token [213]: T_WHITESPACE =>  
+	Process token  214 : T_OPEN_PARENTHESIS => (
+	Process token  215 : T_CLOSE_PARENTHESIS => )
+	Process token [216]: T_WHITESPACE => \t
+	Process token  217 : T_OPEN_CURLY_BRACKET => {
+	Process token [218]: T_WHITESPACE =>  
+	Process token [219]: T_COMMENT => /* comment */
+	Process token [220]: T_WHITESPACE =>  
+	Process token [221]: T_IF => if
+	Process token [222]: T_WHITESPACE =>  
+	Process token  223 : T_OPEN_PARENTHESIS => (
+	Process token [224]: T_VARIABLE => $foo
+	Process token [225]: T_WHITESPACE =>  
+	Process token [226]: T_IS_IDENTICAL => ===
+	Process token [227]: T_WHITESPACE =>  
+	Process token [228]: T_STRING => true
+	Process token  229 : T_CLOSE_PARENTHESIS => )
+	Process token  230 : T_OPEN_CURLY_BRACKET => {
+	Process token [231]: T_WHITESPACE =>  
+	Process token [232]: T_RETURN => return
+	Process token [233]: T_WHITESPACE => \t
+	Process token [234]: T_INT_CAST => (int)
+	Process token [235]: T_VARIABLE => $foo
+	Process token  236 : T_SEMICOLON => ;
+	Process token [237]: T_WHITESPACE =>  
+	Process token  238 : T_CLOSE_CURLY_BRACKET => }
+	Process token  239 : T_CLOSE_CURLY_BRACKET => }
+	Process token  240 : T_SEMICOLON => ;
+	Process token [241]: T_WHITESPACE => \n
+	Process token [242]: T_VARIABLE => $ab
+	Process token [243]: T_WHITESPACE => \t
+	Process token  244 : T_EQUAL => =
+	Process token [245]: T_WHITESPACE =>  
+	Process token [246]: T_FUNCTION => function
+	Process token [247]: T_WHITESPACE =>  
+	Process token  248 : T_OPEN_PARENTHESIS => (
+	Process token  249 : T_CLOSE_PARENTHESIS => )
+	Process token [250]: T_WHITESPACE => \t
+	Process token  251 : T_OPEN_CURLY_BRACKET => {
+	Process token [252]: T_WHITESPACE =>  
+	Process token [253]: T_COMMENT => /* comment */
+	Process token [254]: T_WHITESPACE =>  
+	Process token [255]: T_IF => if
+	Process token [256]: T_WHITESPACE =>  
+	Process token  257 : T_OPEN_PARENTHESIS => (
+	Process token [258]: T_VARIABLE => $foo
+	Process token [259]: T_WHITESPACE =>  
+	Process token [260]: T_IS_IDENTICAL => ===
+	Process token [261]: T_WHITESPACE =>  
+	Process token [262]: T_STRING => true
+	Process token  263 : T_CLOSE_PARENTHESIS => )
+	Process token [264]: T_WHITESPACE =>  
+	Process token  265 : T_OPEN_CURLY_BRACKET => {
+	Process token [266]: T_WHITESPACE =>  
+	Process token [267]: T_RETURN => return
+	Process token [268]: T_WHITESPACE => \t
+	Process token [269]: T_INT_CAST => (int)
+	Process token [270]: T_WHITESPACE =>  
+	Process token [271]: T_VARIABLE => $foo
+	Process token  272 : T_SEMICOLON => ;
+	Process token [273]: T_WHITESPACE =>  
+	Process token  274 : T_CLOSE_CURLY_BRACKET => }
+	Process token [275]: T_WHITESPACE =>   
+	Process token  276 : T_CLOSE_CURLY_BRACKET => }
+	Process token  277 : T_SEMICOLON => ;
+	Process token [278]: T_WHITESPACE => \n\t
+	Process token [279]: T_VARIABLE => $ab
+	Process token [280]: T_WHITESPACE => \t
+	Process token  281 : T_EQUAL => =
+	Process token [282]: T_WHITESPACE =>  
+	Process token [283]: T_FUNCTION => function
+	Process token [284]: T_WHITESPACE =>  
+	Process token  285 : T_OPEN_PARENTHESIS => (
+	Process token  286 : T_CLOSE_PARENTHESIS => )
+	Process token [287]: T_WHITESPACE =>  
+	Process token  288 : T_OPEN_CURLY_BRACKET => {
+	Process token [289]: T_WHITESPACE =>  
+	Process token [290]: T_COMMENT => /* comment */
+	Process token [291]: T_WHITESPACE =>  
+	Process token [292]: T_IF => if
+	Process token [293]: T_WHITESPACE =>  
+	Process token  294 : T_OPEN_PARENTHESIS => (
+	Process token [295]: T_VARIABLE => $foo
+	Process token [296]: T_WHITESPACE =>  
+	Process token [297]: T_IS_IDENTICAL => ===
+	Process token [298]: T_WHITESPACE =>  
+	Process token [299]: T_STRING => true
+	Process token  300 : T_CLOSE_PARENTHESIS => )
+	Process token [301]: T_WHITESPACE =>  
+	Process token  302 : T_OPEN_CURLY_BRACKET => {
+	Process token [303]: T_WHITESPACE =>  
+	Process token [304]: T_RETURN => return
+	Process token [305]: T_INT_CAST => (int)
+	Process token [306]: T_WHITESPACE =>  
+	Process token [307]: T_VARIABLE => $foo
+	Process token  308 : T_SEMICOLON => ;
+	Process token [309]: T_WHITESPACE =>  
+	Process token  310 : T_CLOSE_CURLY_BRACKET => }
+	Process token  311 : T_CLOSE_CURLY_BRACKET => }
+	Process token  312 : T_SEMICOLON => ;
+	Process token [313]: T_WHITESPACE => \n\t
+	Process token [314]: T_VARIABLE => $ab
+	Process token [315]: T_WHITESPACE => \t
+	Process token  316 : T_EQUAL => =
+	Process token [317]: T_WHITESPACE =>  
+	Process token [318]: T_FUNCTION => function
+	Process token [319]: T_WHITESPACE =>  
+	Process token  320 : T_OPEN_PARENTHESIS => (
+	Process token  321 : T_CLOSE_PARENTHESIS => )
+	Process token [322]: T_WHITESPACE =>  
+	Process token  323 : T_OPEN_CURLY_BRACKET => {
+	Process token [324]: T_WHITESPACE =>  
+	Process token [325]: T_COMMENT => /* comment */
+	Process token [326]: T_WHITESPACE =>  
+	Process token [327]: T_IF => if
+	Process token [328]: T_WHITESPACE =>  
+	Process token  329 : T_OPEN_PARENTHESIS => (
+	Process token [330]: T_VARIABLE => $foo
+	Process token [331]: T_WHITESPACE =>  
+	Process token [332]: T_IS_IDENTICAL => ===
+	Process token [333]: T_WHITESPACE =>  
+	Process token [334]: T_STRING => true
+	Process token  335 : T_CLOSE_PARENTHESIS => )
+	Process token [336]: T_WHITESPACE =>  
+	Process token  337 : T_OPEN_CURLY_BRACKET => {
+	Process token [338]: T_WHITESPACE => \t
+	Process token [339]: T_RETURN => return
+	Process token [340]: T_INT_CAST => (int)
+	Process token [341]: T_WHITESPACE =>  
+	Process token [342]: T_VARIABLE => $foo
+	Process token  343 : T_SEMICOLON => ;
+	Process token [344]: T_WHITESPACE =>  
+	Process token  345 : T_CLOSE_CURLY_BRACKET => }
+	Process token  346 : T_CLOSE_CURLY_BRACKET => }
+	Process token  347 : T_SEMICOLON => ;
+	Process token [348]: T_WHITESPACE => \n
+	Process token [349]: T_VARIABLE => $ab
+	Process token [350]: T_WHITESPACE => \t
+	Process token  351 : T_EQUAL => =
+	Process token [352]: T_WHITESPACE =>   \t
+	Process token [353]: T_VARIABLE => $ab
+	Process token [354]: T_WHITESPACE => \t
+	Process token  355 : T_EQUAL => =
+	Process token [356]: T_WHITESPACE =>   \t
+	Process token [357]: T_VARIABLE => $ab
+	Process token [358]: T_WHITESPACE => \t
+	Process token  359 : T_EQUAL => =
+	Process token [360]: T_WHITESPACE =>   \t
+	Process token [361]: T_VARIABLE => $ab
+	Process token [362]: T_WHITESPACE => \t
+	Process token  363 : T_EQUAL => =
+	Process token [364]: T_WHITESPACE =>   \t
+	Process token [365]: T_VARIABLE => $ab
+	Process token [366]: T_WHITESPACE => \t
+	Process token  367 : T_EQUAL => =
+	Process token [368]: T_WHITESPACE =>   \t
+	Process token [369]: T_VARIABLE => $ab
+	Process token [370]: T_WHITESPACE => \t
+	Process token  371 : T_EQUAL => =
+	Process token [372]: T_WHITESPACE =>   \t
+	Process token [373]: T_VARIABLE => $ab
+	Process token [374]: T_WHITESPACE => \t
+	Process token  375 : T_EQUAL => =
+	Process token [376]: T_WHITESPACE =>   \t
+	Process token [377]: T_VARIABLE => $ab
+	Process token [378]: T_WHITESPACE => \t
+	Process token  379 : T_EQUAL => =
+	Process token [380]: T_WHITESPACE =>   \t
+	Process token [381]: T_VARIABLE => $ab
+	Process token [382]: T_WHITESPACE => \t
+	Process token  383 : T_EQUAL => =
+	Process token [384]: T_WHITESPACE =>   \t
+	Process token [385]: T_VARIABLE => $ab
+	Process token  386 : T_SEMICOLON => ;
+	Process token [387]: T_WHITESPACE => \n\n
+	Process token [388]: T_COMMENT => // PHPCS annotations on a line by themselves should be ignored for the metrics.\n
+	Process token [389]: T_COMMENT => // phpcs:enable Standard.Category.Sniff.ErrorCode1,Standard.Category.Sniff.ErrorCode2 -- for reasons ...\n
+	Process token [390]: T_WHITESPACE => \n
+	Process token [391]: T_COMMENT => // ... but not when combined with statements.\n
+	Process token [392]: T_VARIABLE => $a
+	Process token [393]: T_WHITESPACE =>  
+	Process token  394 : T_EQUAL => =
+	Process token [395]: T_WHITESPACE =>  
+	Process token [396]: T_VARIABLE => $b
+	Process token  397 : T_SEMICOLON => ;
+	Process token [398]: T_WHITESPACE =>  
+	Process token [399]: T_COMMENT => // phpcs:ignore Standard.Category.Sniff.ErrorCode1,Standard.Category.Sniff.ErrorCode2 -- for reasons ...\n
+	*** END PHP TOKENIZING ***
+	*** START TOKEN MAP ***
+	=> Found curly bracket opener at 28
+	=> Found curly bracket closer at 32 for 28
+	=> Found curly bracket opener at 61
+	=> Found curly bracket closer at 65 for 61
+	=> Found curly bracket opener at 95
+	=> Found curly bracket closer at 99 for 95
+	=> Found curly bracket opener at 169
+		=> Found curly bracket opener at 178
+			=> Found curly bracket opener at 187
+			=> Found curly bracket closer at 198 for 187
+		=> Found curly bracket closer at 201 for 178
+	=> Found curly bracket closer at 203 for 169
+	=> Found curly bracket opener at 217
+		=> Found curly bracket opener at 231
+		=> Found curly bracket closer at 240 for 231
+	=> Found curly bracket closer at 242 for 217
+	=> Found curly bracket opener at 254
+		=> Found curly bracket opener at 267
+		=> Found curly bracket closer at 275 for 267
+	=> Found curly bracket closer at 276 for 254
+	=> Found curly bracket opener at 288
+		=> Found curly bracket opener at 302
+		=> Found curly bracket closer at 311 for 302
+	=> Found curly bracket closer at 313 for 288
+	=> Found curly bracket opener at 326
+		=> Found curly bracket opener at 340
+		=> Found curly bracket closer at 348 for 340
+	=> Found curly bracket closer at 349 for 326
+	=> Found curly bracket opener at 362
+		=> Found curly bracket opener at 376
+		=> Found curly bracket closer at 384 for 376
+	=> Found curly bracket closer at 385 for 362
+	*** END TOKEN MAP ***
+	*** START SCOPE MAP ***
+	Start scope map at 3:T_IF => if
+	=> Begin scope map recursion at token 3 with depth 1
+	Process token 4 on line 4 []: T_WHITESPACE =>  
+	Process token 5 on line 4 []: T_OPEN_PARENTHESIS => (
+	Process token 6 on line 4 []: T_OPEN_PARENTHESIS => (
+	Process token 7 on line 4 []: T_VARIABLE => $reallyLongVarName
+	Process token 8 on line 4 []: T_WHITESPACE =>  
+	Process token 9 on line 4 []: T_IS_IDENTICAL => ===
+	Process token 10 on line 4 []: T_WHITESPACE =>  
+	Process token 11 on line 4 []: T_TRUE => true
+	Process token 12 on line 4 []: T_CLOSE_PARENTHESIS => )
+	Process token 13 on line 4 []: T_WHITESPACE =>  
+	Process token 14 on line 4 []: T_BOOLEAN_OR => ||
+	Process token 15 on line 4 []: T_WHITESPACE =>  
+	Process token 16 on line 4 []: T_OPEN_PARENTHESIS => (
+	Process token 17 on line 4 []: T_STRING => is_array
+	Process token 18 on line 4 []: T_OPEN_PARENTHESIS => (
+	Process token 19 on line 4 []: T_VARIABLE => $anotherLongVarName
+	Process token 20 on line 4 []: T_CLOSE_PARENTHESIS => )
+	Process token 21 on line 4 []: T_WHITESPACE =>  
+	Process token 22 on line 4 []: T_IS_EQUAL => ==
+	Process token 23 on line 4 []: T_WHITESPACE =>  
+	Process token 24 on line 4 []: T_FALSE => false
+	Process token 25 on line 4 []: T_CLOSE_PARENTHESIS => )
+	Process token 26 on line 4 []: T_CLOSE_PARENTHESIS => )
+	Process token 27 on line 4 []: T_WHITESPACE =>  
+	Process token 28 on line 4 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 3:T_IF
+	Process token 29 on line 4 [opener:28;]: T_WHITESPACE => \n
+	Process token 30 on line 5 [opener:28;]: T_WHITESPACE =>     
+	Process token 31 on line 5 [opener:28;]: T_COMMENT => // Do something.\n
+	Process token 32 on line 6 [opener:28;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer (32:T_CLOSE_CURLY_BRACKET) for 3:T_IF
+	Start scope map at 36:T_IF => if
+	=> Begin scope map recursion at token 36 with depth 1
+	Process token 37 on line 9 []: T_WHITESPACE =>  
+	Process token 38 on line 9 []: T_OPEN_PARENTHESIS => (
+	Process token 39 on line 9 []: T_OPEN_PARENTHESIS => (
+	Process token 40 on line 9 []: T_VARIABLE => $reallyLongVarName
+	Process token 41 on line 9 []: T_WHITESPACE =>  
+	Process token 42 on line 9 []: T_IS_IDENTICAL => ===
+	Process token 43 on line 9 []: T_WHITESPACE =>  
+	Process token 44 on line 9 []: T_TRUE => true
+	Process token 45 on line 9 []: T_CLOSE_PARENTHESIS => )
+	Process token 46 on line 9 []: T_WHITESPACE =>  
+	Process token 47 on line 9 []: T_BOOLEAN_OR => ||
+	Process token 48 on line 9 []: T_WHITESPACE =>  
+	Process token 49 on line 9 []: T_OPEN_PARENTHESIS => (
+	Process token 50 on line 9 []: T_STRING => is_array
+	Process token 51 on line 9 []: T_OPEN_PARENTHESIS => (
+	Process token 52 on line 9 []: T_VARIABLE => $anotherLongVarName
+	Process token 53 on line 9 []: T_CLOSE_PARENTHESIS => )
+	Process token 54 on line 9 []: T_WHITESPACE =>  
+	Process token 55 on line 9 []: T_IS_IDENTICAL => ===
+	Process token 56 on line 9 []: T_WHITESPACE =>  
+	Process token 57 on line 9 []: T_FALSE => false
+	Process token 58 on line 9 []: T_CLOSE_PARENTHESIS => )
+	Process token 59 on line 9 []: T_CLOSE_PARENTHESIS => )
+	Process token 60 on line 9 []: T_WHITESPACE =>  
+	Process token 61 on line 9 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 36:T_IF
+	Process token 62 on line 9 [opener:61;]: T_WHITESPACE => \n
+	Process token 63 on line 10 [opener:61;]: T_WHITESPACE =>     
+	Process token 64 on line 10 [opener:61;]: T_COMMENT => // Do something.\n
+	Process token 65 on line 11 [opener:61;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer (65:T_CLOSE_CURLY_BRACKET) for 36:T_IF
+	Start scope map at 70:T_IF => if
+	=> Begin scope map recursion at token 70 with depth 1
+	Process token 71 on line 15 []: T_WHITESPACE =>  
+	Process token 72 on line 15 []: T_OPEN_PARENTHESIS => (
+	Process token 73 on line 15 []: T_OPEN_PARENTHESIS => (
+	Process token 74 on line 15 []: T_VARIABLE => $anotherReallyLongVarName
+	Process token 75 on line 15 []: T_WHITESPACE =>  
+	Process token 76 on line 15 []: T_IS_IDENTICAL => ===
+	Process token 77 on line 15 []: T_WHITESPACE =>  
+	Process token 78 on line 15 []: T_TRUE => true
+	Process token 79 on line 15 []: T_CLOSE_PARENTHESIS => )
+	Process token 80 on line 15 []: T_WHITESPACE =>  
+	Process token 81 on line 15 []: T_BOOLEAN_OR => ||
+	Process token 82 on line 15 []: T_WHITESPACE =>  
+	Process token 83 on line 15 []: T_OPEN_PARENTHESIS => (
+	Process token 84 on line 15 []: T_STRING => is_array
+	Process token 85 on line 15 []: T_OPEN_PARENTHESIS => (
+	Process token 86 on line 15 []: T_VARIABLE => $anotherReallyLongVarName
+	Process token 87 on line 15 []: T_CLOSE_PARENTHESIS => )
+	Process token 88 on line 15 []: T_WHITESPACE =>  
+	Process token 89 on line 15 []: T_IS_IDENTICAL => ===
+	Process token 90 on line 15 []: T_WHITESPACE =>  
+	Process token 91 on line 15 []: T_FALSE => false
+	Process token 92 on line 15 []: T_CLOSE_PARENTHESIS => )
+	Process token 93 on line 15 []: T_CLOSE_PARENTHESIS => )
+	Process token 94 on line 15 []: T_WHITESPACE =>  
+	Process token 95 on line 15 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 70:T_IF
+	Process token 96 on line 15 [opener:95;]: T_WHITESPACE => \n
+	Process token 97 on line 16 [opener:95;]: T_WHITESPACE =>     
+	Process token 98 on line 16 [opener:95;]: T_COMMENT => // Do something.\n
+	Process token 99 on line 17 [opener:95;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer (99:T_CLOSE_CURLY_BRACKET) for 70:T_IF
+	Start scope map at 163:T_IF => if
+	=> Begin scope map recursion at token 163 with depth 1
+	Process token 164 on line 59 []: T_WHITESPACE =>  
+	Process token 165 on line 59 []: T_OPEN_PARENTHESIS => (
+	Process token 166 on line 59 []: T_VARIABLE => $foo
+	Process token 167 on line 59 []: T_CLOSE_PARENTHESIS => )
+	Process token 168 on line 59 []: T_WHITESPACE =>  
+	Process token 169 on line 59 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 163:T_IF
+	Process token 170 on line 59 [opener:169;]: T_WHITESPACE => \n
+	Process token 171 on line 60 [opener:169;]: T_WHITESPACE =>     
+	Process token 172 on line 60 [opener:169;]: T_IF => if
+	* token is an opening condition *
+	* searching for opener *
+		=> Begin scope map recursion at token 172 with depth 2
+		Process token 173 on line 60 []: T_WHITESPACE =>  
+		Process token 174 on line 60 []: T_OPEN_PARENTHESIS => (
+		Process token 175 on line 60 []: T_VARIABLE => $bar
+		Process token 176 on line 60 []: T_CLOSE_PARENTHESIS => )
+		Process token 177 on line 60 []: T_WHITESPACE =>  
+		Process token 178 on line 60 []: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 172:T_IF
+		Process token 179 on line 60 [opener:178;]: T_WHITESPACE => \n
+		Process token 180 on line 61 [opener:178;]: T_WHITESPACE =>         
+		Process token 181 on line 61 [opener:178;]: T_IF => if
+		* token is an opening condition *
+		* searching for opener *
+			=> Begin scope map recursion at token 181 with depth 3
+			Process token 182 on line 61 []: T_WHITESPACE =>  
+			Process token 183 on line 61 []: T_OPEN_PARENTHESIS => (
+			Process token 184 on line 61 []: T_VARIABLE => $baz
+			Process token 185 on line 61 []: T_CLOSE_PARENTHESIS => )
+			Process token 186 on line 61 []: T_WHITESPACE =>  
+			Process token 187 on line 61 []: T_OPEN_CURLY_BRACKET => {
+			=> Found scope opener for 181:T_IF
+			Process token 188 on line 61 [opener:187;]: T_WHITESPACE => \n
+			Process token 189 on line 62 [opener:187;]: T_WHITESPACE =>             
+			Process token 190 on line 62 [opener:187;]: T_COMMENT => // Next line can be broken:\n
+			Process token 191 on line 63 [opener:187;]: T_WHITESPACE =>             
+			Process token 192 on line 63 [opener:187;]: T_COMMENT => // foo bar baz http://en.wikipedia.org/wiki/Binomial_proportion#blahblahblahblah\n
+			Process token 193 on line 64 [opener:187;]: T_WHITESPACE =>             
+			Process token 194 on line 64 [opener:187;]: T_COMMENT => // But this one is just too long to break with this indent:\n
+			Process token 195 on line 65 [opener:187;]: T_WHITESPACE =>             
+			Process token 196 on line 65 [opener:187;]: T_COMMENT => // foo bar baz http://en.wikipedia.org/wiki/Binomial_proportion#blahblahblahblahblah\n
+			Process token 197 on line 66 [opener:187;]: T_WHITESPACE =>         
+			Process token 198 on line 66 [opener:187;]: T_CLOSE_CURLY_BRACKET => }
+			=> Found scope closer (198:T_CLOSE_CURLY_BRACKET) for 181:T_IF
+		Process token 199 on line 66 [opener:178;]: T_WHITESPACE => \n
+		Process token 200 on line 67 [opener:178;]: T_WHITESPACE =>     
+		Process token 201 on line 67 [opener:178;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer (201:T_CLOSE_CURLY_BRACKET) for 172:T_IF
+	Process token 202 on line 67 [opener:169;]: T_WHITESPACE => \n
+	Process token 203 on line 68 [opener:169;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer (203:T_CLOSE_CURLY_BRACKET) for 163:T_IF
+	Start scope map at 212:T_FUNCTION => function
+	=> Begin scope map recursion at token 212 with depth 1
+	Process token 213 on line 71 []: T_WHITESPACE =>  
+	Process token 214 on line 71 []: T_OPEN_PARENTHESIS => (
+	Process token 215 on line 71 []: T_CLOSE_PARENTHESIS => )
+	Process token 216 on line 71 []: T_WHITESPACE =>  
+	Process token 217 on line 71 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 212:T_FUNCTION
+	Process token 218 on line 71 [opener:217;]: T_WHITESPACE =>  
+	Process token 219 on line 71 [opener:217;]: T_COMMENT => /* comment */
+	Process token 220 on line 71 [opener:217;]: T_WHITESPACE =>  
+	Process token 221 on line 71 [opener:217;]: T_IF => if
+	* token is an opening condition *
+	* searching for opener *
+		=> Begin scope map recursion at token 221 with depth 2
+		Process token 222 on line 71 []: T_WHITESPACE =>  
+		Process token 223 on line 71 []: T_OPEN_PARENTHESIS => (
+		Process token 224 on line 71 []: T_VARIABLE => $foo
+		Process token 225 on line 71 []: T_WHITESPACE =>  
+		Process token 226 on line 71 []: T_IS_IDENTICAL => ===
+		Process token 227 on line 71 []: T_WHITESPACE =>  
+		Process token 228 on line 71 []: T_TRUE => true
+		Process token 229 on line 71 []: T_CLOSE_PARENTHESIS => )
+		Process token 230 on line 71 []: T_WHITESPACE =>  
+		Process token 231 on line 71 []: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 221:T_IF
+		Process token 232 on line 71 [opener:231;]: T_WHITESPACE =>  
+		Process token 233 on line 71 [opener:231;]: T_RETURN => return
+		Process token 234 on line 71 [opener:231;]: T_WHITESPACE =>  
+		Process token 235 on line 71 [opener:231;]: T_INT_CAST => (int)
+		Process token 236 on line 71 [opener:231;]: T_WHITESPACE =>  
+		Process token 237 on line 71 [opener:231;]: T_VARIABLE => $foo
+		Process token 238 on line 71 [opener:231;]: T_SEMICOLON => ;
+		Process token 239 on line 71 [opener:231;]: T_WHITESPACE =>  
+		Process token 240 on line 71 [opener:231;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer (240:T_CLOSE_CURLY_BRACKET) for 221:T_IF
+	Process token 241 on line 71 [opener:217;]: T_WHITESPACE =>  
+	Process token 242 on line 71 [opener:217;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer (242:T_CLOSE_CURLY_BRACKET) for 212:T_FUNCTION
+	Start scope map at 249:T_FUNCTION => function
+	=> Begin scope map recursion at token 249 with depth 1
+	Process token 250 on line 72 []: T_WHITESPACE =>  
+	Process token 251 on line 72 []: T_OPEN_PARENTHESIS => (
+	Process token 252 on line 72 []: T_CLOSE_PARENTHESIS => )
+	Process token 253 on line 72 []: T_WHITESPACE =>    
+	Process token 254 on line 72 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 249:T_FUNCTION
+	Process token 255 on line 72 [opener:254;]: T_WHITESPACE =>  
+	Process token 256 on line 72 [opener:254;]: T_COMMENT => /* comment */
+	Process token 257 on line 72 [opener:254;]: T_WHITESPACE =>  
+	Process token 258 on line 72 [opener:254;]: T_IF => if
+	* token is an opening condition *
+	* searching for opener *
+		=> Begin scope map recursion at token 258 with depth 2
+		Process token 259 on line 72 []: T_WHITESPACE =>  
+		Process token 260 on line 72 []: T_OPEN_PARENTHESIS => (
+		Process token 261 on line 72 []: T_VARIABLE => $foo
+		Process token 262 on line 72 []: T_WHITESPACE =>  
+		Process token 263 on line 72 []: T_IS_IDENTICAL => ===
+		Process token 264 on line 72 []: T_WHITESPACE =>  
+		Process token 265 on line 72 []: T_TRUE => true
+		Process token 266 on line 72 []: T_CLOSE_PARENTHESIS => )
+		Process token 267 on line 72 []: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 258:T_IF
+		Process token 268 on line 72 [opener:267;]: T_WHITESPACE =>  
+		Process token 269 on line 72 [opener:267;]: T_RETURN => return
+		Process token 270 on line 72 [opener:267;]: T_WHITESPACE =>   
+		Process token 271 on line 72 [opener:267;]: T_INT_CAST => (int)
+		Process token 272 on line 72 [opener:267;]: T_VARIABLE => $foo
+		Process token 273 on line 72 [opener:267;]: T_SEMICOLON => ;
+		Process token 274 on line 72 [opener:267;]: T_WHITESPACE =>  
+		Process token 275 on line 72 [opener:267;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer (275:T_CLOSE_CURLY_BRACKET) for 258:T_IF
+	Process token 276 on line 72 [opener:254;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer (276:T_CLOSE_CURLY_BRACKET) for 249:T_FUNCTION
+	Start scope map at 283:T_FUNCTION => function
+	=> Begin scope map recursion at token 283 with depth 1
+	Process token 284 on line 73 []: T_WHITESPACE =>  
+	Process token 285 on line 73 []: T_OPEN_PARENTHESIS => (
+	Process token 286 on line 73 []: T_CLOSE_PARENTHESIS => )
+	Process token 287 on line 73 []: T_WHITESPACE =>    
+	Process token 288 on line 73 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 283:T_FUNCTION
+	Process token 289 on line 73 [opener:288;]: T_WHITESPACE =>  
+	Process token 290 on line 73 [opener:288;]: T_COMMENT => /* comment */
+	Process token 291 on line 73 [opener:288;]: T_WHITESPACE =>  
+	Process token 292 on line 73 [opener:288;]: T_IF => if
+	* token is an opening condition *
+	* searching for opener *
+		=> Begin scope map recursion at token 292 with depth 2
+		Process token 293 on line 73 []: T_WHITESPACE =>  
+		Process token 294 on line 73 []: T_OPEN_PARENTHESIS => (
+		Process token 295 on line 73 []: T_VARIABLE => $foo
+		Process token 296 on line 73 []: T_WHITESPACE =>  
+		Process token 297 on line 73 []: T_IS_IDENTICAL => ===
+		Process token 298 on line 73 []: T_WHITESPACE =>  
+		Process token 299 on line 73 []: T_TRUE => true
+		Process token 300 on line 73 []: T_CLOSE_PARENTHESIS => )
+		Process token 301 on line 73 []: T_WHITESPACE =>  
+		Process token 302 on line 73 []: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 292:T_IF
+		Process token 303 on line 73 [opener:302;]: T_WHITESPACE =>  
+		Process token 304 on line 73 [opener:302;]: T_RETURN => return
+		Process token 305 on line 73 [opener:302;]: T_WHITESPACE =>  
+		Process token 306 on line 73 [opener:302;]: T_INT_CAST => (int)
+		Process token 307 on line 73 [opener:302;]: T_WHITESPACE =>  
+		Process token 308 on line 73 [opener:302;]: T_VARIABLE => $foo
+		Process token 309 on line 73 [opener:302;]: T_SEMICOLON => ;
+		Process token 310 on line 73 [opener:302;]: T_WHITESPACE =>  
+		Process token 311 on line 73 [opener:302;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer (311:T_CLOSE_CURLY_BRACKET) for 292:T_IF
+	Process token 312 on line 73 [opener:288;]: T_WHITESPACE =>   
+	Process token 313 on line 73 [opener:288;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer (313:T_CLOSE_CURLY_BRACKET) for 283:T_FUNCTION
+	Start scope map at 321:T_FUNCTION => function
+	=> Begin scope map recursion at token 321 with depth 1
+	Process token 322 on line 74 []: T_WHITESPACE =>  
+	Process token 323 on line 74 []: T_OPEN_PARENTHESIS => (
+	Process token 324 on line 74 []: T_CLOSE_PARENTHESIS => )
+	Process token 325 on line 74 []: T_WHITESPACE =>  
+	Process token 326 on line 74 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 321:T_FUNCTION
+	Process token 327 on line 74 [opener:326;]: T_WHITESPACE =>  
+	Process token 328 on line 74 [opener:326;]: T_COMMENT => /* comment */
+	Process token 329 on line 74 [opener:326;]: T_WHITESPACE =>  
+	Process token 330 on line 74 [opener:326;]: T_IF => if
+	* token is an opening condition *
+	* searching for opener *
+		=> Begin scope map recursion at token 330 with depth 2
+		Process token 331 on line 74 []: T_WHITESPACE =>  
+		Process token 332 on line 74 []: T_OPEN_PARENTHESIS => (
+		Process token 333 on line 74 []: T_VARIABLE => $foo
+		Process token 334 on line 74 []: T_WHITESPACE =>  
+		Process token 335 on line 74 []: T_IS_IDENTICAL => ===
+		Process token 336 on line 74 []: T_WHITESPACE =>  
+		Process token 337 on line 74 []: T_TRUE => true
+		Process token 338 on line 74 []: T_CLOSE_PARENTHESIS => )
+		Process token 339 on line 74 []: T_WHITESPACE =>  
+		Process token 340 on line 74 []: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 330:T_IF
+		Process token 341 on line 74 [opener:340;]: T_WHITESPACE =>  
+		Process token 342 on line 74 [opener:340;]: T_RETURN => return
+		Process token 343 on line 74 [opener:340;]: T_INT_CAST => (int)
+		Process token 344 on line 74 [opener:340;]: T_WHITESPACE =>  
+		Process token 345 on line 74 [opener:340;]: T_VARIABLE => $foo
+		Process token 346 on line 74 [opener:340;]: T_SEMICOLON => ;
+		Process token 347 on line 74 [opener:340;]: T_WHITESPACE =>  
+		Process token 348 on line 74 [opener:340;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer (348:T_CLOSE_CURLY_BRACKET) for 330:T_IF
+	Process token 349 on line 74 [opener:326;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer (349:T_CLOSE_CURLY_BRACKET) for 321:T_FUNCTION
+	Start scope map at 357:T_FUNCTION => function
+	=> Begin scope map recursion at token 357 with depth 1
+	Process token 358 on line 75 []: T_WHITESPACE =>  
+	Process token 359 on line 75 []: T_OPEN_PARENTHESIS => (
+	Process token 360 on line 75 []: T_CLOSE_PARENTHESIS => )
+	Process token 361 on line 75 []: T_WHITESPACE =>  
+	Process token 362 on line 75 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 357:T_FUNCTION
+	Process token 363 on line 75 [opener:362;]: T_WHITESPACE =>  
+	Process token 364 on line 75 [opener:362;]: T_COMMENT => /* comment */
+	Process token 365 on line 75 [opener:362;]: T_WHITESPACE =>  
+	Process token 366 on line 75 [opener:362;]: T_IF => if
+	* token is an opening condition *
+	* searching for opener *
+		=> Begin scope map recursion at token 366 with depth 2
+		Process token 367 on line 75 []: T_WHITESPACE =>  
+		Process token 368 on line 75 []: T_OPEN_PARENTHESIS => (
+		Process token 369 on line 75 []: T_VARIABLE => $foo
+		Process token 370 on line 75 []: T_WHITESPACE =>  
+		Process token 371 on line 75 []: T_IS_IDENTICAL => ===
+		Process token 372 on line 75 []: T_WHITESPACE =>  
+		Process token 373 on line 75 []: T_TRUE => true
+		Process token 374 on line 75 []: T_CLOSE_PARENTHESIS => )
+		Process token 375 on line 75 []: T_WHITESPACE =>  
+		Process token 376 on line 75 []: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 366:T_IF
+		Process token 377 on line 75 [opener:376;]: T_WHITESPACE =>   
+		Process token 378 on line 75 [opener:376;]: T_RETURN => return
+		Process token 379 on line 75 [opener:376;]: T_INT_CAST => (int)
+		Process token 380 on line 75 [opener:376;]: T_WHITESPACE =>  
+		Process token 381 on line 75 [opener:376;]: T_VARIABLE => $foo
+		Process token 382 on line 75 [opener:376;]: T_SEMICOLON => ;
+		Process token 383 on line 75 [opener:376;]: T_WHITESPACE =>  
+		Process token 384 on line 75 [opener:376;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer (384:T_CLOSE_CURLY_BRACKET) for 366:T_IF
+	Process token 385 on line 75 [opener:362;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer (385:T_CLOSE_CURLY_BRACKET) for 357:T_FUNCTION
+	*** END SCOPE MAP ***
+	*** START LEVEL MAP ***
+	Process token 0 on line 1 [col:1;len:5;lvl:0;]: T_OPEN_TAG => <?php\n
+	Process token 1 on line 2 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 2 on line 3 [col:1;len:29;lvl:0;]: T_COMMENT => // This line is okay... just!\n
+	Process token 3 on line 4 [col:1;len:2;lvl:0;]: T_IF => if
+	Process token 4 on line 4 [col:3;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 5 on line 4 [col:4;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 6 on line 4 [col:5;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 7 on line 4 [col:6;len:18;lvl:0;]: T_VARIABLE => $reallyLongVarName
+	Process token 8 on line 4 [col:24;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 9 on line 4 [col:25;len:3;lvl:0;]: T_IS_IDENTICAL => ===
+	Process token 10 on line 4 [col:28;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 11 on line 4 [col:29;len:4;lvl:0;]: T_TRUE => true
+	Process token 12 on line 4 [col:33;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 13 on line 4 [col:34;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 14 on line 4 [col:35;len:2;lvl:0;]: T_BOOLEAN_OR => ||
+	Process token 15 on line 4 [col:37;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 16 on line 4 [col:38;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 17 on line 4 [col:39;len:8;lvl:0;]: T_STRING => is_array
+	Process token 18 on line 4 [col:47;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 19 on line 4 [col:48;len:19;lvl:0;]: T_VARIABLE => $anotherLongVarName
+	Process token 20 on line 4 [col:67;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 21 on line 4 [col:68;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 22 on line 4 [col:69;len:2;lvl:0;]: T_IS_EQUAL => ==
+	Process token 23 on line 4 [col:71;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 24 on line 4 [col:72;len:5;lvl:0;]: T_FALSE => false
+	Process token 25 on line 4 [col:77;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 26 on line 4 [col:78;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 27 on line 4 [col:79;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 28 on line 4 [col:80;len:1;lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 3:T_IF
+		* level increased *
+		* token 3:T_IF added to conditions array *
+		Process token 29 on line 4 [col:81;len:0;lvl:1;conds;T_IF;]: T_WHITESPACE => \n
+		Process token 30 on line 5 [col:1;len:4;lvl:1;conds;T_IF;]: T_WHITESPACE =>     
+		Process token 31 on line 5 [col:5;len:16;lvl:1;conds;T_IF;]: T_COMMENT => // Do something.\n
+		Process token 32 on line 6 [col:1;len:1;lvl:1;conds;T_IF;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 28:T_OPEN_CURLY_BRACKET
+		* token T_IF removed from conditions array *
+		* level decreased *
+	Process token 33 on line 6 [col:2;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 34 on line 7 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 35 on line 8 [col:1;len:33;lvl:0;]: T_COMMENT => // This line is not okay... just!\n
+	Process token 36 on line 9 [col:1;len:2;lvl:0;]: T_IF => if
+	Process token 37 on line 9 [col:3;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 38 on line 9 [col:4;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 39 on line 9 [col:5;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 40 on line 9 [col:6;len:18;lvl:0;]: T_VARIABLE => $reallyLongVarName
+	Process token 41 on line 9 [col:24;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 42 on line 9 [col:25;len:3;lvl:0;]: T_IS_IDENTICAL => ===
+	Process token 43 on line 9 [col:28;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 44 on line 9 [col:29;len:4;lvl:0;]: T_TRUE => true
+	Process token 45 on line 9 [col:33;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 46 on line 9 [col:34;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 47 on line 9 [col:35;len:2;lvl:0;]: T_BOOLEAN_OR => ||
+	Process token 48 on line 9 [col:37;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 49 on line 9 [col:38;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 50 on line 9 [col:39;len:8;lvl:0;]: T_STRING => is_array
+	Process token 51 on line 9 [col:47;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 52 on line 9 [col:48;len:19;lvl:0;]: T_VARIABLE => $anotherLongVarName
+	Process token 53 on line 9 [col:67;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 54 on line 9 [col:68;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 55 on line 9 [col:69;len:3;lvl:0;]: T_IS_IDENTICAL => ===
+	Process token 56 on line 9 [col:72;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 57 on line 9 [col:73;len:5;lvl:0;]: T_FALSE => false
+	Process token 58 on line 9 [col:78;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 59 on line 9 [col:79;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 60 on line 9 [col:80;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 61 on line 9 [col:81;len:1;lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 36:T_IF
+		* level increased *
+		* token 36:T_IF added to conditions array *
+		Process token 62 on line 9 [col:82;len:0;lvl:1;conds;T_IF;]: T_WHITESPACE => \n
+		Process token 63 on line 10 [col:1;len:4;lvl:1;conds;T_IF;]: T_WHITESPACE =>     
+		Process token 64 on line 10 [col:5;len:16;lvl:1;conds;T_IF;]: T_COMMENT => // Do something.\n
+		Process token 65 on line 11 [col:1;len:1;lvl:1;conds;T_IF;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 61:T_OPEN_CURLY_BRACKET
+		* token T_IF removed from conditions array *
+		* level decreased *
+	Process token 66 on line 11 [col:2;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 67 on line 12 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 68 on line 13 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 69 on line 14 [col:1;len:28;lvl:0;]: T_COMMENT => // This line is is too long.\n
+	Process token 70 on line 15 [col:1;len:2;lvl:0;]: T_IF => if
+	Process token 71 on line 15 [col:3;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 72 on line 15 [col:4;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 73 on line 15 [col:5;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 74 on line 15 [col:6;len:25;lvl:0;]: T_VARIABLE => $anotherReallyLongVarName
+	Process token 75 on line 15 [col:31;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 76 on line 15 [col:32;len:3;lvl:0;]: T_IS_IDENTICAL => ===
+	Process token 77 on line 15 [col:35;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 78 on line 15 [col:36;len:4;lvl:0;]: T_TRUE => true
+	Process token 79 on line 15 [col:40;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 80 on line 15 [col:41;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 81 on line 15 [col:42;len:2;lvl:0;]: T_BOOLEAN_OR => ||
+	Process token 82 on line 15 [col:44;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 83 on line 15 [col:45;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 84 on line 15 [col:46;len:8;lvl:0;]: T_STRING => is_array
+	Process token 85 on line 15 [col:54;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 86 on line 15 [col:55;len:25;lvl:0;]: T_VARIABLE => $anotherReallyLongVarName
+	Process token 87 on line 15 [col:80;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 88 on line 15 [col:81;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 89 on line 15 [col:82;len:3;lvl:0;]: T_IS_IDENTICAL => ===
+	Process token 90 on line 15 [col:85;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 91 on line 15 [col:86;len:5;lvl:0;]: T_FALSE => false
+	Process token 92 on line 15 [col:91;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 93 on line 15 [col:92;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 94 on line 15 [col:93;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 95 on line 15 [col:94;len:1;lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 70:T_IF
+		* level increased *
+		* token 70:T_IF added to conditions array *
+		Process token 96 on line 15 [col:95;len:0;lvl:1;conds;T_IF;]: T_WHITESPACE => \n
+		Process token 97 on line 16 [col:1;len:4;lvl:1;conds;T_IF;]: T_WHITESPACE =>     
+		Process token 98 on line 16 [col:5;len:16;lvl:1;conds;T_IF;]: T_COMMENT => // Do something.\n
+		Process token 99 on line 17 [col:1;len:1;lvl:1;conds;T_IF;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 95:T_OPEN_CURLY_BRACKET
+		* token T_IF removed from conditions array *
+		* level decreased *
+	Process token 100 on line 17 [col:2;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 101 on line 18 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 102 on line 19 [col:1;len:80;lvl:0;]: T_COMMENT => // This is a really really long comment that is going to go to exactly 80 chars.\n
+	Process token 103 on line 20 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 104 on line 21 [col:1;len:90;lvl:0;]: T_COMMENT => // This is another really really long comment that is going to go well over 80 characters.\n
+	Process token 105 on line 22 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 106 on line 23 [col:1;len:67;lvl:0;]: T_COMMENT => // And here is just a bunch of spaces that exceeds the line length.\n
+	Process token 107 on line 24 [col:1;len:84;lvl:0;]: T_WHITESPACE =>                                                                                     \n
+	Process token 108 on line 25 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 109 on line 26 [col:1;len:50;lvl:0;]: T_COMMENT => // And here are some spaces exactly 80 chars long.\n
+	Process token 110 on line 27 [col:1;len:80;lvl:0;]: T_WHITESPACE =>                                                                                 \n
+	Process token 111 on line 28 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 112 on line 29 [col:1;len:100;lvl:0;]: T_COMMENT => // This is a really really really really long long comment that is going to go to exactly 100 chars.\n
+	Process token 113 on line 30 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 114 on line 31 [col:1;len:112;lvl:0;]: T_COMMENT => // This is another really really really really really long comment that is going to go well over 100 characters.\n
+	Process token 115 on line 32 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 116 on line 33 [col:1;len:71;lvl:0;]: T_COMMENT => // And here is just a bunch of spaces that exceeds the max line length.\n
+	Process token 117 on line 34 [col:1;len:107;lvl:0;]: T_WHITESPACE =>                                                                                                            \n
+	Process token 118 on line 35 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 119 on line 36 [col:1;len:51;lvl:0;]: T_COMMENT => // And here are some spaces exactly 100 chars long.\n
+	Process token 120 on line 37 [col:1;len:100;lvl:0;]: T_WHITESPACE =>                                                                                                     \n
+	Process token 121 on line 38 [col:1;len:2;lvl:0;]: T_CLOSE_TAG => ?>\n
+	Process token 122 on line 39 [col:1;len:14;lvl:0;]: T_INLINE_HTML => <b>Hello</b>b>\n
+	Process token 123 on line 40 [col:1;len:5;lvl:0;]: T_OPEN_TAG => <?php\n
+	Process token 124 on line 41 [col:1;len:4;lvl:0;]: T_ECHO => echo
+	Process token 125 on line 41 [col:5;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 126 on line 41 [col:6;len:4;lvl:0;]: T_CONSTANT_ENCAPSED_STRING => 'hi'
+	Process token 127 on line 41 [col:10;len:1;lvl:0;]: T_SEMICOLON => ;
+	Process token 128 on line 41 [col:11;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 129 on line 42 [col:1;len:2;lvl:0;]: T_CLOSE_TAG => ?>\n
+	Process token 130 on line 43 [col:1;len:0;lvl:0;]: T_INLINE_HTML => \n
+	Process token 131 on line 44 [col:1;len:5;lvl:0;]: T_OPEN_TAG => <?php\n
+	Process token 132 on line 45 [col:1;len:118;lvl:0;]: T_COMMENT => // This is another really long comment that is going to go well over 100 characters, with no closing php tag after it.\n
+	Process token 133 on line 46 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 134 on line 47 [col:1;len:3;lvl:0;]: T_DOC_COMMENT_OPEN_TAG => /**
+	Process token 135 on line 47 [col:4;len:0;lvl:0;]: T_DOC_COMMENT_WHITESPACE => \n
+	Process token 136 on line 48 [col:1;len:1;lvl:0;]: T_DOC_COMMENT_WHITESPACE =>  
+	Process token 137 on line 48 [col:2;len:1;lvl:0;]: T_DOC_COMMENT_STAR => *
+	Process token 138 on line 48 [col:3;len:1;lvl:0;]: T_DOC_COMMENT_WHITESPACE =>  
+	Process token 139 on line 48 [col:4;len:49;lvl:0;]: T_DOC_COMMENT_STRING => Does something cool, blah blah, not so long line.
+	Process token 140 on line 48 [col:53;len:0;lvl:0;]: T_DOC_COMMENT_WHITESPACE => \n
+	Process token 141 on line 49 [col:1;len:1;lvl:0;]: T_DOC_COMMENT_WHITESPACE =>  
+	Process token 142 on line 49 [col:2;len:1;lvl:0;]: T_DOC_COMMENT_STAR => *
+	Process token 143 on line 49 [col:3;len:0;lvl:0;]: T_DOC_COMMENT_WHITESPACE => \n
+	Process token 144 on line 50 [col:1;len:1;lvl:0;]: T_DOC_COMMENT_WHITESPACE =>  
+	Process token 145 on line 50 [col:2;len:1;lvl:0;]: T_DOC_COMMENT_STAR => *
+	Process token 146 on line 50 [col:3;len:1;lvl:0;]: T_DOC_COMMENT_WHITESPACE =>  
+	Process token 147 on line 50 [col:4;len:50;lvl:0;]: T_DOC_COMMENT_STRING => We're using Wilson scoring because blah blah, see:
+	Process token 148 on line 50 [col:54;len:0;lvl:0;]: T_DOC_COMMENT_WHITESPACE => \n
+	Process token 149 on line 51 [col:1;len:1;lvl:0;]: T_DOC_COMMENT_WHITESPACE =>  
+	Process token 150 on line 51 [col:2;len:1;lvl:0;]: T_DOC_COMMENT_STAR => *
+	Process token 151 on line 51 [col:3;len:1;lvl:0;]: T_DOC_COMMENT_WHITESPACE =>  
+	Process token 152 on line 51 [col:4;len:90;lvl:0;]: T_DOC_COMMENT_STRING => http://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval
+	Process token 153 on line 51 [col:94;len:0;lvl:0;]: T_DOC_COMMENT_WHITESPACE => \n
+	Process token 154 on line 52 [col:1;len:1;lvl:0;]: T_DOC_COMMENT_WHITESPACE =>  
+	Process token 155 on line 52 [col:2;len:2;lvl:0;]: T_DOC_COMMENT_CLOSE_TAG => */
+	Process token 156 on line 52 [col:4;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 157 on line 53 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 158 on line 54 [col:1;len:11;lvl:0;]: T_COMMENT => // Go here:\n
+	Process token 159 on line 55 [col:1;len:93;lvl:0;]: T_COMMENT => // http://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval\n
+	Process token 160 on line 56 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 161 on line 57 [col:1;len:92;lvl:0;]: T_COMMENT => # http://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval\n
+	Process token 162 on line 58 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 163 on line 59 [col:1;len:2;lvl:0;]: T_IF => if
+	Process token 164 on line 59 [col:3;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 165 on line 59 [col:4;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 166 on line 59 [col:5;len:4;lvl:0;]: T_VARIABLE => $foo
+	Process token 167 on line 59 [col:9;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 168 on line 59 [col:10;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 169 on line 59 [col:11;len:1;lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 163:T_IF
+		* level increased *
+		* token 163:T_IF added to conditions array *
+		Process token 170 on line 59 [col:12;len:0;lvl:1;conds;T_IF;]: T_WHITESPACE => \n
+		Process token 171 on line 60 [col:1;len:4;lvl:1;conds;T_IF;]: T_WHITESPACE =>     
+		Process token 172 on line 60 [col:5;len:2;lvl:1;conds;T_IF;]: T_IF => if
+		Process token 173 on line 60 [col:7;len:1;lvl:1;conds;T_IF;]: T_WHITESPACE =>  
+		Process token 174 on line 60 [col:8;len:1;lvl:1;conds;T_IF;]: T_OPEN_PARENTHESIS => (
+		Process token 175 on line 60 [col:9;len:4;lvl:1;conds;T_IF;]: T_VARIABLE => $bar
+		Process token 176 on line 60 [col:13;len:1;lvl:1;conds;T_IF;]: T_CLOSE_PARENTHESIS => )
+		Process token 177 on line 60 [col:14;len:1;lvl:1;conds;T_IF;]: T_WHITESPACE =>  
+		Process token 178 on line 60 [col:15;len:1;lvl:1;conds;T_IF;]: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 172:T_IF
+			* level increased *
+			* token 172:T_IF added to conditions array *
+			Process token 179 on line 60 [col:16;len:0;lvl:2;conds;T_IF,T_IF;]: T_WHITESPACE => \n
+			Process token 180 on line 61 [col:1;len:8;lvl:2;conds;T_IF,T_IF;]: T_WHITESPACE =>         
+			Process token 181 on line 61 [col:9;len:2;lvl:2;conds;T_IF,T_IF;]: T_IF => if
+			Process token 182 on line 61 [col:11;len:1;lvl:2;conds;T_IF,T_IF;]: T_WHITESPACE =>  
+			Process token 183 on line 61 [col:12;len:1;lvl:2;conds;T_IF,T_IF;]: T_OPEN_PARENTHESIS => (
+			Process token 184 on line 61 [col:13;len:4;lvl:2;conds;T_IF,T_IF;]: T_VARIABLE => $baz
+			Process token 185 on line 61 [col:17;len:1;lvl:2;conds;T_IF,T_IF;]: T_CLOSE_PARENTHESIS => )
+			Process token 186 on line 61 [col:18;len:1;lvl:2;conds;T_IF,T_IF;]: T_WHITESPACE =>  
+			Process token 187 on line 61 [col:19;len:1;lvl:2;conds;T_IF,T_IF;]: T_OPEN_CURLY_BRACKET => {
+			=> Found scope opener for 181:T_IF
+				* level increased *
+				* token 181:T_IF added to conditions array *
+				Process token 188 on line 61 [col:20;len:0;lvl:3;conds;T_IF,T_IF,T_IF;]: T_WHITESPACE => \n
+				Process token 189 on line 62 [col:1;len:12;lvl:3;conds;T_IF,T_IF,T_IF;]: T_WHITESPACE =>             
+				Process token 190 on line 62 [col:13;len:27;lvl:3;conds;T_IF,T_IF,T_IF;]: T_COMMENT => // Next line can be broken:\n
+				Process token 191 on line 63 [col:1;len:12;lvl:3;conds;T_IF,T_IF,T_IF;]: T_WHITESPACE =>             
+				Process token 192 on line 63 [col:13;len:80;lvl:3;conds;T_IF,T_IF,T_IF;]: T_COMMENT => // foo bar baz http://en.wikipedia.org/wiki/Binomial_proportion#blahblahblahblah\n
+				Process token 193 on line 64 [col:1;len:12;lvl:3;conds;T_IF,T_IF,T_IF;]: T_WHITESPACE =>             
+				Process token 194 on line 64 [col:13;len:59;lvl:3;conds;T_IF,T_IF,T_IF;]: T_COMMENT => // But this one is just too long to break with this indent:\n
+				Process token 195 on line 65 [col:1;len:12;lvl:3;conds;T_IF,T_IF,T_IF;]: T_WHITESPACE =>             
+				Process token 196 on line 65 [col:13;len:84;lvl:3;conds;T_IF,T_IF,T_IF;]: T_COMMENT => // foo bar baz http://en.wikipedia.org/wiki/Binomial_proportion#blahblahblahblahblah\n
+				Process token 197 on line 66 [col:1;len:8;lvl:3;conds;T_IF,T_IF,T_IF;]: T_WHITESPACE =>         
+				Process token 198 on line 66 [col:9;len:1;lvl:3;conds;T_IF,T_IF,T_IF;]: T_CLOSE_CURLY_BRACKET => }
+				=> Found scope closer for 187:T_OPEN_CURLY_BRACKET
+				* token T_IF removed from conditions array *
+				* level decreased *
+			Process token 199 on line 66 [col:10;len:0;lvl:2;conds;T_IF,T_IF;]: T_WHITESPACE => \n
+			Process token 200 on line 67 [col:1;len:4;lvl:2;conds;T_IF,T_IF;]: T_WHITESPACE =>     
+			Process token 201 on line 67 [col:5;len:1;lvl:2;conds;T_IF,T_IF;]: T_CLOSE_CURLY_BRACKET => }
+			=> Found scope closer for 178:T_OPEN_CURLY_BRACKET
+			* token T_IF removed from conditions array *
+			* level decreased *
+		Process token 202 on line 67 [col:6;len:0;lvl:1;conds;T_IF;]: T_WHITESPACE => \n
+		Process token 203 on line 68 [col:1;len:1;lvl:1;conds;T_IF;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 169:T_OPEN_CURLY_BRACKET
+		* token T_IF removed from conditions array *
+		* level decreased *
+	Process token 204 on line 68 [col:2;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 205 on line 69 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 206 on line 70 [col:1;len:80;lvl:0;]: T_COMMENT => /* -------------------------------- 80 chars -------------------------------- */
+	Process token 207 on line 70 [col:81;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 208 on line 71 [col:1;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 209 on line 71 [col:4;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 210 on line 71 [col:5;len:1;lvl:0;]: T_EQUAL => =
+	Process token 211 on line 71 [col:6;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 212 on line 71 [col:7;len:8;lvl:0;]: T_FUNCTION => function
+	Process token 213 on line 71 [col:15;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 214 on line 71 [col:16;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 215 on line 71 [col:17;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 216 on line 71 [col:18;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 217 on line 71 [col:19;len:1;lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 212:T_FUNCTION
+		* level increased *
+		* token 212:T_FUNCTION added to conditions array *
+		Process token 218 on line 71 [col:20;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 219 on line 71 [col:21;len:13;lvl:1;conds;T_FUNCTION;]: T_COMMENT => /* comment */
+		Process token 220 on line 71 [col:34;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 221 on line 71 [col:35;len:2;lvl:1;conds;T_FUNCTION;]: T_IF => if
+		Process token 222 on line 71 [col:37;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 223 on line 71 [col:38;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_PARENTHESIS => (
+		Process token 224 on line 71 [col:39;len:4;lvl:1;conds;T_FUNCTION;]: T_VARIABLE => $foo
+		Process token 225 on line 71 [col:43;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 226 on line 71 [col:44;len:3;lvl:1;conds;T_FUNCTION;]: T_IS_IDENTICAL => ===
+		Process token 227 on line 71 [col:47;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 228 on line 71 [col:48;len:4;lvl:1;conds;T_FUNCTION;]: T_TRUE => true
+		Process token 229 on line 71 [col:52;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_PARENTHESIS => )
+		Process token 230 on line 71 [col:53;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 231 on line 71 [col:54;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 221:T_IF
+			* level increased *
+			* token 221:T_IF added to conditions array *
+			Process token 232 on line 71 [col:55;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 233 on line 71 [col:56;len:6;lvl:2;conds;T_FUNCTION,T_IF;]: T_RETURN => return
+			Process token 234 on line 71 [col:62;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 235 on line 71 [col:63;len:5;lvl:2;conds;T_FUNCTION,T_IF;]: T_INT_CAST => (int)
+			Process token 236 on line 71 [col:68;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 237 on line 71 [col:69;len:4;lvl:2;conds;T_FUNCTION,T_IF;]: T_VARIABLE => $foo
+			Process token 238 on line 71 [col:73;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_SEMICOLON => ;
+			Process token 239 on line 71 [col:74;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 240 on line 71 [col:75;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_CLOSE_CURLY_BRACKET => }
+			=> Found scope closer for 231:T_OPEN_CURLY_BRACKET
+			* token T_IF removed from conditions array *
+			* level decreased *
+		Process token 241 on line 71 [col:76;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 242 on line 71 [col:77;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 217:T_OPEN_CURLY_BRACKET
+		* token T_FUNCTION removed from conditions array *
+		* level decreased *
+	Process token 243 on line 71 [col:78;len:1;lvl:0;]: T_SEMICOLON => ;
+	Process token 244 on line 71 [col:79;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 245 on line 72 [col:1;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 246 on line 72 [col:4;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 247 on line 72 [col:5;len:1;lvl:0;]: T_EQUAL => =
+	Process token 248 on line 72 [col:6;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 249 on line 72 [col:7;len:8;lvl:0;]: T_FUNCTION => function
+	Process token 250 on line 72 [col:15;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 251 on line 72 [col:16;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 252 on line 72 [col:17;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 253 on line 72 [col:18;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 254 on line 72 [col:21;len:1;lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 249:T_FUNCTION
+		* level increased *
+		* token 249:T_FUNCTION added to conditions array *
+		Process token 255 on line 72 [col:22;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 256 on line 72 [col:23;len:13;lvl:1;conds;T_FUNCTION;]: T_COMMENT => /* comment */
+		Process token 257 on line 72 [col:36;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 258 on line 72 [col:37;len:2;lvl:1;conds;T_FUNCTION;]: T_IF => if
+		Process token 259 on line 72 [col:39;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 260 on line 72 [col:40;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_PARENTHESIS => (
+		Process token 261 on line 72 [col:41;len:4;lvl:1;conds;T_FUNCTION;]: T_VARIABLE => $foo
+		Process token 262 on line 72 [col:45;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 263 on line 72 [col:46;len:3;lvl:1;conds;T_FUNCTION;]: T_IS_IDENTICAL => ===
+		Process token 264 on line 72 [col:49;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 265 on line 72 [col:50;len:4;lvl:1;conds;T_FUNCTION;]: T_TRUE => true
+		Process token 266 on line 72 [col:54;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_PARENTHESIS => )
+		Process token 267 on line 72 [col:55;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 258:T_IF
+			* level increased *
+			* token 258:T_IF added to conditions array *
+			Process token 268 on line 72 [col:56;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 269 on line 72 [col:57;len:6;lvl:2;conds;T_FUNCTION,T_IF;]: T_RETURN => return
+			Process token 270 on line 72 [col:63;len:2;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>   
+			Process token 271 on line 72 [col:65;len:5;lvl:2;conds;T_FUNCTION,T_IF;]: T_INT_CAST => (int)
+			Process token 272 on line 72 [col:70;len:4;lvl:2;conds;T_FUNCTION,T_IF;]: T_VARIABLE => $foo
+			Process token 273 on line 72 [col:74;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_SEMICOLON => ;
+			Process token 274 on line 72 [col:75;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 275 on line 72 [col:76;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_CLOSE_CURLY_BRACKET => }
+			=> Found scope closer for 267:T_OPEN_CURLY_BRACKET
+			* token T_IF removed from conditions array *
+			* level decreased *
+		Process token 276 on line 72 [col:77;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 254:T_OPEN_CURLY_BRACKET
+		* token T_FUNCTION removed from conditions array *
+		* level decreased *
+	Process token 277 on line 72 [col:78;len:1;lvl:0;]: T_SEMICOLON => ;
+	Process token 278 on line 72 [col:79;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 279 on line 73 [col:1;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 280 on line 73 [col:4;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 281 on line 73 [col:5;len:1;lvl:0;]: T_EQUAL => =
+	Process token 282 on line 73 [col:6;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 283 on line 73 [col:7;len:8;lvl:0;]: T_FUNCTION => function
+	Process token 284 on line 73 [col:15;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 285 on line 73 [col:16;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 286 on line 73 [col:17;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 287 on line 73 [col:18;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 288 on line 73 [col:21;len:1;lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 283:T_FUNCTION
+		* level increased *
+		* token 283:T_FUNCTION added to conditions array *
+		Process token 289 on line 73 [col:22;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 290 on line 73 [col:23;len:13;lvl:1;conds;T_FUNCTION;]: T_COMMENT => /* comment */
+		Process token 291 on line 73 [col:36;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 292 on line 73 [col:37;len:2;lvl:1;conds;T_FUNCTION;]: T_IF => if
+		Process token 293 on line 73 [col:39;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 294 on line 73 [col:40;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_PARENTHESIS => (
+		Process token 295 on line 73 [col:41;len:4;lvl:1;conds;T_FUNCTION;]: T_VARIABLE => $foo
+		Process token 296 on line 73 [col:45;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 297 on line 73 [col:46;len:3;lvl:1;conds;T_FUNCTION;]: T_IS_IDENTICAL => ===
+		Process token 298 on line 73 [col:49;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 299 on line 73 [col:50;len:4;lvl:1;conds;T_FUNCTION;]: T_TRUE => true
+		Process token 300 on line 73 [col:54;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_PARENTHESIS => )
+		Process token 301 on line 73 [col:55;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 302 on line 73 [col:56;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 292:T_IF
+			* level increased *
+			* token 292:T_IF added to conditions array *
+			Process token 303 on line 73 [col:57;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 304 on line 73 [col:58;len:6;lvl:2;conds;T_FUNCTION,T_IF;]: T_RETURN => return
+			Process token 305 on line 73 [col:64;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 306 on line 73 [col:65;len:5;lvl:2;conds;T_FUNCTION,T_IF;]: T_INT_CAST => (int)
+			Process token 307 on line 73 [col:70;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 308 on line 73 [col:71;len:4;lvl:2;conds;T_FUNCTION,T_IF;]: T_VARIABLE => $foo
+			Process token 309 on line 73 [col:75;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_SEMICOLON => ;
+			Process token 310 on line 73 [col:76;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 311 on line 73 [col:77;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_CLOSE_CURLY_BRACKET => }
+			=> Found scope closer for 302:T_OPEN_CURLY_BRACKET
+			* token T_IF removed from conditions array *
+			* level decreased *
+		Process token 312 on line 73 [col:78;len:2;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>   
+		Process token 313 on line 73 [col:80;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 288:T_OPEN_CURLY_BRACKET
+		* token T_FUNCTION removed from conditions array *
+		* level decreased *
+	Process token 314 on line 73 [col:81;len:1;lvl:0;]: T_SEMICOLON => ;
+	Process token 315 on line 73 [col:82;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 316 on line 74 [col:1;len:4;lvl:0;]: T_WHITESPACE =>     
+	Process token 317 on line 74 [col:5;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 318 on line 74 [col:8;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 319 on line 74 [col:9;len:1;lvl:0;]: T_EQUAL => =
+	Process token 320 on line 74 [col:10;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 321 on line 74 [col:11;len:8;lvl:0;]: T_FUNCTION => function
+	Process token 322 on line 74 [col:19;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 323 on line 74 [col:20;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 324 on line 74 [col:21;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 325 on line 74 [col:22;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 326 on line 74 [col:23;len:1;lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 321:T_FUNCTION
+		* level increased *
+		* token 321:T_FUNCTION added to conditions array *
+		Process token 327 on line 74 [col:24;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 328 on line 74 [col:25;len:13;lvl:1;conds;T_FUNCTION;]: T_COMMENT => /* comment */
+		Process token 329 on line 74 [col:38;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 330 on line 74 [col:39;len:2;lvl:1;conds;T_FUNCTION;]: T_IF => if
+		Process token 331 on line 74 [col:41;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 332 on line 74 [col:42;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_PARENTHESIS => (
+		Process token 333 on line 74 [col:43;len:4;lvl:1;conds;T_FUNCTION;]: T_VARIABLE => $foo
+		Process token 334 on line 74 [col:47;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 335 on line 74 [col:48;len:3;lvl:1;conds;T_FUNCTION;]: T_IS_IDENTICAL => ===
+		Process token 336 on line 74 [col:51;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 337 on line 74 [col:52;len:4;lvl:1;conds;T_FUNCTION;]: T_TRUE => true
+		Process token 338 on line 74 [col:56;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_PARENTHESIS => )
+		Process token 339 on line 74 [col:57;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 340 on line 74 [col:58;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 330:T_IF
+			* level increased *
+			* token 330:T_IF added to conditions array *
+			Process token 341 on line 74 [col:59;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 342 on line 74 [col:60;len:6;lvl:2;conds;T_FUNCTION,T_IF;]: T_RETURN => return
+			Process token 343 on line 74 [col:66;len:5;lvl:2;conds;T_FUNCTION,T_IF;]: T_INT_CAST => (int)
+			Process token 344 on line 74 [col:71;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 345 on line 74 [col:72;len:4;lvl:2;conds;T_FUNCTION,T_IF;]: T_VARIABLE => $foo
+			Process token 346 on line 74 [col:76;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_SEMICOLON => ;
+			Process token 347 on line 74 [col:77;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 348 on line 74 [col:78;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_CLOSE_CURLY_BRACKET => }
+			=> Found scope closer for 340:T_OPEN_CURLY_BRACKET
+			* token T_IF removed from conditions array *
+			* level decreased *
+		Process token 349 on line 74 [col:79;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 326:T_OPEN_CURLY_BRACKET
+		* token T_FUNCTION removed from conditions array *
+		* level decreased *
+	Process token 350 on line 74 [col:80;len:1;lvl:0;]: T_SEMICOLON => ;
+	Process token 351 on line 74 [col:81;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 352 on line 75 [col:1;len:4;lvl:0;]: T_WHITESPACE =>     
+	Process token 353 on line 75 [col:5;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 354 on line 75 [col:8;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 355 on line 75 [col:9;len:1;lvl:0;]: T_EQUAL => =
+	Process token 356 on line 75 [col:10;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 357 on line 75 [col:11;len:8;lvl:0;]: T_FUNCTION => function
+	Process token 358 on line 75 [col:19;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 359 on line 75 [col:20;len:1;lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 360 on line 75 [col:21;len:1;lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 361 on line 75 [col:22;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 362 on line 75 [col:23;len:1;lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 357:T_FUNCTION
+		* level increased *
+		* token 357:T_FUNCTION added to conditions array *
+		Process token 363 on line 75 [col:24;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 364 on line 75 [col:25;len:13;lvl:1;conds;T_FUNCTION;]: T_COMMENT => /* comment */
+		Process token 365 on line 75 [col:38;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 366 on line 75 [col:39;len:2;lvl:1;conds;T_FUNCTION;]: T_IF => if
+		Process token 367 on line 75 [col:41;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 368 on line 75 [col:42;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_PARENTHESIS => (
+		Process token 369 on line 75 [col:43;len:4;lvl:1;conds;T_FUNCTION;]: T_VARIABLE => $foo
+		Process token 370 on line 75 [col:47;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 371 on line 75 [col:48;len:3;lvl:1;conds;T_FUNCTION;]: T_IS_IDENTICAL => ===
+		Process token 372 on line 75 [col:51;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 373 on line 75 [col:52;len:4;lvl:1;conds;T_FUNCTION;]: T_TRUE => true
+		Process token 374 on line 75 [col:56;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_PARENTHESIS => )
+		Process token 375 on line 75 [col:57;len:1;lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>  
+		Process token 376 on line 75 [col:58;len:1;lvl:1;conds;T_FUNCTION;]: T_OPEN_CURLY_BRACKET => {
+		=> Found scope opener for 366:T_IF
+			* level increased *
+			* token 366:T_IF added to conditions array *
+			Process token 377 on line 75 [col:59;len:2;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>   
+			Process token 378 on line 75 [col:61;len:6;lvl:2;conds;T_FUNCTION,T_IF;]: T_RETURN => return
+			Process token 379 on line 75 [col:67;len:5;lvl:2;conds;T_FUNCTION,T_IF;]: T_INT_CAST => (int)
+			Process token 380 on line 75 [col:72;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 381 on line 75 [col:73;len:4;lvl:2;conds;T_FUNCTION,T_IF;]: T_VARIABLE => $foo
+			Process token 382 on line 75 [col:77;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_SEMICOLON => ;
+			Process token 383 on line 75 [col:78;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_WHITESPACE =>  
+			Process token 384 on line 75 [col:79;len:1;lvl:2;conds;T_FUNCTION,T_IF;]: T_CLOSE_CURLY_BRACKET => }
+			=> Found scope closer for 376:T_OPEN_CURLY_BRACKET
+			* token T_IF removed from conditions array *
+			* level decreased *
+		Process token 385 on line 75 [col:80;len:1;lvl:1;conds;T_FUNCTION;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 362:T_OPEN_CURLY_BRACKET
+		* token T_FUNCTION removed from conditions array *
+		* level decreased *
+	Process token 386 on line 75 [col:81;len:1;lvl:0;]: T_SEMICOLON => ;
+	Process token 387 on line 75 [col:82;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 388 on line 76 [col:1;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 389 on line 76 [col:4;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 390 on line 76 [col:5;len:1;lvl:0;]: T_EQUAL => =
+	Process token 391 on line 76 [col:6;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 392 on line 76 [col:9;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 393 on line 76 [col:12;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 394 on line 76 [col:13;len:1;lvl:0;]: T_EQUAL => =
+	Process token 395 on line 76 [col:14;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 396 on line 76 [col:17;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 397 on line 76 [col:20;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 398 on line 76 [col:21;len:1;lvl:0;]: T_EQUAL => =
+	Process token 399 on line 76 [col:22;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 400 on line 76 [col:25;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 401 on line 76 [col:28;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 402 on line 76 [col:29;len:1;lvl:0;]: T_EQUAL => =
+	Process token 403 on line 76 [col:30;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 404 on line 76 [col:33;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 405 on line 76 [col:36;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 406 on line 76 [col:37;len:1;lvl:0;]: T_EQUAL => =
+	Process token 407 on line 76 [col:38;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 408 on line 76 [col:41;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 409 on line 76 [col:44;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 410 on line 76 [col:45;len:1;lvl:0;]: T_EQUAL => =
+	Process token 411 on line 76 [col:46;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 412 on line 76 [col:49;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 413 on line 76 [col:52;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 414 on line 76 [col:53;len:1;lvl:0;]: T_EQUAL => =
+	Process token 415 on line 76 [col:54;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 416 on line 76 [col:57;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 417 on line 76 [col:60;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 418 on line 76 [col:61;len:1;lvl:0;]: T_EQUAL => =
+	Process token 419 on line 76 [col:62;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 420 on line 76 [col:65;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 421 on line 76 [col:68;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 422 on line 76 [col:69;len:1;lvl:0;]: T_EQUAL => =
+	Process token 423 on line 76 [col:70;len:3;lvl:0;]: T_WHITESPACE =>    
+	Process token 424 on line 76 [col:73;len:3;lvl:0;]: T_VARIABLE => $ab
+	Process token 425 on line 76 [col:76;len:1;lvl:0;]: T_SEMICOLON => ;
+	Process token 426 on line 76 [col:77;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 427 on line 77 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 428 on line 78 [col:1;len:79;lvl:0;]: T_COMMENT => // PHPCS annotations on a line by themselves should be ignored for the metrics.\n
+	Process token 429 on line 79 [col:1;len:104;lvl:0;]: T_PHPCS_ENABLE => // phpcs:enable Standard.Category.Sniff.ErrorCode1,Standard.Category.Sniff.ErrorCode2 -- for reasons ...\n
+	Process token 430 on line 80 [col:1;len:0;lvl:0;]: T_WHITESPACE => \n
+	Process token 431 on line 81 [col:1;len:45;lvl:0;]: T_COMMENT => // ... but not when combined with statements.\n
+	Process token 432 on line 82 [col:1;len:2;lvl:0;]: T_VARIABLE => $a
+	Process token 433 on line 82 [col:3;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 434 on line 82 [col:4;len:1;lvl:0;]: T_EQUAL => =
+	Process token 435 on line 82 [col:5;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 436 on line 82 [col:6;len:2;lvl:0;]: T_VARIABLE => $b
+	Process token 437 on line 82 [col:8;len:1;lvl:0;]: T_SEMICOLON => ;
+	Process token 438 on line 82 [col:9;len:1;lvl:0;]: T_WHITESPACE =>  
+	Process token 439 on line 82 [col:10;len:104;lvl:0;]: T_PHPCS_IGNORE => // phpcs:ignore Standard.Category.Sniff.ErrorCode1,Standard.Category.Sniff.ErrorCode2 -- for reasons ...\n
+	*** END LEVEL MAP ***
+	*** START ADDITIONAL PHP PROCESSING ***
+	* token 357 on line 75 changed from T_FUNCTION to T_CLOSURE
+		* cleaned 363 (T_WHITESPACE) *
+		* cleaned 364 (T_COMMENT) *
+		* cleaned 365 (T_WHITESPACE) *
+		* cleaned 366 (T_IF) *
+		* cleaned 367 (T_WHITESPACE) *
+		* cleaned 368 (T_OPEN_PARENTHESIS) *
+		* cleaned 369 (T_VARIABLE) *
+		* cleaned 370 (T_WHITESPACE) *
+		* cleaned 371 (T_IS_IDENTICAL) *
+		* cleaned 372 (T_WHITESPACE) *
+		* cleaned 373 (T_TRUE) *
+		* cleaned 374 (T_CLOSE_PARENTHESIS) *
+		* cleaned 375 (T_WHITESPACE) *
+		* cleaned 376 (T_OPEN_CURLY_BRACKET) *
+		* cleaned 377 (T_WHITESPACE) *
+		* cleaned 378 (T_RETURN) *
+		* cleaned 379 (T_INT_CAST) *
+		* cleaned 380 (T_WHITESPACE) *
+		* cleaned 381 (T_VARIABLE) *
+		* cleaned 382 (T_SEMICOLON) *
+		* cleaned 383 (T_WHITESPACE) *
+		* cleaned 384 (T_CLOSE_CURLY_BRACKET) *
+	* token 321 on line 74 changed from T_FUNCTION to T_CLOSURE
+		* cleaned 327 (T_WHITESPACE) *
+		* cleaned 328 (T_COMMENT) *
+		* cleaned 329 (T_WHITESPACE) *
+		* cleaned 330 (T_IF) *
+		* cleaned 331 (T_WHITESPACE) *
+		* cleaned 332 (T_OPEN_PARENTHESIS) *
+		* cleaned 333 (T_VARIABLE) *
+		* cleaned 334 (T_WHITESPACE) *
+		* cleaned 335 (T_IS_IDENTICAL) *
+		* cleaned 336 (T_WHITESPACE) *
+		* cleaned 337 (T_TRUE) *
+		* cleaned 338 (T_CLOSE_PARENTHESIS) *
+		* cleaned 339 (T_WHITESPACE) *
+		* cleaned 340 (T_OPEN_CURLY_BRACKET) *
+		* cleaned 341 (T_WHITESPACE) *
+		* cleaned 342 (T_RETURN) *
+		* cleaned 343 (T_INT_CAST) *
+		* cleaned 344 (T_WHITESPACE) *
+		* cleaned 345 (T_VARIABLE) *
+		* cleaned 346 (T_SEMICOLON) *
+		* cleaned 347 (T_WHITESPACE) *
+		* cleaned 348 (T_CLOSE_CURLY_BRACKET) *
+	* token 283 on line 73 changed from T_FUNCTION to T_CLOSURE
+		* cleaned 289 (T_WHITESPACE) *
+		* cleaned 290 (T_COMMENT) *
+		* cleaned 291 (T_WHITESPACE) *
+		* cleaned 292 (T_IF) *
+		* cleaned 293 (T_WHITESPACE) *
+		* cleaned 294 (T_OPEN_PARENTHESIS) *
+		* cleaned 295 (T_VARIABLE) *
+		* cleaned 296 (T_WHITESPACE) *
+		* cleaned 297 (T_IS_IDENTICAL) *
+		* cleaned 298 (T_WHITESPACE) *
+		* cleaned 299 (T_TRUE) *
+		* cleaned 300 (T_CLOSE_PARENTHESIS) *
+		* cleaned 301 (T_WHITESPACE) *
+		* cleaned 302 (T_OPEN_CURLY_BRACKET) *
+		* cleaned 303 (T_WHITESPACE) *
+		* cleaned 304 (T_RETURN) *
+		* cleaned 305 (T_WHITESPACE) *
+		* cleaned 306 (T_INT_CAST) *
+		* cleaned 307 (T_WHITESPACE) *
+		* cleaned 308 (T_VARIABLE) *
+		* cleaned 309 (T_SEMICOLON) *
+		* cleaned 310 (T_WHITESPACE) *
+		* cleaned 311 (T_CLOSE_CURLY_BRACKET) *
+		* cleaned 312 (T_WHITESPACE) *
+	* token 249 on line 72 changed from T_FUNCTION to T_CLOSURE
+		* cleaned 255 (T_WHITESPACE) *
+		* cleaned 256 (T_COMMENT) *
+		* cleaned 257 (T_WHITESPACE) *
+		* cleaned 258 (T_IF) *
+		* cleaned 259 (T_WHITESPACE) *
+		* cleaned 260 (T_OPEN_PARENTHESIS) *
+		* cleaned 261 (T_VARIABLE) *
+		* cleaned 262 (T_WHITESPACE) *
+		* cleaned 263 (T_IS_IDENTICAL) *
+		* cleaned 264 (T_WHITESPACE) *
+		* cleaned 265 (T_TRUE) *
+		* cleaned 266 (T_CLOSE_PARENTHESIS) *
+		* cleaned 267 (T_OPEN_CURLY_BRACKET) *
+		* cleaned 268 (T_WHITESPACE) *
+		* cleaned 269 (T_RETURN) *
+		* cleaned 270 (T_WHITESPACE) *
+		* cleaned 271 (T_INT_CAST) *
+		* cleaned 272 (T_VARIABLE) *
+		* cleaned 273 (T_SEMICOLON) *
+		* cleaned 274 (T_WHITESPACE) *
+		* cleaned 275 (T_CLOSE_CURLY_BRACKET) *
+	* token 212 on line 71 changed from T_FUNCTION to T_CLOSURE
+		* cleaned 218 (T_WHITESPACE) *
+		* cleaned 219 (T_COMMENT) *
+		* cleaned 220 (T_WHITESPACE) *
+		* cleaned 221 (T_IF) *
+		* cleaned 222 (T_WHITESPACE) *
+		* cleaned 223 (T_OPEN_PARENTHESIS) *
+		* cleaned 224 (T_VARIABLE) *
+		* cleaned 225 (T_WHITESPACE) *
+		* cleaned 226 (T_IS_IDENTICAL) *
+		* cleaned 227 (T_WHITESPACE) *
+		* cleaned 228 (T_TRUE) *
+		* cleaned 229 (T_CLOSE_PARENTHESIS) *
+		* cleaned 230 (T_WHITESPACE) *
+		* cleaned 231 (T_OPEN_CURLY_BRACKET) *
+		* cleaned 232 (T_WHITESPACE) *
+		* cleaned 233 (T_RETURN) *
+		* cleaned 234 (T_WHITESPACE) *
+		* cleaned 235 (T_INT_CAST) *
+		* cleaned 236 (T_WHITESPACE) *
+		* cleaned 237 (T_VARIABLE) *
+		* cleaned 238 (T_SEMICOLON) *
+		* cleaned 239 (T_WHITESPACE) *
+		* cleaned 240 (T_CLOSE_CURLY_BRACKET) *
+		* cleaned 241 (T_WHITESPACE) *
+	*** END ADDITIONAL PHP PROCESSING ***
+[PHP => 440 tokens in 82 lines]... 
+DONE in 234ms (58 fixable violations)
+	=> Fixing file: 58/58 violations remaining	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 209 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 246 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 253 (T_WHITESPACE) "\t{" => "   {"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 270 (T_WHITESPACE) "\t(int)" => "  (int)"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 280 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 287 (T_WHITESPACE) "\t{" => "   {"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 305 (T_WHITESPACE) "\t(int)" => " (int)"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 316 (T_WHITESPACE) "\t$ab" => "    $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 318 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 352 (T_WHITESPACE) "\t$ab" => "    $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 354 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 377 (T_WHITESPACE) "\treturn" => "  return"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 389 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 391 (T_WHITESPACE) "  \t$ab" => "   $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 393 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 395 (T_WHITESPACE) "  \t$ab" => "   $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 397 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 399 (T_WHITESPACE) "  \t$ab" => "   $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 401 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 403 (T_WHITESPACE) "  \t$ab" => "   $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 405 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 407 (T_WHITESPACE) "  \t$ab" => "   $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 409 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 411 (T_WHITESPACE) "  \t$ab" => "   $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 413 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 415 (T_WHITESPACE) "  \t$ab" => "   $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 417 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 419 (T_WHITESPACE) "  \t$ab" => "   $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 421 (T_WHITESPACE) "\t=" => " ="
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff (line 171) replaced token 423 (T_WHITESPACE) "  \t$ab" => "   $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\Functions\OpeningFunctionBraceKernighanRitchieSniff (line 144) replaced token 217 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 242 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 217)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 224) replaced token 232 (T_WHITESPACE) " return" => "return"
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 227) replaced token 231 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 232 (T_WHITESPACE) " return" => "return"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 231 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	=> Changeset ended: 2 changes applied
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 240 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	=> Changeset started by PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 74)
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 75) replaced token 238 (T_SEMICOLON) ";" => ";\n"
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 77) replaced token 239 (T_WHITESPACE) " \n}" => "\n}"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 238 (T_SEMICOLON) ";" => ";\n"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 239 (T_WHITESPACE) " \n}" => "\n}"
+	=> Changeset ended: 2 changes applied
+	PHP_CodeSniffer\Standards\Generic\Sniffs\Functions\OpeningFunctionBraceKernighanRitchieSniff (line 144) replaced token 254 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	* token 254 has already been modified, skipping *
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 276 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 157) replaced token 266 (T_CLOSE_PARENTHESIS) ")" => ") "
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 217)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 224) replaced token 268 (T_WHITESPACE) " return" => "return"
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 227) replaced token 267 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 268 (T_WHITESPACE) " return" => "return"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 267 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	=> Changeset ended: 2 changes applied
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 275 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	=> Changeset started by PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 74)
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 75) replaced token 273 (T_SEMICOLON) ";" => ";\n"
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 77) replaced token 274 (T_WHITESPACE) " \n}" => "\n}"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 273 (T_SEMICOLON) ";" => ";\n"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 274 (T_WHITESPACE) " \n}" => "\n}"
+	=> Changeset ended: 2 changes applied
+	PHP_CodeSniffer\Standards\Generic\Sniffs\Functions\OpeningFunctionBraceKernighanRitchieSniff (line 144) replaced token 288 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	* token 288 has already been modified, skipping *
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 313 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 217)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 224) replaced token 303 (T_WHITESPACE) " return" => "return"
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 227) replaced token 302 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 303 (T_WHITESPACE) " return" => "return"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 302 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	=> Changeset ended: 2 changes applied
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 311 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	=> Changeset started by PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 74)
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 75) replaced token 309 (T_SEMICOLON) ";" => ";\n"
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 77) replaced token 310 (T_WHITESPACE) " \n}" => "\n}"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 309 (T_SEMICOLON) ";" => ";\n"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 310 (T_WHITESPACE) " \n}" => "\n}"
+	=> Changeset ended: 2 changes applied
+	PHP_CodeSniffer\Standards\Generic\Sniffs\Functions\OpeningFunctionBraceKernighanRitchieSniff (line 144) replaced token 326 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 349 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 217)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 224) replaced token 341 (T_WHITESPACE) " return" => "return"
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 227) replaced token 340 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 341 (T_WHITESPACE) " return" => "return"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 340 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	=> Changeset ended: 2 changes applied
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 348 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	=> Changeset started by PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 74)
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 75) replaced token 346 (T_SEMICOLON) ";" => ";\n"
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 77) replaced token 347 (T_WHITESPACE) " \n}" => "\n}"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 346 (T_SEMICOLON) ";" => ";\n"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 347 (T_WHITESPACE) " \n}" => "\n}"
+	=> Changeset ended: 2 changes applied
+	PHP_CodeSniffer\Standards\Generic\Sniffs\Functions\OpeningFunctionBraceKernighanRitchieSniff (line 144) replaced token 362 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 385 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 217)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 224) replaced token 377 (T_WHITESPACE) "  return" => "return"
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 227) replaced token 376 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+		* token 377 has already been modified, skipping *
+	=> Changeset failed to apply
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 72) replaced token 384 (T_CLOSE_CURLY_BRACKET) "}" => "\n}"
+	=> Changeset started by PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 74)
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 75) replaced token 382 (T_SEMICOLON) ";" => ";\n"
+		Q: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 77) replaced token 383 (T_WHITESPACE) " \n}" => "\n}"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 382 (T_SEMICOLON) ";" => ";\n"
+		A: PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\DisallowMultipleStatementsSniff (line 80) replaced token 383 (T_WHITESPACE) " \n}" => "\n}"
+	=> Changeset ended: 2 changes applied
+                                                                                	=> Fixing file: 64/58 violations remaining [made 1 pass]... 	* fixed 64 violations, starting loop 2 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 234 (T_RETURN) "return" => "        return"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 242 (T_CLOSE_CURLY_BRACKET) "}" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 273 (T_RETURN) "return" => "        return"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 280 (T_CLOSE_CURLY_BRACKET) "}" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 311 (T_RETURN) "return" => "        return"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 319 (T_CLOSE_CURLY_BRACKET) "}" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 351 (T_RETURN) "return" => "            return"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 358 (T_CLOSE_CURLY_BRACKET) "}" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 360 (T_CLOSE_CURLY_BRACKET) "}" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 397 (T_CLOSE_CURLY_BRACKET) "}" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 399 (T_CLOSE_CURLY_BRACKET) "}" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 402 (T_VARIABLE) "$ab" => "    $ab"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 443 (T_PHPCS_ENABLE) "// phpcs:enable Standard.Category.Sniff.ErrorCode1,Standard.Category.Sniff.ErrorCode2 -- for reasons ...\n" => "    // phpcs:enable Standard.Category.Sniff.ErrorCode1,Standard.Category.Sniff.ErrorCode2 -- for reasons ...\n"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 446 (T_VARIABLE) "$a" => "    $a"
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 215)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 225) replaced token 241 (T_WHITESPACE) "\n    }" => "    }"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 228) replaced token 241 (T_WHITESPACE) "\n    }" => "    }"
+	=> Changeset ended: 1 changes applied
+	* token 242 has already been modified, skipping *
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\SuperfluousWhitespaceSniff (line 211) replaced token 243 (T_WHITESPACE) " \n}" => "\n}"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\Functions\OpeningFunctionBraceKernighanRitchieSniff (line 177) replaced token 255 (T_WHITESPACE) "   {" => " {"
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 215)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 225) replaced token 279 (T_WHITESPACE) "\n    }" => "    }"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 228) replaced token 279 (T_WHITESPACE) "\n    }" => "    }"
+	=> Changeset ended: 1 changes applied
+	* token 280 has already been modified, skipping *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\Functions\OpeningFunctionBraceKernighanRitchieSniff (line 177) replaced token 293 (T_WHITESPACE) "   {" => " {"
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 215)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 225) replaced token 318 (T_WHITESPACE) "\n    }" => "    }"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 228) replaced token 318 (T_WHITESPACE) "\n    }" => "    }"
+	=> Changeset ended: 1 changes applied
+	* token 319 has already been modified, skipping *
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\SuperfluousWhitespaceSniff (line 211) replaced token 320 (T_WHITESPACE) "  \n}" => "\n}"
+	* token 360 has already been modified, skipping *
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 215)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 225) replaced token 357 (T_WHITESPACE) "\n    }" => "    }"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 228) replaced token 357 (T_WHITESPACE) "\n    }" => "    }"
+	=> Changeset ended: 1 changes applied
+	* token 358 has already been modified, skipping *
+	* token 399 has already been modified, skipping *
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 217)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 224) replaced token 389 (T_WHITESPACE) "  return" => "return"
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 227) replaced token 388 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 389 (T_WHITESPACE) "  return" => "return"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\ControlStructures\ControlSignatureSniff (line 228) replaced token 388 (T_OPEN_CURLY_BRACKET) "{" => "{\n"
+	=> Changeset ended: 2 changes applied
+	=> Changeset started by PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 215)
+		Q: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 225) replaced token 396 (T_WHITESPACE) "\n    }" => "    }"
+		A: PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ControlStructureSpacingSniff (line 228) replaced token 396 (T_WHITESPACE) "\n    }" => "    }"
+	=> Changeset ended: 1 changes applied
+	* token 397 has already been modified, skipping *
+                                                                                	=> Fixing file: 25/58 violations remaining [made 2 passes]... 	* fixed 25 violations, starting loop 3 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1343) replaced token 395 (T_RETURN) "return" => "            return"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 401 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 6/58 violations remaining [made 3 passes]... 	* fixed 6 violations, starting loop 4 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 2; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 1/58 violations remaining [made 4 passes]... 	* fixed 1 violations, starting loop 5 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	**** PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) has possible conflict with another sniff on loop 3; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) "    }" => " }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 4/58 violations remaining [made 5 passes]... 	* fixed 4 violations, starting loop 6 *
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+	**** PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) has possible conflict with another sniff on loop 4; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) "    }" => " }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 1/58 violations remaining [made 6 passes]... 	* fixed 1 violations, starting loop 7 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 5; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 7 passes]... 	* fixed 0 violations, starting loop 8 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 8 passes]... 	* fixed 5 violations, starting loop 9 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 7; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 9 passes]... 	* fixed 0 violations, starting loop 10 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 10 passes]... 	* fixed 5 violations, starting loop 11 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 9; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 11 passes]... 	* fixed 0 violations, starting loop 12 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 12 passes]... 	* fixed 5 violations, starting loop 13 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 11; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 13 passes]... 	* fixed 0 violations, starting loop 14 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 14 passes]... 	* fixed 5 violations, starting loop 15 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 13; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 15 passes]... 	* fixed 0 violations, starting loop 16 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 16 passes]... 	* fixed 5 violations, starting loop 17 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 15; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 17 passes]... 	* fixed 0 violations, starting loop 18 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 18 passes]... 	* fixed 5 violations, starting loop 19 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 17; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 19 passes]... 	* fixed 0 violations, starting loop 20 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 20 passes]... 	* fixed 5 violations, starting loop 21 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 19; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 21 passes]... 	* fixed 0 violations, starting loop 22 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 22 passes]... 	* fixed 5 violations, starting loop 23 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 21; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 23 passes]... 	* fixed 0 violations, starting loop 24 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 24 passes]... 	* fixed 5 violations, starting loop 25 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 23; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 25 passes]... 	* fixed 0 violations, starting loop 26 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 26 passes]... 	* fixed 5 violations, starting loop 27 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 25; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 27 passes]... 	* fixed 0 violations, starting loop 28 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 28 passes]... 	* fixed 5 violations, starting loop 29 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 27; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 29 passes]... 	* fixed 0 violations, starting loop 30 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 30 passes]... 	* fixed 5 violations, starting loop 31 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 29; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 31 passes]... 	* fixed 0 violations, starting loop 32 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 32 passes]... 	* fixed 5 violations, starting loop 33 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 31; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 33 passes]... 	* fixed 0 violations, starting loop 34 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 34 passes]... 	* fixed 5 violations, starting loop 35 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 33; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 35 passes]... 	* fixed 0 violations, starting loop 36 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 36 passes]... 	* fixed 5 violations, starting loop 37 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 35; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 37 passes]... 	* fixed 0 violations, starting loop 38 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 38 passes]... 	* fixed 5 violations, starting loop 39 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 37; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 39 passes]... 	* fixed 0 violations, starting loop 40 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 40 passes]... 	* fixed 5 violations, starting loop 41 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 39; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 41 passes]... 	* fixed 0 violations, starting loop 42 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 42 passes]... 	* fixed 5 violations, starting loop 43 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 41; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 43 passes]... 	* fixed 0 violations, starting loop 44 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 44 passes]... 	* fixed 5 violations, starting loop 45 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 43; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 45 passes]... 	* fixed 0 violations, starting loop 46 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 46 passes]... 	* fixed 5 violations, starting loop 47 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 45; caused by the following change ****
+	**** replaced token 242 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 47 passes]... 	* fixed 0 violations, starting loop 48 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 242 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 281 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 321 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 361 (T_WHITESPACE) "    }" => " }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 402 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 48 passes]... 	* fixed 5 violations, starting loop 49 *
+	**** PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) has possible conflict with another sniff on loop 47; caused by the following change ****
+	**** replaced token 281 (T_WHITESPACE) " }" => "    }" ****
+	**** ignoring all changes until next loop ****
+                                                                                	=> Fixing file: 0/58 violations remaining [made 49 passes]... 	* fixed 0 violations, starting loop 50 *
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 281 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 321 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 361 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\ScopeIndentSniff (line 1346) replaced token 402 (T_WHITESPACE) " }" => "    }"
+	PHP_CodeSniffer\Standards\Squiz\Sniffs\WhiteSpace\ScopeClosingBraceSniff (line 97) replaced token 242 (T_WHITESPACE) "    }" => " }"
+                                                                                	=> Fixing file: 5/58 violations remaining [made 50 passes]... 	* fixed 5 violations, starting loop 51 *
+	*** Reached maximum number of loops with 5 violations left unfixed ***
+ERROR in 5.17 secs
+
+PHPCBF RESULT SUMMARY
+------------------------------------------------------------------------------------------
+FILE                                                                      FIXED  REMAINING
+------------------------------------------------------------------------------------------
+...odeSniffer\src\Standards\Generic\Tests\Files\LineLengthUnitTest.1.inc  FAILED TO FIX
+------------------------------------------------------------------------------------------
+A TOTAL OF 53 ERRORS WERE FIXED IN 1 FILE
+------------------------------------------------------------------------------------------
+PHPCBF FAILED TO FIX 1 FILE
+------------------------------------------------------------------------------------------
+
+Time: 6.46 secs; Memory: 6MB
+
+
