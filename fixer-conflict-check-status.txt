@@ -1,4 +1,9 @@
-Status per 2023-12-10
+Status per 2024-03-29
+======================
+
+Open PRs from others:
+- PR #38: Generic.WhiteSpace.ScopeIndent and PSR2.Methods.FunctionCallSignature
+
 ======================
 
 #phpcbf -p . --standard=PEAR --no-cache --ignore=*/build/*,*/vendor/* --basepath=. --extensions=inc --suffix=.conflictcheck
@@ -20,12 +25,13 @@ src\Standards\Squiz\Tests\PHP\NonExecutableCodeUnitTest.1.inc                   
 src\Standards\Squiz\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                FAILED TO FIX
 tests\Core\File\FindEndOfStatementTest.inc                                                        FAILED TO FIX
 tests\Core\File\FindStartOfStatementTest.inc                                                      FAILED TO FIX
+tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
 tests\Core\Tokenizer\DefaultKeywordTest.inc                                                       FAILED TO FIX
 tests\Core\Tokenizer\EnumCaseTest.inc                                                             FAILED TO FIX
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 9100 ERRORS WERE FIXED IN 269 FILES
+A TOTAL OF 9542 ERRORS WERE FIXED IN 304 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 14 FILES
+PHPCBF FAILED TO FIX 15 FILES
 ------------------------------------------------------------------------------------------------------------------
 
 
@@ -45,12 +51,11 @@ FILE                                                                            
 src\Standards\PEAR\Tests\Functions\FunctionCallSignatureUnitTest.inc                              FAILED TO FIX
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
 src\Standards\Squiz\Tests\ControlStructures\ForEachLoopDeclarationUnitTest.inc                    FAILED TO FIX
-tests\Core\Tokenizer\ScopeSettingWithNamespaceOperatorTest.inc                                    FAILED TO FIX
-tests\Core\Tokenizer\UndoNamespacedNameSingleTokenTest.inc                                        FAILED TO FIX
+tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 8898 ERRORS WERE FIXED IN 320 FILES
+A TOTAL OF 9320 ERRORS WERE FIXED IN 351 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 5 FILES
+PHPCBF FAILED TO FIX 4 FILES
 ------------------------------------------------------------------------------------------------------------------
 
 
@@ -61,19 +66,17 @@ PHPCBF RESULT SUMMARY
 ------------------------------------------------------------------------------------------------------------------
 FILE                                                                                              FIXED  REMAINING
 ------------------------------------------------------------------------------------------------------------------
-src\Standards\Generic\Tests\PHP\RequireStrictTypesUnitTest.13.inc                                 FAILED TO FIX
 src\Standards\Generic\Tests\PHP\RequireStrictTypesUnitTest.5.inc                                  FAILED TO FIX
 src\Standards\PEAR\Tests\Functions\FunctionCallSignatureUnitTest.inc                              FAILED TO FIX
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
 src\Standards\Squiz\Tests\ControlStructures\ForEachLoopDeclarationUnitTest.inc                    FAILED TO FIX
-src\Standards\Squiz\Tests\ControlStructures\ForLoopDeclarationUnitTest.inc                        FAILED TO FIX
+src\Standards\Squiz\Tests\ControlStructures\ForLoopDeclarationUnitTest.1.inc                      FAILED TO FIX
 tests\Core\File\GetMethodParametersTest.inc                                                       FAILED TO FIX
-tests\Core\Tokenizer\ScopeSettingWithNamespaceOperatorTest.inc                                    FAILED TO FIX
-tests\Core\Tokenizer\UndoNamespacedNameSingleTokenTest.inc                                        FAILED TO FIX
+tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 10594 ERRORS WERE FIXED IN 372 FILES
+A TOTAL OF 11132 ERRORS WERE FIXED IN 418 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 9 FILES
+PHPCBF FAILED TO FIX 7 FILES
 ------------------------------------------------------------------------------------------------------------------
 
 
@@ -87,6 +90,7 @@ FILE                                                                            
 src\Standards\Generic\Tests\Arrays\ArrayIndentUnitTest.inc                                        FAILED TO FIX
 src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.3.inc                              FAILED TO FIX
 src\Standards\Generic\Tests\CodeAnalysis\EmptyPHPStatementUnitTest.inc                            FAILED TO FIX
+src\Standards\Generic\Tests\CodeAnalysis\UselessOverridingMethodUnitTest.1.inc                    FAILED TO FIX **NEW 2024-03
 src\Standards\Generic\Tests\ControlStructures\DisallowYodaConditionsUnitTest.inc                  FAILED TO FIX
 src\Standards\Generic\Tests\NamingConventions\AbstractClassNamePrefixUnitTest.inc                 FAILED TO FIX
 src\Standards\Generic\Tests\PHP\CharacterBeforePHPOpeningTagUnitTest.1.inc                        FAILED TO FIX
@@ -98,16 +102,16 @@ src\Standards\PEAR\Tests\Commenting\ClassCommentUnitTest.inc                    
 src\Standards\PEAR\Tests\Commenting\FunctionCommentUnitTest.inc                                   FAILED TO FIX
 src\Standards\PEAR\Tests\ControlStructures\MultiLineConditionUnitTest.inc                         FAILED TO FIX
 src\Standards\PEAR\Tests\Functions\FunctionCallSignatureUnitTest.inc                              FAILED TO FIX
-src\Standards\PEAR\Tests\Functions\FunctionDeclarationUnitTest.inc                                FAILED TO FIX
+src\Standards\PEAR\Tests\Functions\FunctionDeclarationUnitTest.1.inc                              FAILED TO FIX
 src\Standards\PEAR\Tests\NamingConventions\ValidVariableNameUnitTest.inc                          FAILED TO FIX
+src\Standards\PEAR\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                 FAILED TO FIX **NEW 2024-03
 src\Standards\PSR1\Tests\Files\SideEffectsUnitTest.1.inc                                          FAILED TO FIX
 src\Standards\PSR12\Tests\ControlStructures\BooleanOperatorPlacementUnitTest.inc                  FAILED TO FIX
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
-src\Standards\PSR12\Tests\Operators\OperatorSpacingUnitTest.inc                                   FAILED TO FIX
+src\Standards\PSR12\Tests\Operators\OperatorSpacingUnitTest.1.inc                                 FAILED TO FIX
 src\Standards\PSR2\Tests\Classes\ClassDeclarationUnitTest.inc                                     FAILED TO FIX
 src\Standards\PSR2\Tests\ControlStructures\ControlStructureSpacingUnitTest.inc                    FAILED TO FIX
 src\Standards\PSR2\Tests\Methods\FunctionCallSignatureUnitTest.inc                                FAILED TO FIX
-src\Standards\PSR2\Tests\Methods\FunctionClosingBraceUnitTest.inc                                 FAILED TO FIX
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.1.inc                                   FAILED TO FIX
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.2.inc                                   FAILED TO FIX
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                                 FAILED TO FIX
@@ -117,8 +121,11 @@ src\Standards\Squiz\Tests\Commenting\FunctionCommentUnitTest.inc                
 src\Standards\Squiz\Tests\Commenting\VariableCommentUnitTest.inc                                  FAILED TO FIX
 src\Standards\Squiz\Tests\ControlStructures\ControlSignatureUnitTest.inc                          FAILED TO FIX
 src\Standards\Squiz\Tests\ControlStructures\ForEachLoopDeclarationUnitTest.inc                    FAILED TO FIX
-src\Standards\Squiz\Tests\ControlStructures\ForLoopDeclarationUnitTest.inc                        FAILED TO FIX
-src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.inc                                             FAILED TO FIX
+src\Standards\Squiz\Tests\ControlStructures\ForLoopDeclarationUnitTest.1.inc                      FAILED TO FIX
+src\Standards\Squiz\Tests\Objects\ObjectInstantiationUnitTest.inc                                 FAILED TO FIX **NEW 2024-03
+src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.1.inc                                           FAILED TO FIX
+src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.19.inc                                          FAILED TO FIX **NEW 2024-03
+src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.5.inc                                           FAILED TO FIX **NEW 2024-03
 src\Standards\Squiz\Tests\PHP\InnerFunctionsUnitTest.inc                                          FAILED TO FIX
 src\Standards\Squiz\Tests\Scope\MemberVarScopeUnitTest.inc                                        FAILED TO FIX
 src\Standards\Squiz\Tests\Scope\MethodScopeUnitTest.inc                                           FAILED TO FIX
@@ -128,23 +135,26 @@ src\Standards\Squiz\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc              
 src\Standards\Squiz\Tests\WhiteSpace\ScopeKeywordSpacingUnitTest.1.inc                            FAILED TO FIX
 src\Standards\Squiz\Tests\WhiteSpace\ScopeKeywordSpacingUnitTest.3.inc                            FAILED TO FIX
 tests\Core\File\FindEndOfStatementTest.inc                                                        FAILED TO FIX
+tests\Core\File\FindExtendedClassNameTest.inc                                                     FAILED TO FIX **NEW 2024-03
 tests\Core\File\FindStartOfStatementTest.inc                                                      FAILED TO FIX
+tests\Core\File\GetConditionTest.inc                                                              FAILED TO FIX **NEW 2024-03
+tests\Core\File\GetDeclarationNameTest.inc                                                        FAILED TO FIX **NEW 2024-03
 tests\Core\File\GetMemberPropertiesTest.inc                                                       FAILED TO FIX
 tests\Core\File\GetMethodParametersTest.inc                                                       FAILED TO FIX
+tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
 tests\Core\Tokenizer\AttributesTest.inc                                                           FAILED TO FIX
 tests\Core\Tokenizer\BackfillMatchTokenTest.inc                                                   FAILED TO FIX
+tests\Core\Tokenizer\BackfillReadonlyTest.inc                                                     FAILED TO FIX **NEW 2024-03
 tests\Core\Tokenizer\BitwiseOrTest.inc                                                            FAILED TO FIX
 tests\Core\Tokenizer\ContextSensitiveKeywordsTest.inc                                             FAILED TO FIX
 tests\Core\Tokenizer\DefaultKeywordTest.inc                                                       FAILED TO FIX
 tests\Core\Tokenizer\DoubleArrowTest.inc                                                          FAILED TO FIX
 tests\Core\Tokenizer\EnumCaseTest.inc                                                             FAILED TO FIX
-tests\Core\Tokenizer\ScopeSettingWithNamespaceOperatorTest.inc                                    FAILED TO FIX
 tests\Core\Tokenizer\TypeIntersectionTest.inc                                                     FAILED TO FIX
-tests\Core\Tokenizer\UndoNamespacedNameSingleTokenTest.inc                                        FAILED TO FIX
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 23586 ERRORS WERE FIXED IN 379 FILES
+A TOTAL OF 25149 ERRORS WERE FIXED IN 437 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 57 FILES
+PHPCBF FAILED TO FIX 64 FILES
 ------------------------------------------------------------------------------------------------------------------
 
 
@@ -161,7 +171,7 @@ src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.1.inc                
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.2.inc                                  FAILED TO FIX
 src\Standards\Squiz\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                FAILED TO FIX
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 5760 ERRORS WERE FIXED IN 282 FILES
+A TOTAL OF 6077 ERRORS WERE FIXED IN 319 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 5 FILES
 ------------------------------------------------------------------------------------------------------------------
