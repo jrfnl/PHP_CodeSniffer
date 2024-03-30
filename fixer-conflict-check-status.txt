@@ -14,23 +14,41 @@ PHPCBF RESULT SUMMARY
 FILE                                                                                              FIXED  REMAINING
 ------------------------------------------------------------------------------------------------------------------
 src\Standards\Generic\Tests\ControlStructures\DisallowYodaConditionsUnitTest.inc                  FAILED TO FIX
+    => Generic.Functions.OpeningFunctionBraceKernighanRitchie + Generic.WhiteSpace.ScopeIndent + PEAR.ControlStructures.MultiLineCondition + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.1.inc                                  FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionCallSignature + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.2.inc                                  FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionCallSignature + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\PEAR\Tests\NamingConventions\ValidVariableNameUnitTest.inc                          FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\PEAR\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                 FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Generic.Functions.OpeningFunctionBraceBsdAllman
 src\Standards\PSR2\Tests\ControlStructures\SwitchDeclarationUnitTest.inc                          FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\Squiz\Tests\Commenting\LongConditionClosingCommentUnitTest.inc                      FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\Squiz\Tests\PHP\NonExecutableCodeUnitTest.1.inc                                     FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\Squiz\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionCallSignature + PEAR.WhiteSpace.ScopeClosingBrace
 tests\Core\File\FindEndOfStatementTest.inc                                                        FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 tests\Core\File\FindStartOfStatementTest.inc                                                      FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
+    => Generic.WhiteSpace.ScopeIndent + Generic.Functions.OpeningFunctionBraceBsdAllman
 tests\Core\Tokenizer\PHP\DefaultKeywordTest.inc                                                   FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionDeclaration
 tests\Core\Tokenizer\PHP\EnumCaseTest.inc                                                         FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 tests\Core\Tokenizer\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                       FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 tests\Core\Tokenizer\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                    FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + PEAR.WhiteSpace.ScopeClosingBrace
 ------------------------------------------------------------------------------------------------------------------
 A TOTAL OF 9881 ERRORS WERE FIXED IN 315 FILES
 ------------------------------------------------------------------------------------------------------------------
@@ -52,12 +70,21 @@ PHPCBF RESULT SUMMARY
 FILE                                                                                              FIXED  REMAINING
 ------------------------------------------------------------------------------------------------------------------
 src\Standards\Generic\Tests\CodeAnalysis\JumbledIncrementerUnitTest.4.inc                         FAILED TO FIX **NEW 2024-07
+    => Squiz.ControlStructures.ControlSignature + Squiz.WhiteSpace.ScopeClosingBrace
 src\Standards\PEAR\Tests\Functions\FunctionCallSignatureUnitTest.inc                              FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionCallSignature
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Generic.Functions.OpeningFunctionBraceBsdAllman
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                                 FAILED TO FIX **NEW 2024-07
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PSR2.Namespaces.NamespaceDeclaration
 src\Standards\Squiz\Tests\ControlStructures\ForEachLoopDeclarationUnitTest.inc                    FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PSR2.ControlStructures.ControlStructureSpacing + Squiz.ControlStructures.ForEachLoopDeclaration
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
+    => Generic.WhiteSpace.ScopeIndent + Generic.Functions.OpeningFunctionBraceBsdAllman
 tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionDeclaration
 ------------------------------------------------------------------------------------------------------------------
 A TOTAL OF 9637 ERRORS WERE FIXED IN 366 FILES
 ------------------------------------------------------------------------------------------------------------------
@@ -73,15 +100,29 @@ PHPCBF RESULT SUMMARY
 FILE                                                                                              FIXED  REMAINING
 ------------------------------------------------------------------------------------------------------------------
 src\Standards\Generic\Tests\CodeAnalysis\JumbledIncrementerUnitTest.4.inc                         FAILED TO FIX **NEW 2024-07
+    => Squiz.ControlStructures.ControlSignature + Squiz.WhiteSpace.ScopeClosingBrace
 src\Standards\Generic\Tests\PHP\RequireStrictTypesUnitTest.5.inc                                  FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PSR12.Files.DeclareStatement + PSR12.Operators.OperatorSpacing
 src\Standards\PEAR\Tests\Functions\FunctionCallSignatureUnitTest.inc                              FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionCallSignature
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Generic.Functions.OpeningFunctionBraceBsdAllman
 src\Standards\Squiz\Tests\ControlStructures\ForEachLoopDeclarationUnitTest.inc                    FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PSR2.ControlStructures.ControlStructureSpacing + Squiz.ControlStructures.ForEachLoopDeclaration
 src\Standards\Squiz\Tests\ControlStructures\ForLoopDeclarationUnitTest.1.inc                      FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PSR12.ControlStructures.ControlStructureSpacing
 tests\Core\File\GetMethodParametersTest.inc                                                       FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.Functions.FunctionDeclarationArgumentSpacing + Squiz.WhiteSpace.SuperfluousWhitespace
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
+    => Generic.WhiteSpace.ScopeIndent + Generic.Functions.OpeningFunctionBraceBsdAllman + Squiz.Functions.FunctionDeclarationArgumentSpacing
 tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionDeclaration
 tests\Core\Tokenizer\PHP\DNFTypesParseError2Test.inc                                              FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionDeclaration + PSR2.Classes.PropertyDeclaration + Squiz.WhiteSpace.SuperfluousWhitespace
 ------------------------------------------------------------------------------------------------------------------
 A TOTAL OF 11585 ERRORS WERE FIXED IN 435 FILES
 ------------------------------------------------------------------------------------------------------------------
@@ -97,76 +138,175 @@ PHPCBF RESULT SUMMARY
 FILE                                                                                              FIXED  REMAINING
 ------------------------------------------------------------------------------------------------------------------
 src\Standards\Generic\Tests\Arrays\ArrayIndentUnitTest.inc                                        FAILED TO FIX
+    => Squiz.Arrays.ArrayDeclaration
 src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.3.inc                              FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration
 src\Standards\Generic\Tests\CodeAnalysis\EmptyPHPStatementUnitTest.inc                            FAILED TO FIX
+    => Squiz.Classes.ClassDeclaration + Squiz.Commenting.ClosingDeclarationComment + Squiz.Commenting.InlineComment + Squiz.WhiteSpace.SemicolonSpacing
 src\Standards\Generic\Tests\CodeAnalysis\JumbledIncrementerUnitTest.4.inc                         FAILED TO FIX **NEW 2024-07
+    => Squiz.ControlStructures.ControlSignature + Squiz.WhiteSpace.ScopeClosingBrace
 src\Standards\Generic\Tests\CodeAnalysis\UselessOverridingMethodUnitTest.1.inc                    FAILED TO FIX **NEW 2024-03
+    => Squiz.WhiteSpace.FunctionClosingBraceSpace + Squiz.WhiteSpace.FunctionOpeningBraceSpace + Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.SuperfluousWhitespace
 src\Standards\Generic\Tests\ControlStructures\DisallowYodaConditionsUnitTest.inc                  FAILED TO FIX
+    => Generic.Arrays.DisallowLongArray + PEAR.ControlStructures.MultiLineCondition + Squiz.Arrays.ArrayDeclaration
 src\Standards\Generic\Tests\ControlStructures\InlineControlStructureUnitTest.1.inc                FAILED TO FIX **NEW 2024-07
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.Commenting.InlineComment + Squiz.Commenting.LongConditionClosingComment
 src\Standards\Generic\Tests\Functions\FunctionCallArgumentSpacingUnitTest.1.inc                   FAILED TO FIX **NEW 2024-07
+    => PEAR.Functions.FunctionCallSignature + Squiz.WhiteSpace.ControlStructureSpacing
 src\Standards\Generic\Tests\NamingConventions\AbstractClassNamePrefixUnitTest.inc                 FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Classes.ClassDeclaration
 src\Standards\Generic\Tests\PHP\CharacterBeforePHPOpeningTagUnitTest.1.inc                        FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.PHP.EmbeddedPhp
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.1.inc                                  FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionCallSignature + Squiz.Arrays.ArrayDeclaration + Squiz.Classes.ClassDeclaration + Squiz.ControlStructures.SwitchDeclaration + Squiz.PHP.EmbeddedPhp + Squiz.WhiteSpace.ControlStructureSpacing + Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.OperatorSpacing
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.2.inc                                  FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionCallSignature + Squiz.Arrays.ArrayDeclaration + Squiz.Classes.ClassDeclaration + Squiz.PHP.EmbeddedPhp + Squiz.WhiteSpace.ControlStructureSpacing + Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.OperatorSpacing
 src\Standards\PEAR\Tests\Classes\ClassDeclarationUnitTest.1.inc                                   FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration
 src\Standards\PEAR\Tests\Classes\ClassDeclarationUnitTest.2.inc                                   FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Classes.ClassDeclaration
 src\Standards\PEAR\Tests\Commenting\ClassCommentUnitTest.inc                                      FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration
 src\Standards\PEAR\Tests\Commenting\FunctionCommentUnitTest.inc                                   FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PEAR.Commenting.FunctionComment + Squiz.WhiteSpace.FunctionSpacing
 src\Standards\PEAR\Tests\ControlStructures\MultiLineConditionUnitTest.inc                         FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.ControlStructures.MultiLineCondition + Squiz.PHP.EmbeddedPhp + Squiz.Strings.ConcatenationSpacing + Squiz.WhiteSpace.OperatorSpacing + Squiz.WhiteSpace.ScopeClosingBrace
 src\Standards\PEAR\Tests\Functions\FunctionCallSignatureUnitTest.inc                              FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionCallSignature + Squiz.WhiteSpace.ObjectOperatorSpacing
 src\Standards\PEAR\Tests\Functions\FunctionDeclarationUnitTest.1.inc                              FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration + Squiz.WhiteSpace.FunctionSpacing
 src\Standards\PEAR\Tests\NamingConventions\ValidVariableNameUnitTest.inc                          FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Classes.ClassDeclaration + Squiz.WhiteSpace.FunctionOpeningBraceSpace + Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.SuperfluousWhitespace
 src\Standards\PEAR\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                 FAILED TO FIX **NEW 2024-03
+    => Squiz.Classes.ClassDeclaration + Squiz.PHP.EmbeddedPhp
 src\Standards\PSR1\Tests\Files\SideEffectsUnitTest.1.inc                                          FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration + Squiz.WhiteSpace.FunctionSpacing
 src\Standards\PSR12\Tests\ControlStructures\BooleanOperatorPlacementUnitTest.inc                  FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PEAR.ControlStructures.MultiLineCondition + Squiz.WhiteSpace.SuperfluousWhitespace
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Generic.Functions.OpeningFunctionBraceBsdAllman
 src\Standards\PSR12\Tests\Operators\OperatorSpacingUnitTest.1.inc                                 FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Generic.Formatting.MultipleStatementAlignment
 src\Standards\PSR2\Tests\Classes\ClassDeclarationUnitTest.inc                                     FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PSR2.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration + Squiz.WhiteSpace.ScopeKeywordSpacing
 src\Standards\PSR2\Tests\ControlStructures\ControlStructureSpacingUnitTest.inc                    FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PEAR.ControlStructures.MultiLineCondition + Squiz.WhiteSpace.SuperfluousWhitespace
 src\Standards\PSR2\Tests\Methods\FunctionCallSignatureUnitTest.inc                                FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PEAR.Functions.FunctionCallSignature + Squiz.Commenting.BlockComment
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.1.inc                                   FAILED TO FIX
+    => Generic.Arrays.ArrayIndent + Squiz.WhiteSpace.OperatorSpacing
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.2.inc                                   FAILED TO FIX
+    => Generic.Arrays.ArrayIndent + Squiz.WhiteSpace.OperatorSpacing
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                                 FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration + Squiz.WhiteSpace.FunctionSpacing
 src\Standards\Squiz\Tests\Commenting\ClassCommentUnitTest.inc                                     FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration
 src\Standards\Squiz\Tests\Commenting\FunctionCommentThrowTagUnitTest.inc                          FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration + Squiz.WhiteSpace.FunctionSpacing
 src\Standards\Squiz\Tests\Commenting\FunctionCommentUnitTest.inc                                  FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.Classes.ClassDeclaration + Squiz.WhiteSpace.FunctionSpacing
 src\Standards\Squiz\Tests\Commenting\VariableCommentUnitTest.inc                                  FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.MemberVarSpacing
 src\Standards\Squiz\Tests\ControlStructures\ControlSignatureUnitTest.1.inc                        FAILED TO FIX
+    => PEAR.ControlStructures.MultiLineCondition + Squiz.ControlStructures.ControlSignature
 src\Standards\Squiz\Tests\ControlStructures\ForEachLoopDeclarationUnitTest.inc                    FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.ControlStructures.ForEachLoopDeclaration + Squiz.WhiteSpace.ControlStructureSpacing
 src\Standards\Squiz\Tests\ControlStructures\ForLoopDeclarationUnitTest.1.inc                      FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.ControlStructures.ForLoopDeclaration + Squiz.WhiteSpace.ControlStructureSpacing
 src\Standards\Squiz\Tests\Objects\ObjectInstantiationUnitTest.inc                                 FAILED TO FIX **NEW 2024-03
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.WhiteSpace.ControlStructureSpacing + Squiz.WhiteSpace.OperatorSpacing
 src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.1.inc                                           FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.PHP.EmbeddedPhp + Squiz.WhiteSpace.FunctionSpacing
 src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.19.inc                                          FAILED TO FIX **NEW 2024-03
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Generic.WhiteSpace.LanguageConstructSpacing + Squiz.PHP.EmbeddedPhp
 src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.5.inc                                           FAILED TO FIX **NEW 2024-03
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.PHP.EmbeddedPhp
 src\Standards\Squiz\Tests\PHP\InnerFunctionsUnitTest.inc                                          FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Classes.ClassDeclaration + Squiz.WhiteSpace.FunctionClosingBraceSpace + Squiz.WhiteSpace.FunctionOpeningBraceSpace + Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.SuperfluousWhitespace
 src\Standards\Squiz\Tests\Scope\MemberVarScopeUnitTest.inc                                        FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.MemberVarSpacing
 src\Standards\Squiz\Tests\Scope\MethodScopeUnitTest.inc                                           FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.SuperfluousWhitespace
 src\Standards\Squiz\Tests\WhiteSpace\ControlStructureSpacingUnitTest.inc                          FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration
 src\Standards\Squiz\Tests\WhiteSpace\FunctionSpacingUnitTest.1.inc                                FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.WhiteSpace.FunctionClosingBraceSpace + Squiz.WhiteSpace.FunctionOpeningBraceSpace + Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.SuperfluousWhitespace
 src\Standards\Squiz\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.PHP.EmbeddedPhp + Squiz.WhiteSpace.FunctionSpacing
 src\Standards\Squiz\Tests\WhiteSpace\ScopeKeywordSpacingUnitTest.1.inc                            FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.WhiteSpace.FunctionSpacing + Squiz.WhiteSpace.MemberVarSpacing
 src\Standards\Squiz\Tests\WhiteSpace\ScopeKeywordSpacingUnitTest.3.inc                            FAILED TO FIX
+    => Squiz.Arrays.ArrayDeclaration
 tests\Core\File\FindExtendedClassNameTest.inc                                                     FAILED TO FIX **NEW 2024-03
+    => Squiz.Classes.ClassDeclaration + Squiz.Commenting.ClosingDeclarationComment + Squiz.Commenting.InlineComment + Squiz.WhiteSpace.SemicolonSpacing
 tests\Core\File\FindStartOfStatementTest.inc                                                      FAILED TO FIX
+    => PEAR.Functions.FunctionCallSignature + Squiz.WhiteSpace.ControlStructureSpacing
 tests\Core\File\GetConditionTest.inc                                                              FAILED TO FIX **NEW 2024-03
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration + Squiz.WhiteSpace.FunctionSpacing
 tests\Core\File\GetDeclarationNameTest.inc                                                        FAILED TO FIX **NEW 2024-03
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => PSR2.Classes.ClassDeclaration + Squiz.Commenting.PostStatementComment
 tests\Core\File\GetMemberPropertiesTest.inc                                                       FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Commenting.InlineComment + Squiz.Commenting.PostStatementComment + Squiz.WhiteSpace.MemberVarSpacing + Squiz.WhiteSpace.ScopeKeywordSpacing
 tests\Core\File\GetMethodParametersTest.inc                                                       FAILED TO FIX
+    => Squiz.Classes.ClassDeclaration + Squiz.Commenting.ClosingDeclarationComment + Squiz.Commenting.InlineComment + Squiz.Functions.FunctionDeclarationArgumentSpacing + Squiz.WhiteSpace.SemicolonSpacing + Squiz.WhiteSpace.SuperfluousWhitespace
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
+    => Generic.Functions.OpeningFunctionBraceBsdAllman + Generic.WhiteSpace.ScopeIndent + Squiz.Functions.FunctionDeclarationArgumentSpacing
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.Functions.FunctionDeclarationArgumentSpacing
 tests\Core\Tokenizer\PHP\AttributesTest.inc                                                       FAILED TO FIX
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Squiz.Commenting.InlineComment + Squiz.WhiteSpace.FunctionSpacing
 tests\Core\Tokenizer\PHP\BackfillMatchTokenTest.inc                                               FAILED TO FIX
+    => PEAR.Functions.FunctionCallSignature + Squiz.Arrays.ArrayDeclaration + Squiz.WhiteSpace.ControlStructureSpacing + Squiz.WhiteSpace.ObjectOperatorSpacing + Squiz.WhiteSpace.OperatorSpacing
 tests\Core\Tokenizer\PHP\BackfillReadonlyTest.inc                                                 FAILED TO FIX **NEW 2024-03
+  ====== GOOD CANDIDATE FOR FIXING ======
+    => Generic.WhiteSpace.LanguageConstructSpacing + Squiz.Commenting.PostStatementComment
 tests\Core\Tokenizer\PHP\BitwiseOrTest.inc                                                        FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Commenting.PostStatementComment + Squiz.WhiteSpace.ScopeKeywordSpacing
 tests\Core\Tokenizer\PHP\ContextSensitiveKeywordsTest.inc                                         FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration + Squiz.ControlStructures.SwitchDeclaration
 tests\Core\Tokenizer\PHP\DefaultKeywordTest.inc                                                   FAILED TO FIX
+  ====== NEEDS INVESTIGATION ======
+    => Reports "failed to fix", but stops after 6 loops ????
+      This is the still "fixable" error:
+      99 | ERROR   | [x] Case breaking statements must be followed by a single blank line (Squiz.ControlStructures.SwitchDeclaration.SpacingAfterBreak)
+      => This is very likely a problem with the sniff saying it is fixable, but not fixing anything.tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX **NEW 2024-07
 tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Commenting.PostStatementComment + Squiz.WhiteSpace.ScopeKeywordSpacing
 tests\Core\Tokenizer\PHP\DNFTypesTest.inc                                                         FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Functions.FunctionDeclaration
 tests\Core\Tokenizer\PHP\DoubleArrowTest.inc                                                      FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Arrays.ArrayDeclaration
 tests\Core\Tokenizer\PHP\EnumCaseTest.inc                                                         FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration
 tests\Core\Tokenizer\PHP\TypeIntersectionTest.inc                                                 FAILED TO FIX
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Commenting.PostStatementComment + Squiz.WhiteSpace.ScopeKeywordSpacing
 tests\Core\Tokenizer\Tokenizer\CreateParenthesisNestingMapDNFTypesTest.inc                        FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + Squiz.Commenting.PostStatementComment + Squiz.WhiteSpace.ScopeKeywordSpacing
 tests\Core\Tokenizer\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                       FAILED TO FIX **NEW 2024-07
+    => Generic.WhiteSpace.ScopeIndent + PEAR.Classes.ClassDeclaration + Squiz.Classes.ClassDeclaration
 tests\Core\Tokenizer\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                    FAILED TO FIX **NEW 2024-07
+  ====== NEEDS INVESTIGATION ======
+  See above
 ------------------------------------------------------------------------------------------------------------------
 A TOTAL OF 26620 ERRORS WERE FIXED IN 471 FILES
 ------------------------------------------------------------------------------------------------------------------
@@ -182,10 +322,15 @@ PHPCBF RESULT SUMMARY
 FILE                                                                                       FIXED  REMAINING
 -----------------------------------------------------------------------------------------------------------
 src\Standards\Generic\Tests\Functions\FunctionCallArgumentSpacingUnitTest.1.inc            FAILED TO FIX
+    => PEAR.Functions.FunctionCallSignature + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.inc                  FAILED TO FIX
+    => PEAR.Functions.FunctionCallSignature + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.1.inc                           FAILED TO FIX
+    => PEAR.Functions.FunctionCallSignature + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.2.inc                           FAILED TO FIX
+    => PEAR.Functions.FunctionCallSignature + PEAR.WhiteSpace.ScopeClosingBrace
 src\Standards\Squiz\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                         FAILED TO FIX
+    => PEAR.Functions.FunctionCallSignature + PEAR.WhiteSpace.ScopeClosingBrace
 -----------------------------------------------------------------------------------------------------------
 A TOTAL OF 6354 ERRORS WERE FIXED IN 328 FILES
 -----------------------------------------------------------------------------------------------------------
