@@ -49,6 +49,7 @@ jobs:
           # Allow for PHP deprecation notices. That's not what this check is about.
           ini-values: "error_reporting=E_ALL & ~E_DEPRECATED"
           coverage: none
+#          tools: parallel-lint
 
       # Test for fixer conflicts by running the auto-fixers of a complete standard over all the test case files.
       # This is not an exhaustive test, but should give an early indication for typical fixer conflicts.
@@ -74,3 +75,12 @@ jobs:
         // run: do something to post a comment on the PR with instructions on how to handle this failure
         // i.e.: open a new issue about the fixer conflict
         // and add an ignore for the standard which failed to this workflow.
+
+## This can only be enabled once all parse error tests are in their own file and those are
+## excluded from the linting check via a comment at the top of the file
+## Alternatively, we may actually be able to do this without linting check comments
+## by running linting on all "git modified" files with the right extension.
+## After all, sniffs should stay silent/not act on parse errors.
+## And if the sniff doesn't act on parse errors, the file won't be modified.
+#      - name: "Verify the fixers didn't introduce any parse errors"
+#        run: parallel-lint ./src/ ./tests/ -e conflictcheck
