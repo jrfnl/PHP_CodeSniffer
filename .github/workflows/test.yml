@@ -79,9 +79,44 @@ jobs:
       - name: 'PHPCBF: fix code style using the Phar file to test the Phar is functional'
         run: php phpcbf.phar ./scripts
 
-  test:
+  test-phar:
     runs-on: ubuntu-latest
     needs: build
+
+    strategy:
+      matrix:
+        php: ['5.4', '5.5', '5.6', '7.0', '7.1', '7.2', '7.3', '7.4', '8.0', '8.1', '8.2', '8.3', '8.4']
+
+    name: "PHAR | PHP: ${{ matrix.php }}"
+
+    continue-on-error: ${{ matrix.php == '8.4' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          ini-values: 'error_reporting=-1, display_errors=On'
+          coverage: none
+          tools: cs2pr
+
+      - name: Download the PHPCS phar
+        uses: actions/download-artifact@v4
+        with:
+          name: phpcs-phar
+
+      # These tests specifically test that the Phar which will be released is functional on all PHP versions.
+      - name: 'Check code style using the Phar file'
+        run: php phpcs.phar
+
+      - name: 'Check documentation generation using the Phar file'
+        run: php phpcs.phar --generator=Text --standard=Generic,MySource,PEAR,PSR1,PSR2,PSR12,Squiz,Zend
+
+  test:
+    runs-on: ubuntu-latest
 
     strategy:
       # Keys:
@@ -178,17 +213,6 @@ jobs:
       - name: Show PHPCS results in PR
         if: ${{ always() && steps.phpcs.outcome == 'failure' && matrix.php == '7.4' }}
         run: cs2pr ./phpcs-report.xml
-
-      - name: Download the PHPCS phar
-        if: ${{ matrix.custom_ini == false }}
-        uses: actions/download-artifact@v4
-        with:
-          name: phpcs-phar
-
-      # This test specifically tests that the Phar which will be released works correctly on all PHP versions.
-      - name: 'PHPCS: check code style using the Phar file'
-        if: ${{ matrix.custom_ini == false }}
-        run: php phpcs.phar
 
   coverage:
     runs-on: ubuntu-latest
