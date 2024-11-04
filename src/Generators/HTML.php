@@ -169,7 +169,7 @@ class HTML extends Generator
             $doc->load($file);
             $documentation = $doc->getElementsByTagName('documentation')->item(0);
             $title         = $this->getTitle($documentation);
-            echo '   <li><a href="#'.str_replace(' ', '-', $title)."\">$title</a></li>".PHP_EOL;
+            echo '   <li><a href="#'.str_replace(' ', '-', $title).'">'.ucfirst($title).'</a></li>'.PHP_EOL;
         }
 
         echo '  </ul>'.PHP_EOL;
@@ -212,7 +212,7 @@ class HTML extends Generator
     {
         $title = $this->getTitle($doc);
         echo '  <a name="'.str_replace(' ', '-', $title).'" />'.PHP_EOL;
-        echo "  <h2>$title</h2>".PHP_EOL;
+        echo '  <h2>'.ucfirst($title).'</h2>'.PHP_EOL;
 
         foreach ($doc->childNodes as $node) {
             if ($node->nodeName === 'standard') {
