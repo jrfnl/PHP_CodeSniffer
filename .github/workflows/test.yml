@@ -113,6 +113,9 @@ jobs:
           sudo make install
           sudo ldconfig
 
+      - name: "DEBUG: show current libxml version (xmllint)"
+        run: xmllint --version
+
       - name: Setup ini config
         id: set_ini
         shell: bash
@@ -134,12 +137,6 @@ jobs:
           ini-values: ${{ steps.set_ini.outputs.PHP_INI }}
           coverage: none
           tools: cs2pr
-
-      - name: "DEBUG: show libxml version (php)"
-        run: php -r 'echo "libxml version = ", LIBXML_DOTTED_VERSION, PHP_EOL;'
-
-      - name: "DEBUG: show current libxml version (xmllint)"
-        run: xmllint --version
 
       # This action also handles the caching of the dependencies.
       - name: Set up node
