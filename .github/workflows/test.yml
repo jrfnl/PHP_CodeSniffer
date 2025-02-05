@@ -63,6 +63,20 @@ jobs:
             os: 'windows-latest'
 
         include:
+          # The default libxml library on Ubuntu images is a little out of date.
+          # To safeguard support for the latest libxml we need to update the library on the fly.
+          # This only applies to recent PHP versions (PHP 8.1+) and only needs to be tested with one
+          # PHP version for each libxml minor to be verify support.
+          # Testing against multiple PHP versions would not yield a difference in results.
+          - php: '8.2'
+            os: 'ubuntu-latest'
+            libxml_minor: '2.12'
+            libxml_patch: '2.12.9'
+          - php: '8.3'
+            os: 'ubuntu-latest'
+            libxml_minor: '2.13'
+            libxml_patch: '2.13.5'
+
           # Skip test runs on builds which are also run in the coverage job.
           # Note: the tests on PHP 7.2 will still be run as the coverage build uses custom_ini settings for that version.
           - php: '5.4'
@@ -72,7 +86,7 @@ jobs:
             skip_tests: true
 
     # yamllint disable-line rule:line-length
-    name: "PHP: ${{ matrix.php }} ${{ matrix.custom_ini && ' with custom ini settings' || '' }} (${{ matrix.os == 'ubuntu-latest' && 'Linux' || 'Win'  }})"
+    name: "PHP: ${{ matrix.php }} ${{ matrix.custom_ini && ' with custom ini settings' || '' }}${{ matrix.libxml_minor && format( ' with libxml {0}', matrix.libxml_minor ) || '' }} (${{ matrix.os == 'ubuntu-latest' && 'Linux' || 'Win'  }})"
 
     continue-on-error: ${{ matrix.php == '8.5' }}
 
@@ -97,23 +111,23 @@ jobs:
       - name: "DEBUG: show original libxml version (xmllint)"
         run: xmllint --version
 
-      # This is a temporary solution.
       # Once ubuntu-latest includes libxml2 >= v2.12.0, this step can be removed.
-      - name: Install latest libxml2 on PHP 8.3 (linux only)
-        if: ${{ matrix.os == 'ubuntu-latest' && matrix.php == '8.3' }}
+      - name: Update libxml2 (linux only)
+        if: ${{ matrix.libxml_minor }}
 #        run: |
 #          /home/linuxbrew/.linuxbrew/bin/brew install libxml2
         run: |
           sudo apt-get install -y wget build-essential
-          wget https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.9.tar.xz
-          tar -xf libxml2-2.12.9.tar.xz
-          cd libxml2-2.12.9
+          wget https://download.gnome.org/sources/libxml2/${{ matrix.libxml_minor }}/libxml2-${{ matrix.libxml_patch }}.tar.xz
+          tar -xf libxml2-${{ matrix.libxml_patch }}.tar.xz
+          cd libxml2-${{ matrix.libxml_patch }}
           ./configure --prefix=/usr/local
           make
           sudo make install
           sudo ldconfig
 
       - name: "DEBUG: show current libxml version (xmllint)"
+        if: ${{ matrix.libxml_minor }}
         run: xmllint --version
 
       - name: Setup ini config
