@@ -112,6 +112,9 @@ jobs:
           coverage: none
           tools: cs2pr
 
+      - name: "DEBUG: show libxml version"
+        run: php -r 'echo "libxml version = ", LIBXML_DOTTED_VERSION, PHP_EOL;'
+
       # This action also handles the caching of the dependencies.
       - name: Set up node
         if: ${{ matrix.custom_ini == false }}
