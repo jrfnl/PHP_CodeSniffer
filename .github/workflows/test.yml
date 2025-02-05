@@ -90,6 +90,13 @@ jobs:
         continue-on-error: true
         run: sudo apt-get update
 
+      # This allows for retrieving the _real_ libxml version being used.
+      - name: Install xmllint
+        run: sudo apt-get install --no-install-recommends -y libxml2-utils
+
+      - name: "DEBUG: show original libxml version (xmllint)"
+        run: xmllint --version
+
       # This is a temporary solution.
       # Once ubuntu-latest includes libxml2 >= v2.12.0, this step can be removed.
       - name: Install latest libxml2 on PHP 8.3 (linux only)
@@ -128,8 +135,11 @@ jobs:
           coverage: none
           tools: cs2pr
 
-      - name: "DEBUG: show libxml version"
+      - name: "DEBUG: show libxml version (php)"
         run: php -r 'echo "libxml version = ", LIBXML_DOTTED_VERSION, PHP_EOL;'
+
+      - name: "DEBUG: show current libxml version (xmllint)"
+        run: xmllint --version
 
       # This action also handles the caching of the dependencies.
       - name: Set up node
