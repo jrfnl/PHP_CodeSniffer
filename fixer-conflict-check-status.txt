@@ -1,4 +1,4 @@
-Status per 2024-07-29
+Status per 2025-02-12
 ======================
 
 Open PRs from others:
@@ -14,6 +14,7 @@ PHPCBF RESULT SUMMARY
 FILE                                                                                              FIXED  REMAINING
 ------------------------------------------------------------------------------------------------------------------
 src\Standards\Generic\Tests\ControlStructures\DisallowYodaConditionsUnitTest.inc                  FAILED TO FIX
+src\Standards\Generic\Tests\ControlStructures\InlineControlStructureUnitTest.1.inc                FAILED TO FIX **NEW 2025-02
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.1.inc                                  FAILED TO FIX
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.2.inc                                  FAILED TO FIX
 src\Standards\PEAR\Tests\NamingConventions\ValidVariableNameUnitTest.inc                          FAILED TO FIX
@@ -21,20 +22,21 @@ src\Standards\PEAR\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc               
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
 src\Standards\PSR2\Tests\ControlStructures\SwitchDeclarationUnitTest.inc                          FAILED TO FIX
 src\Standards\Squiz\Tests\Commenting\LongConditionClosingCommentUnitTest.inc                      FAILED TO FIX
+src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.5.inc              FAILED TO FIX **NEW 2025-02
 src\Standards\Squiz\Tests\PHP\NonExecutableCodeUnitTest.1.inc                                     FAILED TO FIX
 src\Standards\Squiz\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                FAILED TO FIX
 tests\Core\File\FindEndOfStatementTest.inc                                                        FAILED TO FIX
 tests\Core\File\FindStartOfStatementTest.inc                                                      FAILED TO FIX
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
-tests\Core\Tokenizer\PHP\DefaultKeywordTest.inc                                                   FAILED TO FIX
-tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX **NEW 2024-07
-tests\Core\Tokenizer\PHP\EnumCaseTest.inc                                                         FAILED TO FIX
-tests\Core\Tokenizer\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                       FAILED TO FIX **NEW 2024-07
-tests\Core\Tokenizer\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                    FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\PHP\DefaultKeywordTest.inc                                                  FAILED TO FIX
+tests\Core\Tokenizers\PHP\DNFTypesParseError1Test.inc                                             FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\PHP\EnumCaseTest.inc                                                        FAILED TO FIX
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                      FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                   FAILED TO FIX **NEW 2024-07
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 9881 ERRORS WERE FIXED IN 315 FILES
+A TOTAL OF 10107 ERRORS WERE FIXED IN 320 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 18 FILES
+PHPCBF FAILED TO FIX 20 FILES
 ------------------------------------------------------------------------------------------------------------------
 
 
@@ -51,17 +53,19 @@ PHPCBF RESULT SUMMARY
 ------------------------------------------------------------------------------------------------------------------
 FILE                                                                                              FIXED  REMAINING
 ------------------------------------------------------------------------------------------------------------------
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.10.inc                             FAILED TO FIX **NEW 2025-02
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.11.inc                             FAILED TO FIX **NEW 2025-02
 src\Standards\Generic\Tests\CodeAnalysis\JumbledIncrementerUnitTest.4.inc                         FAILED TO FIX **NEW 2024-07
 src\Standards\PEAR\Tests\Functions\FunctionCallSignatureUnitTest.inc                              FAILED TO FIX
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                                 FAILED TO FIX **NEW 2024-07
-src\Standards\Squiz\Tests\ControlStructures\ForEachLoopDeclarationUnitTest.inc                    FAILED TO FIX
+src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.5.inc              FAILED TO FIX **NEW 2025-02
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
-tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\PHP\DNFTypesParseError1Test.inc                                             FAILED TO FIX **NEW 2024-07
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 9637 ERRORS WERE FIXED IN 366 FILES
+A TOTAL OF 9958 ERRORS WERE FIXED IN 371 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 7 FILES
+PHPCBF FAILED TO FIX 9 FILES
 ------------------------------------------------------------------------------------------------------------------
 
 
@@ -76,16 +80,14 @@ src\Standards\Generic\Tests\CodeAnalysis\JumbledIncrementerUnitTest.4.inc       
 src\Standards\Generic\Tests\PHP\RequireStrictTypesUnitTest.5.inc                                  FAILED TO FIX
 src\Standards\PEAR\Tests\Functions\FunctionCallSignatureUnitTest.inc                              FAILED TO FIX
 src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc                             FAILED TO FIX
-src\Standards\Squiz\Tests\ControlStructures\ForEachLoopDeclarationUnitTest.inc                    FAILED TO FIX
-src\Standards\Squiz\Tests\ControlStructures\ForLoopDeclarationUnitTest.1.inc                      FAILED TO FIX
-tests\Core\File\GetMethodParametersTest.inc                                                       FAILED TO FIX
+src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.5.inc              FAILED TO FIX **NEW 2025-02
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
-tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX **NEW 2024-07
-tests\Core\Tokenizer\PHP\DNFTypesParseError2Test.inc                                              FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\PHP\DNFTypesParseError1Test.inc                                             FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\PHP\DNFTypesParseError2Test.inc                                             FAILED TO FIX **NEW 2024-07
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 11585 ERRORS WERE FIXED IN 435 FILES
+A TOTAL OF 11894 ERRORS WERE FIXED IN 441 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 10 FILES
+PHPCBF FAILED TO FIX 8 FILES
 ------------------------------------------------------------------------------------------------------------------
 
 
@@ -98,13 +100,16 @@ FILE                                                                            
 ------------------------------------------------------------------------------------------------------------------
 src\Standards\Generic\Tests\Arrays\ArrayIndentUnitTest.inc                                        FAILED TO FIX
 src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.3.inc                              FAILED TO FIX
-src\Standards\Generic\Tests\CodeAnalysis\EmptyPHPStatementUnitTest.inc                            FAILED TO FIX
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.9.inc                              FAILED TO FIX **NEW 2025-02
+src\Standards\Generic\Tests\CodeAnalysis\EmptyPHPStatementUnitTest.1.inc                          FAILED TO FIX
 src\Standards\Generic\Tests\CodeAnalysis\JumbledIncrementerUnitTest.4.inc                         FAILED TO FIX **NEW 2024-07
 src\Standards\Generic\Tests\CodeAnalysis\UselessOverridingMethodUnitTest.1.inc                    FAILED TO FIX **NEW 2024-03
 src\Standards\Generic\Tests\ControlStructures\DisallowYodaConditionsUnitTest.inc                  FAILED TO FIX
 src\Standards\Generic\Tests\ControlStructures\InlineControlStructureUnitTest.1.inc                FAILED TO FIX **NEW 2024-07
 src\Standards\Generic\Tests\Functions\FunctionCallArgumentSpacingUnitTest.1.inc                   FAILED TO FIX **NEW 2024-07
-src\Standards\Generic\Tests\NamingConventions\AbstractClassNamePrefixUnitTest.inc                 FAILED TO FIX
+src\Standards\Generic\Tests\NamingConventions\AbstractClassNamePrefixUnitTest.1.inc               FAILED TO FIX
+src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.1.inc                       FAILED TO FIX **NEW 2025-02
+src\Standards\Generic\Tests\NamingConventions\TraitNameSuffixUnitTest.1.inc                       FAILED TO FIX **NEW 2025-02
 src\Standards\Generic\Tests\PHP\CharacterBeforePHPOpeningTagUnitTest.1.inc                        FAILED TO FIX
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.1.inc                                  FAILED TO FIX
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.2.inc                                  FAILED TO FIX
@@ -134,6 +139,8 @@ src\Standards\Squiz\Tests\Commenting\VariableCommentUnitTest.inc                
 src\Standards\Squiz\Tests\ControlStructures\ControlSignatureUnitTest.1.inc                        FAILED TO FIX
 src\Standards\Squiz\Tests\ControlStructures\ForEachLoopDeclarationUnitTest.inc                    FAILED TO FIX
 src\Standards\Squiz\Tests\ControlStructures\ForLoopDeclarationUnitTest.1.inc                      FAILED TO FIX
+src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.1.inc              FAILED TO FIX **NEW 2025-02
+src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.5.inc              FAILED TO FIX **NEW 2025-02
 src\Standards\Squiz\Tests\Objects\ObjectInstantiationUnitTest.inc                                 FAILED TO FIX **NEW 2024-03
 src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.1.inc                                           FAILED TO FIX
 src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.19.inc                                          FAILED TO FIX **NEW 2024-03
@@ -148,29 +155,31 @@ src\Standards\Squiz\Tests\WhiteSpace\ScopeKeywordSpacingUnitTest.1.inc          
 src\Standards\Squiz\Tests\WhiteSpace\ScopeKeywordSpacingUnitTest.3.inc                            FAILED TO FIX
 tests\Core\File\FindExtendedClassNameTest.inc                                                     FAILED TO FIX **NEW 2024-03
 tests\Core\File\FindStartOfStatementTest.inc                                                      FAILED TO FIX
+tests\Core\File\GetClassPropertiesTest.inc                                                        FAILED TO FIX **NEW 2025-02
 tests\Core\File\GetConditionTest.inc                                                              FAILED TO FIX **NEW 2024-03
 tests\Core\File\GetDeclarationNameTest.inc                                                        FAILED TO FIX **NEW 2024-03
 tests\Core\File\GetMemberPropertiesTest.inc                                                       FAILED TO FIX
 tests\Core\File\GetMethodParametersTest.inc                                                       FAILED TO FIX
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
-tests\Core\Tokenizer\PHP\AttributesTest.inc                                                       FAILED TO FIX
-tests\Core\Tokenizer\PHP\BackfillMatchTokenTest.inc                                               FAILED TO FIX
-tests\Core\Tokenizer\PHP\BackfillReadonlyTest.inc                                                 FAILED TO FIX **NEW 2024-03
-tests\Core\Tokenizer\PHP\BitwiseOrTest.inc                                                        FAILED TO FIX
-tests\Core\Tokenizer\PHP\ContextSensitiveKeywordsTest.inc                                         FAILED TO FIX
-tests\Core\Tokenizer\PHP\DefaultKeywordTest.inc                                                   FAILED TO FIX
-tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX **NEW 2024-07
-tests\Core\Tokenizer\PHP\DNFTypesTest.inc                                                         FAILED TO FIX **NEW 2024-07
-tests\Core\Tokenizer\PHP\DoubleArrowTest.inc                                                      FAILED TO FIX
-tests\Core\Tokenizer\PHP\EnumCaseTest.inc                                                         FAILED TO FIX
-tests\Core\Tokenizer\PHP\TypeIntersectionTest.inc                                                 FAILED TO FIX
-tests\Core\Tokenizer\Tokenizer\CreateParenthesisNestingMapDNFTypesTest.inc                        FAILED TO FIX **NEW 2024-07
-tests\Core\Tokenizer\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                       FAILED TO FIX **NEW 2024-07
-tests\Core\Tokenizer\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                    FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\PHP\AttributesTest.inc                                                      FAILED TO FIX
+tests\Core\Tokenizers\PHP\BackfillMatchTokenTest.inc                                              FAILED TO FIX
+tests\Core\Tokenizers\PHP\BackfillReadonlyTest.inc                                                FAILED TO FIX **NEW 2024-03
+tests\Core\Tokenizers\PHP\BitwiseOrTest.inc                                                       FAILED TO FIX
+tests\Core\Tokenizers\PHP\ContextSensitiveKeywordsTest.inc                                        FAILED TO FIX
+tests\Core\Tokenizers\PHP\DefaultKeywordTest.inc                                                  FAILED TO FIX
+tests\Core\Tokenizers\PHP\DNFTypesParseError1Test.inc                                             FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\PHP\DNFTypesTest.inc                                                        FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\PHP\DoubleArrowTest.inc                                                     FAILED TO FIX
+tests\Core\Tokenizers\PHP\EnumCaseTest.inc                                                        FAILED TO FIX
+tests\Core\Tokenizers\PHP\HeredocParseErrorTest.inc                                               FAILED TO FIX **NEW 2025-02
+tests\Core\Tokenizers\PHP\TypeIntersectionTest.inc                                                FAILED TO FIX
+tests\Core\Tokenizers\Tokenizer\CreateParenthesisNestingMapDNFTypesTest.inc                       FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                      FAILED TO FIX **NEW 2024-07
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                   FAILED TO FIX **NEW 2024-07
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 26620 ERRORS WERE FIXED IN 471 FILES
+A TOTAL OF 27472 ERRORS WERE FIXED IN 500 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 71 FILES
+PHPCBF FAILED TO FIX 78 FILES
 ------------------------------------------------------------------------------------------------------------------
 
 
@@ -182,12 +191,12 @@ PHPCBF RESULT SUMMARY
 FILE                                                                                              FIXED  REMAINING
 ------------------------------------------------------------------------------------------------------------------
 src\Standards\Generic\Tests\Functions\FunctionCallArgumentSpacingUnitTest.1.inc                   FAILED TO FIX
-src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.inc                         FAILED TO FIX
+src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.1.inc                       FAILED TO FIX
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.1.inc                                  FAILED TO FIX
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.2.inc                                  FAILED TO FIX
 src\Standards\Squiz\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                FAILED TO FIX
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 6354 ERRORS WERE FIXED IN 328 FILES
+A TOTAL OF 6548 ERRORS WERE FIXED IN 331 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 5 FILES
 ------------------------------------------------------------------------------------------------------------------
