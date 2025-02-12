@@ -1,3 +1,9 @@
+PHP 8.4.3 (cli) (built: Jan 15 2025 11:04:37) (ZTS Visual C++ 2022 x64)
+Copyright (c) The PHP Group
+Zend Engine v4.4.3, Copyright (c) Zend Technologies
+    with Zend OPcache v8.4.3, Copyright (c), by Zend Technologies
+    with Xdebug v3.4.1, Copyright (c) 2002-2025, by Derick Rethans
+PHP_CodeSniffer version 3.12.0 (stable) by Squiz and PHPCSStandards
 
 
 FAILED TO FIX FILE: 
@@ -7,7 +13,7 @@ SNIFFS SEEN IN LAST TEN LOOPS
 array (
   0 => 'Squiz.Arrays.ArrayDeclaration',
 )==================================================
-EFFFFF
+EFFFFFFF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.3.inc
@@ -18,10 +24,21 @@ array (
   1 => 'PEAR.Classes.ClassDeclaration',
   2 => 'Squiz.Classes.ClassDeclaration',
 )==================================================
+EFFFFF
+
+FAILED TO FIX FILE: 
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.9.inc
+SNIFFS SEEN IN LAST TEN LOOPS
+==================================================
+array (
+  0 => 'Generic.WhiteSpace.ScopeIndent',
+  1 => 'PEAR.Classes.ClassDeclaration',
+  2 => 'Squiz.Classes.ClassDeclaration',
+)==================================================
 EFFFFF.F..F
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\CodeAnalysis\EmptyPHPStatementUnitTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\CodeAnalysis\EmptyPHPStatementUnitTest.1.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
@@ -30,7 +47,7 @@ array (
   2 => 'Squiz.Commenting.InlineComment',
   3 => 'Squiz.WhiteSpace.SemicolonSpacing',
 )==================================================
-EFF.FF.FFF.
+E.FF.FF.FFF.
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\CodeAnalysis\JumbledIncrementerUnitTest.4.inc
@@ -75,11 +92,16 @@ D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\ControlStructure
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
-  0 => 'Squiz.Commenting.InlineComment',
-  1 => 'Squiz.Commenting.LongConditionClosingComment',
+  0 => 'Generic.Functions.OpeningFunctionBraceKernighanRitchie',
+  1 => 'Generic.WhiteSpace.ScopeIndent',
+  2 => 'PEAR.ControlStructures.MultiLineCondition',
+  3 => 'Squiz.Commenting.InlineComment',
+  4 => 'Squiz.Commenting.LongConditionClosingComment',
+  5 => 'Squiz.WhiteSpace.FunctionClosingBraceSpace',
 )==================================================
-EF.F.FFFF...  60 / 551 (11%)
-F.FF.FFFFFFFFF.FFF..FFFF.....FFFFFFFFFFFFFFFF.FFFFFF
+EF.  60 / 589 (10%)
+F.FFFF...F.FF.FFFFFFFFF.FFF..FFFF.....FFFFFFFF.FFFFFFFF.FFFF 120 / 589 (20%)
+FF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\Functions\FunctionCallArgumentSpacingUnitTest.1.inc
@@ -89,18 +111,40 @@ array (
   0 => 'PEAR.Functions.FunctionCallSignature',
   1 => 'Squiz.WhiteSpace.ControlStructureSpacing',
 )==================================================
-EFFFFF
+EFFFFFFFFFFF
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\NamingConventions\AbstractClassNamePrefixUnitTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\NamingConventions\AbstractClassNamePrefixUnitTest.1.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'Squiz.Classes.ClassDeclaration',
+  2 => 'Squiz.Commenting.PostStatementComment',
+  3 => 'Squiz.WhiteSpace.ScopeKeywordSpacing',
 )==================================================
-EF 120 / 551 (22%)
-FFFF.
+EFFFF
+
+FAILED TO FIX FILE: 
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.1.inc
+SNIFFS SEEN IN LAST TEN LOOPS
+==================================================
+array (
+  0 => 'Generic.WhiteSpace.ScopeIndent',
+  1 => 'Squiz.Classes.SelfMemberReference',
+  2 => 'Squiz.WhiteSpace.ObjectOperatorSpacing',
+)==================================================
+EFFFF
+
+FAILED TO FIX FILE: 
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\NamingConventions\TraitNameSuffixUnitTest.1.inc
+SNIFFS SEEN IN LAST TEN LOOPS
+==================================================
+array (
+  0 => 'PSR2.Classes.ClassDeclaration',
+  1 => 'Squiz.Commenting.PostStatementComment',
+)==================================================
+EFFFFFF.
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\PHP\CharacterBeforePHPOpeningTagUnitTest.1.inc
@@ -110,7 +154,8 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'Squiz.PHP.EmbeddedPhp',
 )==================================================
-EFF.FF...FF..FFFFFFFF...F..........F.FFFF.FFFFF.FF.FF.
+EFF.FF...FF...FFFFFFFF...F.. 180 / 589 (31%)
+........F.FF...FF.FFFFF.FF..FF.
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.1.inc
@@ -127,8 +172,7 @@ array (
   7 => 'Squiz.WhiteSpace.FunctionSpacing',
   8 => 'Squiz.WhiteSpace.OperatorSpacing',
 )==================================================
-E 180 / 551 (33%)
-
+E
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.2.inc
@@ -197,7 +241,8 @@ array (
   1 => 'Squiz.PHP.EmbeddedPhp',
   2 => 'Squiz.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFF
+EFF 240 / 589 (41%)
+
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PEAR\Tests\Functions\FunctionCallSignatureUnitTest.inc
@@ -258,8 +303,7 @@ array (
   2 => 'Squiz.Classes.ClassDeclaration',
   3 => 'Squiz.WhiteSpace.FunctionSpacing',
 )==================================================
-EFFFFFFFFFFFFFF.FF 240 / 551 (44%)
-FFFF
+EFFFFFFFFFFFFFF.FFFFFF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR12\Tests\ControlStructures\BooleanOperatorPlacementUnitTest.inc
@@ -269,7 +313,8 @@ array (
   0 => 'PEAR.ControlStructures.MultiLineCondition',
   1 => 'Squiz.WhiteSpace.SuperfluousWhitespace',
 )==================================================
-EFFF.FFFF..FFFFFFF..FF...F.F
+EFFF.FFFF..FFFFFFF..FF.. 300 / 589 (51%)
+.F.F
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc
@@ -312,8 +357,7 @@ array (
   0 => 'PEAR.ControlStructures.MultiLineCondition',
   1 => 'Squiz.WhiteSpace.SuperfluousWhitespace',
 )==================================================
-EFFFFFFFFFFFFFFF.F 300 / 551 (54%)
-..FF.F
+EFFFFFFFFFFFFFFF.F..FF.F
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\PSR2\Tests\Methods\FunctionCallSignatureUnitTest.inc
@@ -323,7 +367,8 @@ array (
   0 => 'PEAR.Functions.FunctionCallSignature',
   1 => 'Squiz.Commenting.BlockComment',
 )==================================================
-EFF.FFFFFFFFF.FF.FF.FFF
+EFF.FFFFFFFFF.FF.FF.FF 360 / 589 (61%)
+F
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.1.inc
@@ -343,7 +388,7 @@ array (
   0 => 'Generic.Arrays.ArrayIndent',
   1 => 'Squiz.WhiteSpace.OperatorSpacing',
 )==================================================
-EFFF
+EFFFFF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc
@@ -388,8 +433,7 @@ array (
   0 => 'Squiz.Classes.ClassDeclaration',
   1 => 'Squiz.WhiteSpace.FunctionSpacing',
 )==================================================
-EFFF 360 / 551 (65%)
-
+EFFF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\Commenting\VariableCommentUnitTest.inc
@@ -429,7 +473,28 @@ array (
   0 => 'Squiz.ControlStructures.ForLoopDeclaration',
   1 => 'Squiz.WhiteSpace.ControlStructureSpacing',
 )==================================================
-E..FFFFFFFFFFFFFFFFFFFFF
+E..FFFFFFFFFFF
+
+FAILED TO FIX FILE: 
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.1.inc
+SNIFFS SEEN IN LAST TEN LOOPS
+==================================================
+array (
+  0 => 'PEAR.Functions.FunctionDeclaration',
+  1 => 'Squiz.Commenting.PostStatementComment',
+  2 => 'Squiz.Functions.FunctionDeclarationArgumentSpacing',
+)==================================================
+EFF.
+
+FAILED TO FIX FILE: 
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.5.inc
+SNIFFS SEEN IN LAST TEN LOOPS
+==================================================
+array (
+  0 => 'PEAR.Functions.FunctionDeclaration',
+)==================================================
+E.F 420 / 589 (71%)
+FFFFFFFF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\Objects\ObjectInstantiationUnitTest.inc
@@ -459,7 +524,7 @@ array (
   0 => 'Generic.WhiteSpace.LanguageConstructSpacing',
   1 => 'Squiz.PHP.EmbeddedPhp',
 )==================================================
-EFFFF.FF
+EFFFF..FF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\PHP\EmbeddedPhpUnitTest.5.inc
@@ -468,8 +533,7 @@ SNIFFS SEEN IN LAST TEN LOOPS
 array (
   0 => 'Squiz.PHP.EmbeddedPhp',
 )==================================================
-E 420 / 551 (76%)
-FF.FFF.
+EFF.FFF.
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\PHP\InnerFunctionsUnitTest.inc
@@ -503,7 +567,8 @@ array (
   0 => 'Squiz.WhiteSpace.FunctionSpacing',
   1 => 'Squiz.WhiteSpace.SuperfluousWhitespace',
 )==================================================
-EFFFFF
+EFFFFF 480 / 589 (81%)
+
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\WhiteSpace\ControlStructureSpacingUnitTest.inc
@@ -557,8 +622,7 @@ array (
   0 => 'Squiz.Commenting.PostStatementComment',
   1 => 'Squiz.WhiteSpace.ScopeKeywordSpacing',
 )==================================================
-EFFFFFFFFFFFFFFFFFFF 480 / 551 (87%)
-F
+EFFFFFFFFFFFFFFFFFFFFF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\File\FindExtendedClassNameTest.inc
@@ -580,7 +644,17 @@ array (
   0 => 'PEAR.Functions.FunctionCallSignature',
   1 => 'Squiz.WhiteSpace.ControlStructureSpacing',
 )==================================================
-EF
+E
+
+FAILED TO FIX FILE: 
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\File\GetClassPropertiesTest.inc
+SNIFFS SEEN IN LAST TEN LOOPS
+==================================================
+array (
+  0 => 'Squiz.Commenting.PostStatementComment',
+  1 => 'Squiz.WhiteSpace.ScopeKeywordSpacing',
+)==================================================
+E
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\File\GetConditionTest.inc
@@ -625,9 +699,7 @@ array (
   0 => 'Squiz.Classes.ClassDeclaration',
   1 => 'Squiz.Commenting.ClosingDeclarationComment',
   2 => 'Squiz.Commenting.InlineComment',
-  3 => 'Squiz.Functions.FunctionDeclarationArgumentSpacing',
-  4 => 'Squiz.WhiteSpace.SemicolonSpacing',
-  5 => 'Squiz.WhiteSpace.SuperfluousWhitespace',
+  3 => 'Squiz.WhiteSpace.SemicolonSpacing',
 )==================================================
 E
 
@@ -640,20 +712,21 @@ array (
   1 => 'Generic.WhiteSpace.ScopeIndent',
   2 => 'Squiz.Functions.FunctionDeclarationArgumentSpacing',
 )==================================================
-EFFFFFFFFFFFFFFFFFFFF.FFF
+EFFFFFFF 540 / 589 (92%)
+F.FFF
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\AttributesTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\AttributesTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
   0 => 'Squiz.Commenting.InlineComment',
   1 => 'Squiz.WhiteSpace.FunctionSpacing',
 )==================================================
-EFFF
+EFFFF
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\BackfillMatchTokenTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\BackfillMatchTokenTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
@@ -666,28 +739,32 @@ array (
 EF
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\BackfillReadonlyTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\BackfillReadonlyTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
   0 => 'Generic.WhiteSpace.LanguageConstructSpacing',
-  1 => 'Squiz.Commenting.PostStatementComment',
+  1 => 'Squiz.Commenting.InlineComment',
+  2 => 'Squiz.Commenting.PostStatementComment',
+  3 => 'Squiz.WhiteSpace.MemberVarSpacing',
 )==================================================
 E
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\BitwiseOrTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\BitwiseOrTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
-  1 => 'Squiz.Commenting.PostStatementComment',
-  2 => 'Squiz.WhiteSpace.ScopeKeywordSpacing',
+  1 => 'Squiz.Commenting.InlineComment',
+  2 => 'Squiz.Commenting.PostStatementComment',
+  3 => 'Squiz.WhiteSpace.MemberVarSpacing',
+  4 => 'Squiz.WhiteSpace.ScopeKeywordSpacing',
 )==================================================
 E
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\ContextSensitiveKeywordsTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\ContextSensitiveKeywordsTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
@@ -699,7 +776,7 @@ array (
 EE
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\DNFTypesParseError1Test.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
@@ -709,7 +786,7 @@ array (
 EF
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\DNFTypesTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\DNFTypesTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
@@ -720,7 +797,7 @@ array (
 E
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\DoubleArrowTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\DoubleArrowTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
@@ -730,7 +807,7 @@ array (
 EF
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\EnumCaseTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\EnumCaseTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
@@ -738,22 +815,20 @@ array (
   1 => 'PEAR.Classes.ClassDeclaration',
   2 => 'Squiz.Classes.ClassDeclaration',
 )==================================================
-EFFFFFFFF 540 / 551 (98%)
-FFF
+EFFF
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\PHP\TypeIntersectionTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\HeredocParseErrorTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
-  0 => 'Generic.WhiteSpace.ScopeIndent',
-  1 => 'Squiz.Commenting.PostStatementComment',
-  2 => 'Squiz.WhiteSpace.ScopeKeywordSpacing',
+  0 => 'Squiz.Formatting.OperatorBracket',
+  1 => 'Squiz.WhiteSpace.OperatorSpacing',
 )==================================================
-EF
+EFFFFFFFFF
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\Tokenizer\CreateParenthesisNestingMapDNFTypesTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\PHP\TypeIntersectionTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
@@ -764,7 +839,18 @@ array (
 EFF
 
 FAILED TO FIX FILE: 
-D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizer\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\Tokenizer\CreateParenthesisNestingMapDNFTypesTest.inc
+SNIFFS SEEN IN LAST TEN LOOPS
+==================================================
+array (
+  0 => 'Generic.WhiteSpace.ScopeIndent',
+  1 => 'Squiz.Commenting.PostStatementComment',
+  2 => 'Squiz.WhiteSpace.ScopeKeywordSpacing',
+)==================================================
+EFFFF
+
+FAILED TO FIX FILE: 
+D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\Tokenizers\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc
 SNIFFS SEEN IN LAST TEN LOOPS
 ==================================================
 array (
@@ -772,7 +858,7 @@ array (
   1 => 'PEAR.Classes.ClassDeclaration',
   2 => 'Squiz.Classes.ClassDeclaration',
 )==================================================
-EEF                                                  551 / 551 (100%)
+EEFFFF            589 / 589 (100%)
 
 
 
@@ -785,16 +871,24 @@ src\Standards\Generic\Tests\Arrays\DisallowLongArraySyntaxUnitTest.1.inc        
 src\Standards\Generic\Tests\Arrays\DisallowLongArraySyntaxUnitTest.3.inc                          1      3
 src\Standards\Generic\Tests\Arrays\DisallowShortArraySyntaxUnitTest.inc                           10     2
 src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.1.inc                              61     25
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.10.inc                             9      5
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.11.inc                             8      6
 src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.2.inc                              22     7
 src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.3.inc                              FAILED TO FIX
 src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.4.inc                              12     5
 src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.5.inc                              16     8
 src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.6.inc                              14     7
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.7.inc                              17     12
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.8.inc                              18     12
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.9.inc                              FAILED TO FIX
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.97.inc                             1      6
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.98.inc                             1      6
+src\Standards\Generic\Tests\Classes\DuplicateClassNameUnitTest.99.inc                             1      2
 src\Standards\Generic\Tests\Classes\OpeningBraceSameLineUnitTest.inc                              68     90
 src\Standards\Generic\Tests\CodeAnalysis\AssignmentInConditionUnitTest.1.inc                      174    135
 src\Standards\Generic\Tests\CodeAnalysis\AssignmentInConditionUnitTest.3.inc                      1      5
 src\Standards\Generic\Tests\CodeAnalysis\AssignmentInConditionUnitTest.6.inc                      2      2
-src\Standards\Generic\Tests\CodeAnalysis\EmptyPHPStatementUnitTest.inc                            FAILED TO FIX
+src\Standards\Generic\Tests\CodeAnalysis\EmptyPHPStatementUnitTest.1.inc                          FAILED TO FIX
 src\Standards\Generic\Tests\CodeAnalysis\EmptyStatementUnitTest.inc                               26     38
 src\Standards\Generic\Tests\CodeAnalysis\ForLoopShouldBeWhileLoopUnitTest.1.inc                   7      14
 src\Standards\Generic\Tests\CodeAnalysis\ForLoopShouldBeWhileLoopUnitTest.3.inc                   1      4
@@ -872,15 +966,32 @@ src\Standards\Generic\Tests\Functions\CallTimePassByReferenceUnitTest.3.inc     
 src\Standards\Generic\Tests\Functions\FunctionCallArgumentSpacingUnitTest.1.inc                   FAILED TO FIX
 src\Standards\Generic\Tests\Functions\FunctionCallArgumentSpacingUnitTest.2.inc                   1      2
 src\Standards\Generic\Tests\Functions\OpeningFunctionBraceBsdAllmanUnitTest.inc                   271    121
-src\Standards\Generic\Tests\Functions\OpeningFunctionBraceKernighanRitchieUnitTest.inc            211    94
-src\Standards\Generic\Tests\Metrics\CyclomaticComplexityUnitTest.inc                              157    216
-src\Standards\Generic\Tests\Metrics\NestingLevelUnitTest.inc                                      24     27
-src\Standards\Generic\Tests\NamingConventions\AbstractClassNamePrefixUnitTest.inc                 FAILED TO FIX
-src\Standards\Generic\Tests\NamingConventions\CamelCapsFunctionNameUnitTest.inc                   544    265
-src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.inc                         76     56
-src\Standards\Generic\Tests\NamingConventions\InterfaceNameSuffixUnitTest.inc                     7      13
-src\Standards\Generic\Tests\NamingConventions\TraitNameSuffixUnitTest.inc                         25     7
-src\Standards\Generic\Tests\NamingConventions\UpperCaseConstantNameUnitTest.inc                   16     19
+src\Standards\Generic\Tests\Functions\OpeningFunctionBraceKernighanRitchieUnitTest.1.inc          229    106
+src\Standards\Generic\Tests\Functions\OpeningFunctionBraceKernighanRitchieUnitTest.2.inc          20     10
+src\Standards\Generic\Tests\Functions\OpeningFunctionBraceKernighanRitchieUnitTest.3.inc          2      5
+src\Standards\Generic\Tests\Metrics\CyclomaticComplexityUnitTest.1.inc                            166    221
+src\Standards\Generic\Tests\Metrics\CyclomaticComplexityUnitTest.2.inc                            2      5
+src\Standards\Generic\Tests\Metrics\CyclomaticComplexityUnitTest.3.inc                            2      5
+src\Standards\Generic\Tests\Metrics\NestingLevelUnitTest.1.inc                                    46     34
+src\Standards\Generic\Tests\Metrics\NestingLevelUnitTest.2.inc                                    2      5
+src\Standards\Generic\Tests\Metrics\NestingLevelUnitTest.3.inc                                    2      5
+src\Standards\Generic\Tests\NamingConventions\AbstractClassNamePrefixUnitTest.1.inc               FAILED TO FIX
+src\Standards\Generic\Tests\NamingConventions\AbstractClassNamePrefixUnitTest.2.inc               1      6
+src\Standards\Generic\Tests\NamingConventions\CamelCapsFunctionNameUnitTest.1.inc                 570    282
+src\Standards\Generic\Tests\NamingConventions\CamelCapsFunctionNameUnitTest.2.inc                 8      5
+src\Standards\Generic\Tests\NamingConventions\CamelCapsFunctionNameUnitTest.3.inc                 2      4
+src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.1.inc                       FAILED TO FIX
+src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.2.inc                       8      5
+src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.3.inc                       2      4
+src\Standards\Generic\Tests\NamingConventions\InterfaceNameSuffixUnitTest.1.inc                   20     11
+src\Standards\Generic\Tests\NamingConventions\InterfaceNameSuffixUnitTest.2.inc                   1      5
+src\Standards\Generic\Tests\NamingConventions\TraitNameSuffixUnitTest.1.inc                       FAILED TO FIX
+src\Standards\Generic\Tests\NamingConventions\TraitNameSuffixUnitTest.2.inc                       1      5
+src\Standards\Generic\Tests\NamingConventions\UpperCaseConstantNameUnitTest.1.inc                 43     42
+src\Standards\Generic\Tests\NamingConventions\UpperCaseConstantNameUnitTest.2.inc                 1      2
+src\Standards\Generic\Tests\NamingConventions\UpperCaseConstantNameUnitTest.3.inc                 1      2
+src\Standards\Generic\Tests\NamingConventions\UpperCaseConstantNameUnitTest.4.inc                 1      2
+src\Standards\Generic\Tests\NamingConventions\UpperCaseConstantNameUnitTest.5.inc                 3      3
 src\Standards\Generic\Tests\PHP\CharacterBeforePHPOpeningTagUnitTest.1.inc                        FAILED TO FIX
 src\Standards\Generic\Tests\PHP\CharacterBeforePHPOpeningTagUnitTest.2.inc                        2      4
 src\Standards\Generic\Tests\PHP\CharacterBeforePHPOpeningTagUnitTest.3.inc                        1      2
@@ -892,7 +1003,7 @@ src\Standards\Generic\Tests\PHP\DiscourageGotoUnitTest.inc                      
 src\Standards\Generic\Tests\PHP\ForbiddenFunctionsUnitTest.inc                                    53     33
 src\Standards\Generic\Tests\PHP\LowerCaseConstantUnitTest.1.inc                                   183    83
 src\Standards\Generic\Tests\PHP\LowerCaseConstantUnitTest.2.inc                                   1      7
-src\Standards\Generic\Tests\PHP\LowerCaseKeywordUnitTest.inc                                      123    61
+src\Standards\Generic\Tests\PHP\LowerCaseKeywordUnitTest.inc                                      147    95
 src\Standards\Generic\Tests\PHP\LowerCaseTypeUnitTest.inc                                         179    83
 src\Standards\Generic\Tests\PHP\NoSilencedErrorsUnitTest.inc                                      2      7
 src\Standards\Generic\Tests\PHP\RequireStrictTypesUnitTest.1.inc                                  1      4
@@ -904,18 +1015,18 @@ src\Standards\Generic\Tests\Strings\UnnecessaryStringConcatUnitTest.1.inc       
 src\Standards\Generic\Tests\Strings\UnnecessaryStringConcatUnitTest.2.inc                         1      2
 src\Standards\Generic\Tests\WhiteSpace\ArbitraryParenthesesSpacingUnitTest.1.inc                  241    217
 src\Standards\Generic\Tests\WhiteSpace\ArbitraryParenthesesSpacingUnitTest.2.inc                  3      4
-src\Standards\Generic\Tests\WhiteSpace\DisallowSpaceIndentUnitTest.1.inc                          66     73
-src\Standards\Generic\Tests\WhiteSpace\DisallowSpaceIndentUnitTest.2.inc                          66     73
+src\Standards\Generic\Tests\WhiteSpace\DisallowSpaceIndentUnitTest.1.inc                          72     75
+src\Standards\Generic\Tests\WhiteSpace\DisallowSpaceIndentUnitTest.2.inc                          72     75
 src\Standards\Generic\Tests\WhiteSpace\DisallowSpaceIndentUnitTest.3.inc                          12     6
-src\Standards\Generic\Tests\WhiteSpace\DisallowTabIndentUnitTest.1.inc                            81     11
+src\Standards\Generic\Tests\WhiteSpace\DisallowTabIndentUnitTest.1.inc                            86     13
 src\Standards\Generic\Tests\WhiteSpace\DisallowTabIndentUnitTest.2.inc                            12     6
 src\Standards\Generic\Tests\WhiteSpace\IncrementDecrementSpacingUnitTest.inc                      15     10
-src\Standards\Generic\Tests\WhiteSpace\LanguageConstructSpacingUnitTest.1.inc                     56     177
+src\Standards\Generic\Tests\WhiteSpace\LanguageConstructSpacingUnitTest.1.inc                     57     253
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.1.inc                                  FAILED TO FIX
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.2.inc                                  FAILED TO FIX
-src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.3.inc                                  8      5
+src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.3.inc                                  18     8
 src\Standards\Generic\Tests\WhiteSpace\ScopeIndentUnitTest.4.inc                                  5      3
-src\Standards\Generic\Tests\WhiteSpace\SpreadOperatorSpacingAfterUnitTest.1.inc                   91     17
+src\Standards\Generic\Tests\WhiteSpace\SpreadOperatorSpacingAfterUnitTest.1.inc                   92     18
 src\Standards\Generic\Tests\WhiteSpace\SpreadOperatorSpacingAfterUnitTest.2.inc                   1      5
 src\Standards\MySource\Tests\Channels\DisallowSelfActionsUnitTest.inc                             20     15
 src\Standards\MySource\Tests\Channels\IncludeSystemUnitTest.inc                                   68     32
@@ -935,7 +1046,7 @@ src\Standards\PEAR\Tests\Commenting\FileCommentUnitTest.2.inc                   
 src\Standards\PEAR\Tests\Commenting\FileCommentUnitTest.3.inc                                     1      2
 src\Standards\PEAR\Tests\Commenting\FileCommentUnitTest.4.inc                                     2      3
 src\Standards\PEAR\Tests\Commenting\FunctionCommentUnitTest.inc                                   FAILED TO FIX
-src\Standards\PEAR\Tests\Commenting\InlineCommentUnitTest.inc                                     10     6
+src\Standards\PEAR\Tests\Commenting\InlineCommentUnitTest.inc                                     11     6
 src\Standards\PEAR\Tests\ControlStructures\ControlSignatureUnitTest.inc                           76     61
 src\Standards\PEAR\Tests\ControlStructures\MultiLineConditionUnitTest.inc                         FAILED TO FIX
 src\Standards\PEAR\Tests\Files\IncludingFileUnitTest.inc                                          29     22
@@ -1045,9 +1156,11 @@ src\Standards\PSR2\Tests\Namespaces\UseDeclarationUnitTest.9.inc                
 src\Standards\Squiz\Tests\Arrays\ArrayBracketSpacingUnitTest.inc                                  30     16
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.1.inc                                   FAILED TO FIX
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.2.inc                                   FAILED TO FIX
-src\Standards\Squiz\Tests\Classes\ClassDeclarationUnitTest.inc                                    76     79
+src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.3.inc                                   1      3
+src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.4.inc                                   2      3
+src\Standards\Squiz\Tests\Classes\ClassDeclarationUnitTest.inc                                    77     79
 src\Standards\Squiz\Tests\Classes\ClassFileNameUnitTest.inc                                       165    69
-src\Standards\Squiz\Tests\Classes\LowercaseClassKeywordsUnitTest.inc                              60     18
+src\Standards\Squiz\Tests\Classes\LowercaseClassKeywordsUnitTest.inc                              61     18
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                                 FAILED TO FIX
 src\Standards\Squiz\Tests\Classes\ValidClassNameUnitTest.inc                                      311    147
 src\Standards\Squiz\Tests\Commenting\BlockCommentUnitTest.inc                                     113    61
@@ -1067,9 +1180,9 @@ src\Standards\Squiz\Tests\Commenting\FileCommentUnitTest.7.inc                  
 src\Standards\Squiz\Tests\Commenting\FileCommentUnitTest.9.inc                                    2      2
 src\Standards\Squiz\Tests\Commenting\FunctionCommentThrowTagUnitTest.inc                          FAILED TO FIX
 src\Standards\Squiz\Tests\Commenting\FunctionCommentUnitTest.inc                                  FAILED TO FIX
-src\Standards\Squiz\Tests\Commenting\InlineCommentUnitTest.inc                                    60     42
+src\Standards\Squiz\Tests\Commenting\InlineCommentUnitTest.inc                                    61     42
 src\Standards\Squiz\Tests\Commenting\LongConditionClosingCommentUnitTest.inc                      86     197
-src\Standards\Squiz\Tests\Commenting\PostStatementCommentUnitTest.inc                             43     30
+src\Standards\Squiz\Tests\Commenting\PostStatementCommentUnitTest.inc                             49     35
 src\Standards\Squiz\Tests\Commenting\VariableCommentUnitTest.inc                                  FAILED TO FIX
 src\Standards\Squiz\Tests\ControlStructures\ControlSignatureUnitTest.1.inc                        FAILED TO FIX
 src\Standards\Squiz\Tests\ControlStructures\ElseIfDeclarationUnitTest.inc                         2      16
@@ -1086,25 +1199,28 @@ src\Standards\Squiz\Tests\Files\FileExtensionUnitTest.5.inc                     
 src\Standards\Squiz\Tests\Formatting\OperatorBracketUnitTest.1.inc                                76     37
 src\Standards\Squiz\Tests\Formatting\OperatorBracketUnitTest.2.inc                                4      3
 src\Standards\Squiz\Tests\Formatting\OperatorBracketUnitTest.3.inc                                1      2
-src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.inc                324    105
+src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.1.inc              FAILED TO FIX
+src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.2.inc              2      4
+src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.3.inc              2      6
+src\Standards\Squiz\Tests\Functions\FunctionDeclarationArgumentSpacingUnitTest.5.inc              FAILED TO FIX
 src\Standards\Squiz\Tests\Functions\FunctionDeclarationUnitTest.1.inc                             45     37
 src\Standards\Squiz\Tests\Functions\FunctionDeclarationUnitTest.2.inc                             1      4
 src\Standards\Squiz\Tests\Functions\FunctionDeclarationUnitTest.3.inc                             2      4
 src\Standards\Squiz\Tests\Functions\FunctionDuplicateArgumentUnitTest.inc                         21     14
 src\Standards\Squiz\Tests\Functions\GlobalFunctionUnitTest.inc                                    30     13
 src\Standards\Squiz\Tests\Functions\LowercaseFunctionKeywordsUnitTest.inc                         128    38
-src\Standards\Squiz\Tests\Functions\MultiLineFunctionDeclarationUnitTest.inc                      234    131
+src\Standards\Squiz\Tests\Functions\MultiLineFunctionDeclarationUnitTest.inc                      265    158
 src\Standards\Squiz\Tests\NamingConventions\ValidFunctionNameUnitTest.inc                         83     41
 src\Standards\Squiz\Tests\NamingConventions\ValidVariableNameUnitTest.inc                         46     107
 src\Standards\Squiz\Tests\Objects\ObjectInstantiationUnitTest.inc                                 FAILED TO FIX
 src\Standards\Squiz\Tests\Operators\ComparisonOperatorUsageUnitTest.inc                           50     108
 src\Standards\Squiz\Tests\Operators\IncrementDecrementUsageUnitTest.inc                           26     26
 src\Standards\Squiz\Tests\Operators\ValidLogicalOperatorsUnitTest.inc                             19     18
-src\Standards\Squiz\Tests\PHP\CommentedOutCodeUnitTest.inc                                        74     34
+src\Standards\Squiz\Tests\PHP\CommentedOutCodeUnitTest.inc                                        71     37
 src\Standards\Squiz\Tests\PHP\DisallowBooleanStatementUnitTest.inc                                5      15
 src\Standards\Squiz\Tests\PHP\DisallowComparisonAssignmentUnitTest.inc                            24     35
 src\Standards\Squiz\Tests\PHP\DisallowInlineIfUnitTest.inc                                        9      14
-src\Standards\Squiz\Tests\PHP\DisallowMultipleAssignmentsUnitTest.1.inc                           85     46
+src\Standards\Squiz\Tests\PHP\DisallowMultipleAssignmentsUnitTest.1.inc                           106    56
 src\Standards\Squiz\Tests\PHP\DisallowMultipleAssignmentsUnitTest.2.inc                           2      5
 src\Standards\Squiz\Tests\PHP\DisallowSizeFunctionsInLoopsUnitTest.inc                            6      36
 src\Standards\Squiz\Tests\PHP\DiscouragedFunctionsUnitTest.inc                                    5      7
@@ -1162,6 +1278,7 @@ src\Standards\Squiz\Tests\WhiteSpace\OperatorSpacingUnitTest.3.inc              
 src\Standards\Squiz\Tests\WhiteSpace\ScopeClosingBraceUnitTest.inc                                FAILED TO FIX
 src\Standards\Squiz\Tests\WhiteSpace\ScopeKeywordSpacingUnitTest.1.inc                            FAILED TO FIX
 src\Standards\Squiz\Tests\WhiteSpace\ScopeKeywordSpacingUnitTest.3.inc                            FAILED TO FIX
+src\Standards\Squiz\Tests\WhiteSpace\ScopeKeywordSpacingUnitTest.4.inc                            3      5
 src\Standards\Squiz\Tests\WhiteSpace\SemicolonSpacingUnitTest.inc                                 58     21
 src\Standards\Squiz\Tests\WhiteSpace\SuperfluousWhitespaceUnitTest.1.inc                          35     19
 src\Standards\Squiz\Tests\WhiteSpace\SuperfluousWhitespaceUnitTest.2.inc                          6      0
@@ -1185,7 +1302,7 @@ tests\Core\File\FindEndOfStatementTest.inc                                      
 tests\Core\File\FindExtendedClassNameTest.inc                                                     FAILED TO FIX
 tests\Core\File\FindImplementedInterfaceNamesTest.inc                                             71     80
 tests\Core\File\FindStartOfStatementTest.inc                                                      FAILED TO FIX
-tests\Core\File\GetClassPropertiesTest.inc                                                        77     72
+tests\Core\File\GetClassPropertiesTest.inc                                                        FAILED TO FIX
 tests\Core\File\GetConditionTest.inc                                                              FAILED TO FIX
 tests\Core\File\GetDeclarationNameTest.inc                                                        FAILED TO FIX
 tests\Core\File\GetMemberPropertiesTest.inc                                                       FAILED TO FIX
@@ -1195,69 +1312,66 @@ tests\Core\File\GetMethodParametersTest.inc                                     
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX
 tests\Core\File\GetTokensAsStringTest.inc                                                         19     14
 tests\Core\File\IsReferenceTest.inc                                                               200    175
-tests\Core\Fixer\Fixtures\GenerateDiffTest-BlankLinesAtEnd.inc                                    5      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-BlankLinesAtStart.inc                                  5      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-LineAdded.inc                                          3      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-LineRemoved.inc                                        4      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-NoDiff.inc                                             4      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-NoTrailingWhitespace.inc                               3      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-TabsToSpaces.inc                                       2      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-VarNameChanged.inc                                     4      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-WhiteSpaceAtEnd.inc                                    5      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-WhiteSpaceAtStart.inc                                  9      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest-WindowsLineEndings.inc                                 5      3
-tests\Core\Fixer\Fixtures\GenerateDiffTest.inc                                                    4      3
 tests\Core\Sniffs\AbstractArraySniffTest.inc                                                      46     47
-tests\Core\Tokenizer\Comment\LiveCoding1Test.inc                                                  2      4
-tests\Core\Tokenizer\Comment\LiveCoding2Test.inc                                                  1      4
-tests\Core\Tokenizer\Comment\LiveCoding3Test.inc                                                  2      4
-tests\Core\Tokenizer\Comment\LiveCoding4Test.inc                                                  2      4
-tests\Core\Tokenizer\Comment\MultiLineDocBlockTest.inc                                            38     30
-tests\Core\Tokenizer\Comment\SingleLineDocBlockTest.inc                                           20     27
-tests\Core\Tokenizer\PHP\AnonClassParenthesisOwnerTest.inc                                        33     24
-tests\Core\Tokenizer\PHP\ArrayKeywordTest.inc                                                     57     51
-tests\Core\Tokenizer\PHP\AttributesTest.inc                                                       FAILED TO FIX
-tests\Core\Tokenizer\PHP\BackfillEnumTest.inc                                                     51     67
-tests\Core\Tokenizer\PHP\BackfillExplicitOctalNotationTest.inc                                    10     22
-tests\Core\Tokenizer\PHP\BackfillFnTokenTest.inc                                                  132    199
-tests\Core\Tokenizer\PHP\BackfillMatchTokenTest.inc                                               FAILED TO FIX
-tests\Core\Tokenizer\PHP\BackfillNumericSeparatorTest.inc                                         39     57
-tests\Core\Tokenizer\PHP\BackfillReadonlyTest.inc                                                 FAILED TO FIX
-tests\Core\Tokenizer\PHP\BitwiseOrTest.inc                                                        FAILED TO FIX
-tests\Core\Tokenizer\PHP\ContextSensitiveKeywordsTest.inc                                         FAILED TO FIX
-tests\Core\Tokenizer\PHP\DefaultKeywordTest.inc                                                   FAILED TO FIX
-tests\Core\Tokenizer\PHP\DNFTypesParseError1Test.inc                                              FAILED TO FIX
-tests\Core\Tokenizer\PHP\DNFTypesParseError2Test.inc                                              105    42
-tests\Core\Tokenizer\PHP\DNFTypesTest.inc                                                         FAILED TO FIX
-tests\Core\Tokenizer\PHP\DoubleArrowTest.inc                                                      FAILED TO FIX
-tests\Core\Tokenizer\PHP\DoubleQuotedStringTest.inc                                               21     52
-tests\Core\Tokenizer\PHP\EnumCaseTest.inc                                                         FAILED TO FIX
-tests\Core\Tokenizer\PHP\FinallyTest.inc                                                          17     24
-tests\Core\Tokenizer\PHP\GotoLabelTest.inc                                                        38     62
-tests\Core\Tokenizer\PHP\HeredocStringTest.inc                                                    39     115
-tests\Core\Tokenizer\PHP\NamedFunctionCallArgumentsTest.inc                                       160    473
-tests\Core\Tokenizer\PHP\NullsafeObjectOperatorTest.inc                                           13     29
-tests\Core\Tokenizer\PHP\OtherContextSensitiveKeywordsTest.inc                                    279    349
-tests\Core\Tokenizer\PHP\ResolveSimpleTokenTest.inc                                               32     40
-tests\Core\Tokenizer\PHP\ShortArrayTest.inc                                                       53     70
-tests\Core\Tokenizer\PHP\StableCommentWhitespaceTest.inc                                          73     116
-tests\Core\Tokenizer\PHP\StableCommentWhitespaceWinTest.inc                                       36     65
-tests\Core\Tokenizer\PHP\TypedConstantsTest.inc                                                   71     145
-tests\Core\Tokenizer\PHP\TypeIntersectionTest.inc                                                 FAILED TO FIX
-tests\Core\Tokenizer\PHP\UndoNamespacedNameSingleTokenTest.inc                                    77     103
-tests\Core\Tokenizer\Tokenizer\CreateParenthesisNestingMapDNFTypesTest.inc                        FAILED TO FIX
-tests\Core\Tokenizer\Tokenizer\CreateTokenMapArrayParenthesesTest.inc                             57     51
-tests\Core\Tokenizer\Tokenizer\HeredocNowdocCloserTest.inc                                        6      22
-tests\Core\Tokenizer\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                       FAILED TO FIX
-tests\Core\Tokenizer\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                    FAILED TO FIX
-tests\Core\Tokenizer\Tokenizer\ScopeSettingWithNamespaceOperatorTest.inc                          22     19
+tests\Core\Tokenizers\Comment\LiveCoding1Test.inc                                                 2      4
+tests\Core\Tokenizers\Comment\LiveCoding2Test.inc                                                 1      4
+tests\Core\Tokenizers\Comment\LiveCoding3Test.inc                                                 2      4
+tests\Core\Tokenizers\Comment\LiveCoding4Test.inc                                                 2      4
+tests\Core\Tokenizers\Comment\MultiLineDocBlockTest.inc                                           38     30
+tests\Core\Tokenizers\Comment\SingleLineDocBlockTest.inc                                          20     27
+tests\Core\Tokenizers\PHP\AnonClassParenthesisOwnerTest.inc                                       33     24
+tests\Core\Tokenizers\PHP\ArrayKeywordTest.inc                                                    57     51
+tests\Core\Tokenizers\PHP\AttributesTest.inc                                                      FAILED TO FIX
+tests\Core\Tokenizers\PHP\BackfillEnumTest.inc                                                    51     67
+tests\Core\Tokenizers\PHP\BackfillExplicitOctalNotationTest.inc                                   10     22
+tests\Core\Tokenizers\PHP\BackfillFnTokenParseErrorTest.inc                                       1      6
+tests\Core\Tokenizers\PHP\BackfillFnTokenTest.inc                                                 132    199
+tests\Core\Tokenizers\PHP\BackfillMatchTokenTest.inc                                              FAILED TO FIX
+tests\Core\Tokenizers\PHP\BackfillNumericSeparatorTest.inc                                        39     57
+tests\Core\Tokenizers\PHP\BackfillReadonlyTest.inc                                                FAILED TO FIX
+tests\Core\Tokenizers\PHP\BitwiseOrTest.inc                                                       FAILED TO FIX
+tests\Core\Tokenizers\PHP\ContextSensitiveKeywordsTest.inc                                        FAILED TO FIX
+tests\Core\Tokenizers\PHP\DefaultKeywordTest.inc                                                  FAILED TO FIX
+tests\Core\Tokenizers\PHP\DNFTypesParseError1Test.inc                                             FAILED TO FIX
+tests\Core\Tokenizers\PHP\DNFTypesParseError2Test.inc                                             105    42
+tests\Core\Tokenizers\PHP\DNFTypesTest.inc                                                        FAILED TO FIX
+tests\Core\Tokenizers\PHP\DoubleArrowTest.inc                                                     FAILED TO FIX
+tests\Core\Tokenizers\PHP\DoubleQuotedStringTest.inc                                              21     52
+tests\Core\Tokenizers\PHP\EnumCaseTest.inc                                                        FAILED TO FIX
+tests\Core\Tokenizers\PHP\FinallyTest.inc                                                         17     24
+tests\Core\Tokenizers\PHP\GotoLabelTest.inc                                                       38     62
+tests\Core\Tokenizers\PHP\HeredocNowdocTest.inc                                                   6      20
+tests\Core\Tokenizers\PHP\HeredocParseErrorTest.inc                                               FAILED TO FIX
+tests\Core\Tokenizers\PHP\HeredocStringTest.inc                                                   39     115
+tests\Core\Tokenizers\PHP\NamedFunctionCallArgumentsTest.inc                                      160    473
+tests\Core\Tokenizers\PHP\NullsafeObjectOperatorTest.inc                                          13     29
+tests\Core\Tokenizers\PHP\OtherContextSensitiveKeywordsTest.inc                                   279    349
+tests\Core\Tokenizers\PHP\ResolveSimpleTokenTest.inc                                              32     40
+tests\Core\Tokenizers\PHP\ShortArrayTest.inc                                                      53     70
+tests\Core\Tokenizers\PHP\StableCommentWhitespaceTest.inc                                         73     116
+tests\Core\Tokenizers\PHP\StableCommentWhitespaceWinTest.inc                                      36     65
+tests\Core\Tokenizers\PHP\TypedConstantsTest.inc                                                  71     145
+tests\Core\Tokenizers\PHP\TypeIntersectionTest.inc                                                FAILED TO FIX
+tests\Core\Tokenizers\PHP\UndoNamespacedNameSingleTokenTest.inc                                   77     103
+tests\Core\Tokenizers\PHP\YieldTest.inc                                                           49     67
+tests\Core\Tokenizers\Tokenizer\CreateParenthesisNestingMapDNFTypesTest.inc                       FAILED TO FIX
+tests\Core\Tokenizers\Tokenizer\CreatePositionMapHeredocNowdocCloserTest.inc                      6      22
+tests\Core\Tokenizers\Tokenizer\CreatePositionMapHeredocNowdocOpenerTest.inc                      6      20
+tests\Core\Tokenizers\Tokenizer\CreatePositionMapYieldFromTest.inc                                14     12
+tests\Core\Tokenizers\Tokenizer\CreateTokenMapArrayParenthesesTest.inc                            57     51
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                      FAILED TO FIX
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                   FAILED TO FIX
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapIfKeywordConditionsTest.inc                        7      6
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapSwitchTokenScopeTest.inc                           17     13
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapWithNamespaceOperatorTest.inc                      22     19
+tests\Core\Tokenizers\Tokenizer\ReplaceTabsInTokenTest.inc                                        23     34
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 26620 ERRORS WERE FIXED IN 471 FILES
+A TOTAL OF 27420 ERRORS WERE FIXED IN 499 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 71 FILES
+PHPCBF FAILED TO FIX 78 FILES
 ------------------------------------------------------------------------------------------------------------------
 
-Time: 1 mins, 45.45 secs; Memory: 26MB
+Time: 4 mins, 40.54 secs; Memory: 32MB
 
 
 
