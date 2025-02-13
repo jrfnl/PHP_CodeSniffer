@@ -168,3 +168,25 @@ enum Cards
 <?php if ($someConditional) : ?>
 <div class="container">
 </div> <?php endif;
+
+// Prevent fixer conflict when the first content on the line containing the scope opener,
+// is part of a multi-line text string.
+function handleMultilineTextStringsCorrectly() {
+    $foo(
+        'some
+    long description', function () {
+        }
+    );
+
+    $foo(
+        "some
+    $long
+    description", function () {
+            }
+    );
+
+    $foo(
+        'some long description', function () {
+    }
+    );
+}

@@ -78,6 +78,23 @@ class ScopeClosingBraceSniff implements Sniff
             }
         }
 
+        // If this is a multi-line text string, we need to find the first piece of content on the line
+        // containing the first token in the text string, which may not be on the same line.
+        if ($tokens[$lineStart]['code'] === T_CONSTANT_ENCAPSED_STRING
+            || $tokens[$lineStart]['code'] === T_DOUBLE_QUOTED_STRING
+        ) {
+            $tokenCode = $tokens[$lineStart]['code'];
+            while ($tokens[($lineStart - 1)]['code'] === $tokenCode) {
+                --$lineStart;
+            }
+
+            for ($lineStart; $lineStart > 0; $lineStart--) {
+                if ($tokens[$lineStart]['column'] === 1) {
+                    break;
+                }
+            }
+        }
+
         $startColumn = 1;
         if ($tokens[$lineStart]['code'] === T_WHITESPACE) {
             $startColumn = $tokens[($lineStart + 1)]['column'];
