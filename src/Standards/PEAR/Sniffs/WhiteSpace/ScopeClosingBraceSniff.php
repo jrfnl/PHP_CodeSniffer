@@ -71,14 +71,12 @@ class ScopeClosingBraceSniff implements Sniff
         // because if this is a method with tokens before it (public, static etc)
         // or an if with an else before it, then we need to start the scope
         // checking from there, rather than the current token.
-        $lineStart = ($stackPtr - 1);
+        $lineStart = $stackPtr;
         for ($lineStart; $lineStart > 0; $lineStart--) {
-            if (strpos($tokens[$lineStart]['content'], $phpcsFile->eolChar) !== false) {
+            if ($tokens[$lineStart]['column'] === 1) {
                 break;
             }
         }
-
-        $lineStart++;
 
         $startColumn = 1;
         if ($tokens[$lineStart]['code'] === T_WHITESPACE) {
@@ -118,14 +116,12 @@ class ScopeClosingBraceSniff implements Sniff
         }
 
         // Check now that the closing brace is lined up correctly.
-        $lineStart = ($scopeEnd - 1);
+        $lineStart = $scopeEnd;
         for ($lineStart; $lineStart > 0; $lineStart--) {
-            if (strpos($tokens[$lineStart]['content'], $phpcsFile->eolChar) !== false) {
+            if ($tokens[$lineStart]['column'] === 1) {
                 break;
             }
         }
-
-        $lineStart++;
 
         $braceIndent = 0;
         if ($tokens[$lineStart]['code'] === T_WHITESPACE) {
