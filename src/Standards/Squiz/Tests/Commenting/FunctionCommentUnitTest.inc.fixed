@@ -360,7 +360,7 @@ class Another_Class
  *
  * @return void
  */
-public static function paramAlign($varrr1, $vr2, $var3)
+function paramAlign($varrr1, $vr2, $var3)
 {
 
 }//end paramAlign()
