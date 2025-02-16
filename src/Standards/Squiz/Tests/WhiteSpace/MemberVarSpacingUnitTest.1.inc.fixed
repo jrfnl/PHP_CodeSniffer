@@ -416,3 +416,44 @@ class MultilineCommentShouldNotBeSplitUp {
      */
     public $prop;
 }
+
+// Set the "not first" spacing to 2, so we can properly check that these are correctly recognized as the first property.
+// phpcs:set Squiz.WhiteSpace.MemberVarSpacing spacing 2
+class DocblockPrecededByAttributesCorrectSpacing {
+
+    #[AttributesShouldBeJumpedOver]
+    #[
+        ASecondAttributeShouldBeJumpedOverToo
+    ]#[AndAThirdAsWell]
+    /**
+     * No error.
+     */
+    public $firstProp;
+}
+
+class DocblockPrecededByAttributesTooMuchSpacing {
+
+    #[AttributesShouldBeJumpedOver]
+    #[
+        ASecondAttributeShouldBeJumpedOverToo
+    ]#[AndAThirdAsWell]
+    /**
+     * Docblock.
+     */
+    public $firstProp;
+}
+
+class DocblockPrecededByAttributesTooLittleSpacing {
+
+    #[AttributesShouldBeJumpedOver]
+    #[
+        ASecondAttributeShouldBeJumpedOverToo
+    ]#[AndAThirdAsWell]
+    /**
+     * Docblock.
+     */
+    public $firstProp;
+}
+
+// Reset properties to their default value.
+// phpcs:set Squiz.WhiteSpace.MemberVarSpacing spacing 1

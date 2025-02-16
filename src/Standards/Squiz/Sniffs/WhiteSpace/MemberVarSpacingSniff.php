@@ -65,37 +65,69 @@ class MemberVarSpacingSniff extends AbstractVariableSniff
 
         $endOfStatement = $phpcsFile->findNext(T_SEMICOLON, ($stackPtr + 1), null, false, null, true);
 
-        $start = $startOfStatement;
+        $start       = $startOfStatement;
+        $seenComment = false;
         for ($prev = ($startOfStatement - 1); $prev >= 0; $prev--) {
             if ($tokens[$prev]['code'] === T_WHITESPACE) {
                 continue;
             }
 
-            if ($tokens[$prev]['code'] === T_ATTRIBUTE_END
-                && isset($tokens[$prev]['attribute_opener']) === true
-            ) {
+            if (isset($tokens[$prev]['attribute_opener']) === true) {
                 $prev  = $tokens[$prev]['attribute_opener'];
                 $start = $prev;
                 continue;
             }
 
-            break;
-        }
-
-        if ($tokens[$prev]['code'] === T_DOC_COMMENT_CLOSE_TAG) {
-            $start = $prev;
-        } else if (isset(Tokens::$commentTokens[$tokens[$prev]['code']]) === true) {
-            // Assume the comment belongs to the member var if it is on a line by itself.
-            $prevContent = $phpcsFile->findPrevious(Tokens::$emptyTokens, ($prev - 1), null, true);
-            if ($tokens[$prevContent]['line'] !== $tokens[$prev]['line']) {
-                $start = $prev;
+            if ($seenComment === false && $tokens[$prev]['code'] === T_DOC_COMMENT_CLOSE_TAG) {
+                $prev        = $tokens[$prev]['comment_opener'];
+                $start       = $prev;
+                $seenComment = true;
+                continue;
             }
-        }
 
-        // Check for blank lines between the docblock/comment and the property declaration.
+            // Check for non-docblock comments and annotations.
+            // Assume the comment belongs to the member var if it is on a line by itself
+            // and we've not yet seen a docblock.
+            if ($seenComment === false && isset(Tokens::$commentTokens[$tokens[$prev]['code']]) === true) {
+                $prevContent = $phpcsFile->findPrevious(Tokens::$emptyTokens, ($prev - 1), null, true);
+                if ($tokens[$prevContent]['line'] !== $tokens[$prev]['line']) {
+                    // The comment is on a line by itself.
+                    // Now find the first line of a potentially multi-line comment.
+                    $startOfComment = $prev;
+                    for ($find = ($prev - 1); $find > 0; $find--) {
+                        if ($tokens[$find]['code'] === T_WHITESPACE) {
+                            continue;
+                        }
+
+                        if (isset(Tokens::$commentTokens[$tokens[$find]['code']]) === true
+                            && $tokens[$find]['line'] === ($tokens[$startOfComment]['line'] - 1)
+                        ) {
+                            $startOfComment = $find;
+                            continue;
+                        }
+
+                        break;
+                    }
+
+                    $start       = $startOfComment;
+                    $seenComment = true;
+                }//end if
+            }//end if
+
+            break;
+        }//end for
+
+        // Check there are no blank lines in the preamble for the property,
+        // but ignore blank lines _within_ docblocks and attributes as that's not the concern of this sniff.
         for ($i = ($start + 1); $i < $startOfStatement; $i++) {
+            // Skip over the contents of docblocks and attributes.
             if (isset($tokens[$i]['attribute_closer']) === true) {
                 $i = $tokens[$i]['attribute_closer'];
+                continue;
+            }
+
+            if (isset($tokens[$i]['comment_closer']) === true) {
+                $i = $tokens[$i]['comment_closer'];
                 continue;
             }
 
@@ -112,7 +144,7 @@ class MemberVarSpacingSniff extends AbstractVariableSniff
             $nextNonWhitespace = $phpcsFile->findNext(T_WHITESPACE, ($i + 1), null, true);
             $foundLines        = ($tokens[$nextNonWhitespace]['line'] - $tokens[$i]['line']);
 
-            $error = 'Expected no blank lines between the member var comment and the declaration; %s found';
+            $error = 'Expected no blank lines between the member var comment/attributes and the declaration; %s found';
             $data  = [$foundLines];
             $fix   = $phpcsFile->addFixableError($error, $i, 'AfterComment', $data);
 
@@ -133,18 +165,10 @@ class MemberVarSpacingSniff extends AbstractVariableSniff
             $i = $nextNonWhitespace;
         }//end for
 
-        // There needs to be n blank lines before the var, not counting comments.
-        if ($start === $startOfStatement) {
-            // No comment found.
-            $first = $phpcsFile->findFirstOnLine(Tokens::$emptyTokens, $start, true);
-            if ($first === false) {
-                $first = $start;
-            }
-        } else if ($tokens[$start]['code'] === T_DOC_COMMENT_CLOSE_TAG) {
-            $first = $tokens[$start]['comment_opener'];
-        } else {
-            $first = $phpcsFile->findPrevious(Tokens::$emptyTokens, ($start - 1), null, true);
-            $first = $phpcsFile->findNext(array_merge(Tokens::$commentTokens, [T_ATTRIBUTE]), ($first + 1));
+        // There needs to be n blank lines before the var, not counting comments/attributes.
+        $first = $phpcsFile->findFirstOnLine(Tokens::$emptyTokens, $start, true);
+        if ($first === false) {
+            $first = $start;
         }
 
         // Determine if this is the first member var.
