@@ -4,7 +4,7 @@ class MyClass
     public $var1 = 'value';
 
 
-    public ?int $var2 = 'value';
+    public ?int $var2 = 1;
 
     public $var3 = 'value';
 
@@ -96,7 +96,7 @@ class MyClass
      * @var   array
      * @since 4.0.0
      */
-    var $actions = array();
+    var $actionsA = array();
 
     /**
      * The actions that this wizard step requires.
@@ -105,14 +105,14 @@ class MyClass
      * @since 4.0.0
      */
 
-    protected $actions = array();
+    protected $actionsB = array();
     /**
      * The actions that this wizard step requires.
      *
      * @var   array
      * @since 4.0.0
      */
-    protected $actions = array();
+    protected $actionsC = array();
 
 }//end class
 
@@ -216,7 +216,7 @@ interface MyInterface
 // phpcs:set Squiz.WhiteSpace.MemberVarSpacing spacing 0
 // phpcs:set Squiz.WhiteSpace.MemberVarSpacing spacingBeforeFirst 0
 
-class phpcsCommentTest {
+class phpcsCommentTestIncorrectSpacing {
 
 
     // phpcs:disable Standard.Category.Sniff
@@ -226,14 +226,14 @@ class phpcsCommentTest {
 
     // phpcs:enable Standard.Category.Sniff
 
-    public $var1 = 'value';
+    public $var2 = 'value';
 
 }
 
 // phpcs:set Squiz.WhiteSpace.MemberVarSpacing spacing 1
 // phpcs:set Squiz.WhiteSpace.MemberVarSpacing spacingBeforeFirst 1
 
-class phpcsCommentTest {
+class phpcsCommentTestCorrectSpacing {
 
 
     // phpcs:disable Standard.Category.Sniff
@@ -243,14 +243,14 @@ class phpcsCommentTest {
 
     // phpcs:enable Standard.Category.Sniff
 
-    public $var1 = 'value';
+    public $var2 = 'value';
 
 }
 
 class MyOtherClass
 {
     public
-        $varK = array( 'a', 'b' );
+        $varJ = array( 'a', 'b' );
     protected static
         $varK,
         $varL,
@@ -366,7 +366,7 @@ class HasAttributes
     protected $propertyWithoutSpacing;
 }
 
-enum SomeEnum
+enum SomeEnum: string
 {
     // Enum cannot have properties
 
