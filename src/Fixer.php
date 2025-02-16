@@ -12,6 +12,7 @@
 
 namespace PHP_CodeSniffer;
 
+use InvalidArgumentException;
 use PHP_CodeSniffer\Exceptions\RuntimeException;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Util\Common;
@@ -422,7 +423,7 @@ class Fixer
             if ($bt[1]['class'] === __CLASS__) {
                 $sniff = 'Fixer';
             } else {
-                $sniff = Common::getSniffCode($bt[1]['class']);
+                $sniff = $this->getSniffCodeForDebug($bt[1]['class']);
             }
 
             $line = $bt[0]['line'];
@@ -507,7 +508,7 @@ class Fixer
                     $line  = $bt[0]['line'];
                 }
 
-                $sniff = Common::getSniffCode($sniff);
+                $sniff = $this->getSniffCodeForDebug($sniff);
 
                 $numChanges = count($this->changeset);
 
@@ -564,7 +565,7 @@ class Fixer
                 $line  = $bt[0]['line'];
             }
 
-            $sniff = Common::getSniffCode($sniff);
+            $sniff = $this->getSniffCodeForDebug($sniff);
 
             if ($this->loops >= 40) {
                 $this->sniffsSeenLastLoops[] = $sniff;
@@ -685,7 +686,7 @@ class Fixer
                 $line  = $bt[0]['line'];
             }
 
-            $sniff = Common::getSniffCode($sniff);
+            $sniff = $this->getSniffCodeForDebug($sniff);
 
             $tokens     = $this->currentFile->getTokens();
             $type       = $tokens[$stackPtr]['type'];
@@ -867,6 +868,26 @@ class Fixer
         }
 
     }//end changeCodeBlockIndent()
+
+
+    /**
+     * Get the sniff code for the current sniff or the class name if this was not a sniff file.
+     *
+     * @param string $className Class name.
+     *
+     * @return string
+     */
+    private function getSniffCodeForDebug(string $className)
+    {
+        try {
+            $sniffCode = Common::getSniffCode($className);
+            return $sniffCode;
+        } catch (InvalidArgumentException $e) {
+            // Sniff code could not be determined. This may be an abstract sniff class or a helper class.
+            return $className;
+        }
+
+    }//end getSniffCodeForDebug()
 
 
 }//end class
