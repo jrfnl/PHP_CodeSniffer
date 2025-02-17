@@ -415,3 +415,19 @@ final class BlankLinesBetweenVsAttributesWithoutCommentIssueSquiz3594
 
     public $property2;
 }
+
+class MultilineCommentShouldNotBeSplitUp {
+    // This is the first line
+    // of a multi-line comment
+    // which should be recognized as belonging
+    // with the property.
+    public $prop;
+
+
+    /* This is the first line
+       of a multi-line comment
+       which should be recognized as belonging
+       with the property.
+     */
+    public $prop;
+}
