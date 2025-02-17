@@ -298,7 +298,7 @@ class Foo
 
     private function foo()
     {
-    }
+    }//end foo()
 
 
     /* no error here because after function */
