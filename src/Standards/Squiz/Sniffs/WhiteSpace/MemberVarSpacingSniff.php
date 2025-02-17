@@ -171,8 +171,8 @@ class MemberVarSpacingSniff extends AbstractVariableSniff
             $first = $start;
         }
 
-        // Determine if this is the first member var.
-        $prev = $phpcsFile->findPrevious(T_WHITESPACE, ($first - 1), null, true);
+        // Prevent conflict with function spacing sniffs.
+        $prev = $phpcsFile->findPrevious(Tokens::$emptyTokens, ($first - 1), null, true);
         if ($tokens[$prev]['code'] === T_CLOSE_CURLY_BRACKET
             && isset($tokens[$prev]['scope_condition']) === true
             && $tokens[$tokens[$prev]['scope_condition']]['code'] === T_FUNCTION
@@ -180,6 +180,7 @@ class MemberVarSpacingSniff extends AbstractVariableSniff
             return;
         }
 
+        // Determine if this is the first member var.
         if ($tokens[$prev]['code'] === T_OPEN_CURLY_BRACKET
             && isset(Tokens::$ooScopeTokens[$tokens[$tokens[$prev]['scope_condition']]['code']]) === true
         ) {
