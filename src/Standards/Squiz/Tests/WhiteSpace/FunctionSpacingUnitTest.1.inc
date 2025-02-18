@@ -452,7 +452,7 @@ $anon_class = new class() {
 
 // phpcs:set Squiz.WhiteSpace.FunctionSpacing spacing 2
 // phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingBeforeFirst 1
-// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingAfterLast 3
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingAfterLast 1
 
 class MyClass {
     function a(){}
@@ -726,3 +726,67 @@ class SilenceBeforeErrorIfPreviousThingWasAFunctionBug
 
     }//end blankLineDetectionB()
 }//end class
+
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacing 1
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingBeforeFirst 0
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingAfterLast 0
+function HandleNestedFunctionDeclarations() {
+
+    function ShouldBeFixedTooMuchSpaceBeforeFirst() {
+        // ...
+    }
+
+
+    $foo = 10;
+    function ShouldBeFixedTooLittleSpace() {
+        // ...
+    }
+    $a = true;
+
+    $foo = 10;
+
+
+    function ShouldBeFixedTooMuchSpace() {
+        // ...
+    }
+
+
+    $a = true;
+
+
+    function ShouldBeFixedTooMuchSpaceAfterLast() {
+        // ...
+    }
+
+}
+
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacing 1
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingBeforeFirst 2
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingAfterLast 2
+function SelectivelyIgnoreNestedFunctionDeclarations() {
+    function BeforeShouldNotBeFixedAsSpacingBeforeFirstMoreThan1() {
+        // ...
+    }
+
+    function AfterShouldNotBeFixedAsSpacingAfterLastMoreThan1() {
+        // ...
+    }
+}
+
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacing 2
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingBeforeFirst 1
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingAfterLast 1
+$appliesToFunctionsNestedInClosureToo = function() {
+    function BeforeShouldBeFixedButNotAfter() {
+        // ...
+    }
+
+    function AfterShouldBeFixedButNotBefore() {
+        // ...
+    }
+};
+
+// Reset properties to their default value.
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacing 2
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingBeforeFirst 2
+// phpcs:set Squiz.WhiteSpace.FunctionSpacing spacingAfterLast 2
