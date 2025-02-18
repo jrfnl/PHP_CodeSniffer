@@ -146,7 +146,7 @@ class MemberVarSpacingSniff extends AbstractVariableSniff
 
             $error = 'Expected no blank lines between the member var comment/attributes and the declaration; %s found';
             $data  = [$foundLines];
-            $fix   = $phpcsFile->addFixableError($error, $i, 'AfterComment', $data);
+            $fix   = $phpcsFile->addFixableError($error, $i, 'BlankLineInPreamble', $data);
 
             if ($fix === true) {
                 $phpcsFile->fixer->beginChangeset();
