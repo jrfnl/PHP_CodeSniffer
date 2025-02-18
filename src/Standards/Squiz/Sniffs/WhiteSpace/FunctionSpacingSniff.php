@@ -102,6 +102,18 @@ class FunctionSpacingSniff implements Sniff
         $this->spacingBeforeFirst = (int) $this->spacingBeforeFirst;
         $this->spacingAfterLast   = (int) $this->spacingAfterLast;
 
+        // Check for functions nested within other functions.
+        // Different rules for allowed number of consecutive blank lines may apply.
+        $isNested = false;
+        if (isset($tokens[$stackPtr]['conditions']) === true) {
+            $conditions    = $tokens[$stackPtr]['conditions'];
+            $lastCondition = end($conditions);
+
+            if ($lastCondition === T_FUNCTION || $lastCondition === T_CLOSURE) {
+                $isNested = true;
+            }
+        }
+
         if (isset($tokens[$stackPtr]['scope_closer']) === false) {
             // Must be an interface method, so the closer is the semicolon.
             $closer = $phpcsFile->findNext(T_SEMICOLON, $stackPtr);
@@ -213,7 +225,9 @@ class FunctionSpacingSniff implements Sniff
             $phpcsFile->recordMetric($stackPtr, 'Function spacing after', $foundLines);
         }
 
-        if ($foundLines !== $requiredSpacing) {
+        if ($foundLines !== $requiredSpacing
+            && ($isNested === false || $requiredSpacing < 2)
+        ) {
             $error = 'Expected %s blank line';
             if ($requiredSpacing !== 1) {
                 $error .= 's';
@@ -324,7 +338,9 @@ class FunctionSpacingSniff implements Sniff
             $phpcsFile->recordMetric($stackPtr, 'Function spacing before', $foundLines);
         }
 
-        if ($foundLines !== $requiredSpacing) {
+        if ($foundLines !== $requiredSpacing
+            && ($isNested === false || $requiredSpacing < 2)
+        ) {
             $error = 'Expected %s blank line';
             if ($requiredSpacing !== 1) {
                 $error .= 's';
