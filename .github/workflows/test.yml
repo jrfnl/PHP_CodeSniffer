@@ -148,8 +148,11 @@ jobs:
           coverage: none
           tools: cs2pr
 
-      - name: "DEBUG: show libxml version (php)"
-        run: php -r 'echo "libxml version = ", LIBXML_DOTTED_VERSION, PHP_EOL;'
+      - name: "DEBUG: show libxml dotted version (php)"
+        run: php -r 'echo "libxml dotted version = ", LIBXML_DOTTED_VERSION, PHP_EOL;'
+
+      - name: "DEBUG: show libxml loaded version (php)"
+        run: php -r 'echo "libxml loaded version = ", LIBXML_LOADED_VERSION, PHP_EOL;'
 
       - name: "DEBUG: show current libxml version (xmllint)"
         run: xmllint --version
