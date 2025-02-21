@@ -1,7 +1,7 @@
-PHP 8.4.3 (cli) (built: Jan 15 2025 11:04:37) (ZTS Visual C++ 2022 x64)
+PHP 8.4.4 (cli) (built: Feb 11 2025 16:25:02) (ZTS Visual C++ 2022 x64)
 Copyright (c) The PHP Group
-Zend Engine v4.4.3, Copyright (c) Zend Technologies
-    with Zend OPcache v8.4.3, Copyright (c), by Zend Technologies
+Zend Engine v4.4.4, Copyright (c) Zend Technologies
+    with Zend OPcache v8.4.4, Copyright (c), by Zend Technologies
     with Xdebug v3.4.1, Copyright (c) 2002-2025, by Derick Rethans
 PHP_CodeSniffer version 3.12.0 (stable) by Squiz and PHPCSStandards
 FF..FFFFFFFFFFF...FF.....F.F...F..F...F..F.F..FFFFFFF...
@@ -483,7 +483,7 @@ tests\Core\File\FindStartOfStatementTest.inc                                    
 tests\Core\File\GetClassPropertiesTest.inc                                                        30     17
 tests\Core\File\GetConditionTest.inc                                                              25     11
 tests\Core\File\GetDeclarationNameTest.inc                                                        40     29
-tests\Core\File\GetMemberPropertiesTest.inc                                                       20     49
+tests\Core\File\GetMemberPropertiesTest.inc                                                       21     50
 tests\Core\File\GetMethodParametersTest.inc                                                       132    97
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX
 tests\Core\File\GetTokensAsStringTest.inc                                                         5      1
@@ -528,12 +528,12 @@ tests\Core\Tokenizers\Tokenizer\RecurseScopeMapSwitchTokenScopeTest.inc         
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapWithNamespaceOperatorTest.inc                      8      4
 tests\Core\Tokenizers\Tokenizer\ReplaceTabsInTokenTest.inc                                        6      1
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 10153 ERRORS WERE FIXED IN 321 FILES
+A TOTAL OF 10154 ERRORS WERE FIXED IN 321 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 18 FILES
 ------------------------------------------------------------------------------------------------------------------
 
-Time: 1 mins, 21.19 secs; Memory: 22MB
+Time: 1 mins, 22.67 secs; Memory: 22MB
 
 
 
