@@ -1,7 +1,7 @@
-PHP 8.4.3 (cli) (built: Jan 15 2025 11:04:37) (ZTS Visual C++ 2022 x64)
+PHP 8.4.4 (cli) (built: Feb 11 2025 16:25:02) (ZTS Visual C++ 2022 x64)
 Copyright (c) The PHP Group
-Zend Engine v4.4.3, Copyright (c) Zend Technologies
-    with Zend OPcache v8.4.3, Copyright (c), by Zend Technologies
+Zend Engine v4.4.4, Copyright (c) Zend Technologies
+    with Zend OPcache v8.4.4, Copyright (c), by Zend Technologies
     with Xdebug v3.4.1, Copyright (c) 2002-2025, by Derick Rethans
 PHP_CodeSniffer version 3.12.0 (stable) by Squiz and PHPCSStandards
 
@@ -1232,12 +1232,12 @@ tests\Core\Tokenizers\Tokenizer\RecurseScopeMapSwitchTokenScopeTest.inc         
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapWithNamespaceOperatorTest.inc                      22     19
 tests\Core\Tokenizers\Tokenizer\ReplaceTabsInTokenTest.inc                                        23     34
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 27638 ERRORS WERE FIXED IN 506 FILES
+A TOTAL OF 27658 ERRORS WERE FIXED IN 506 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 66 FILES
 ------------------------------------------------------------------------------------------------------------------
 
-Time: 4 mins, 22.35 secs; Memory: 32MB
+Time: 4 mins, 23.65 secs; Memory: 32MB
 
 
 
