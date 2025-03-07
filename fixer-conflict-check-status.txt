@@ -32,7 +32,7 @@ tests\Core\Tokenizers\PHP\EnumCaseTest.inc                                      
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                      FAILED TO FIX **NEW 2024-07
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                   FAILED TO FIX **NEW 2024-07
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 10153 ERRORS WERE FIXED IN 321 FILES
+A TOTAL OF 10159 ERRORS WERE FIXED IN 322 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 18 FILES
 ------------------------------------------------------------------------------------------------------------------
@@ -57,7 +57,7 @@ src\Standards\PSR12\Tests\Functions\ReturnTypeDeclarationUnitTest.inc           
 tests\Core\File\GetMethodPropertiesTest.inc                                                       FAILED TO FIX **NEW 2024-03
 tests\Core\Tokenizers\PHP\DNFTypesParseError1Test.inc                                             FAILED TO FIX **NEW 2024-07
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 10020 ERRORS WERE FIXED IN 373 FILES
+A TOTAL OF 10028 ERRORS WERE FIXED IN 374 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 5 FILES
 ------------------------------------------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ tests\Core\File\GetMethodPropertiesTest.inc                                     
 tests\Core\Tokenizers\PHP\DNFTypesParseError1Test.inc                                             FAILED TO FIX **NEW 2024-07
 tests\Core\Tokenizers\PHP\DNFTypesParseError2Test.inc                                             FAILED TO FIX **NEW 2024-07
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 11962 ERRORS WERE FIXED IN 441 FILES
+A TOTAL OF 11973 ERRORS WERE FIXED IN 442 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 7 FILES
 ------------------------------------------------------------------------------------------------------------------
@@ -120,6 +120,7 @@ src\Standards\PSR2\Tests\ControlStructures\ControlStructureSpacingUnitTest.inc  
 src\Standards\PSR2\Tests\Methods\FunctionCallSignatureUnitTest.inc                                FAILED TO FIX
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.1.inc                                   FAILED TO FIX
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.2.inc                                   FAILED TO FIX
+src\Standards\Squiz\Tests\Classes\ClassFileNameUnitTest.inc                                       FAILED TO FIX **NEW 2025-03
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                                 FAILED TO FIX
 src\Standards\Squiz\Tests\Classes\ValidClassNameUnitTest.inc                                      FAILED TO FIX **NEW 2025-02
 src\Standards\Squiz\Tests\Commenting\ClassCommentUnitTest.inc                                     FAILED TO FIX
@@ -158,9 +159,9 @@ tests\Core\Tokenizers\Tokenizer\CreateParenthesisNestingMapDNFTypesTest.inc     
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                      FAILED TO FIX **NEW 2024-07
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                   FAILED TO FIX **NEW 2024-07
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 27638 ERRORS WERE FIXED IN 506 FILES
+A TOTAL OF 27693 ERRORS WERE FIXED IN 511 FILES
 ------------------------------------------------------------------------------------------------------------------
-PHPCBF FAILED TO FIX 66 FILES
+PHPCBF FAILED TO FIX 67 FILES
 ------------------------------------------------------------------------------------------------------------------
 
 
@@ -174,7 +175,7 @@ FILE                                                                            
 src\Standards\Generic\Tests\Functions\FunctionCallArgumentSpacingUnitTest.1.inc                   FAILED TO FIX
 src\Standards\Generic\Tests\NamingConventions\ConstructorNameUnitTest.1.inc                       FAILED TO FIX
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 6580 ERRORS WERE FIXED IN 331 FILES
+A TOTAL OF 6582 ERRORS WERE FIXED IN 332 FILES
 -------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 2 FILES
 ------------------------------------------------------------------------------------------------------------------
