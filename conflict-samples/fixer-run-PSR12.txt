@@ -14,9 +14,9 @@ array (
   0 => 'Squiz.ControlStructures.ControlSignature',
   1 => 'Squiz.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFFFF.F..FFFFFFFFFFFFF.  60 / 596 (10%)
-F.F.FF...FFFFFFF.FFFFFFFF......FF.....FFF..FF..FFFFFFFF.F.FF 120 / 596 (20%)
-..F.FFF.F..F..F.FF.FFF.F.F...FFFFF......F.....FFFFFFFF..FFF. 180 / 596 (30%)
+EFFFF.F..FFFFFFFFFFFFF.  60 / 601 (10%)
+F.F.FF...FFFFFFF.FFFFFFFF......FF.....FFF..FF..FFFFFFFF.F.FF 120 / 601 (20%)
+..F.FFF.F..F..F.FF.FFF.F.F...FFFFF......F.....FFFFFFFF..FFF. 180 / 601 (30%)
 FFF
 
 FAILED TO FIX FILE: 
@@ -27,7 +27,7 @@ array (
   0 => 'PSR12.Files.DeclareStatement',
   1 => 'PSR12.Operators.OperatorSpacing',
 )==================================================
-EF...F.FF...F..FFFFF.FF..FF.FFFFF.FFFFFFFFFFFFFF..FFFFFFF 240 / 596 (40%)
+EF...F.FF...F..FFFFF.FF..FF.FFFFF.FFFFFFFFFFFFFF..FFFFFFF 240 / 601 (40%)
 
 
 FAILED TO FIX FILE: 
@@ -38,7 +38,7 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'PEAR.Functions.FunctionCallSignature',
 )==================================================
-EF..FF.FFFFFFFFFFFFFFFFFFFFFFF.FFFFFFFFFFF.FFFF....FF.F.FF.. 300 / 596 (50%)
+EF..FF.FFFFFFFFFFFFFFFFFFFFFFF.FFFFFFFFFFF.FFFF....FF.F.FF.. 300 / 601 (50%)
 F.FF..F
 
 FAILED TO FIX FILE: 
@@ -49,11 +49,11 @@ array (
   0 => 'Generic.Functions.OpeningFunctionBraceBsdAllman',
   1 => 'Generic.WhiteSpace.ScopeIndent',
 )==================================================
-EFFFFFFFFFFFFF.FFFFFFFFFF.FFF.FFFFFFFFFFFFFFFFF.FFFFF 360 / 596 (60%)
-FFFFFF..FFFFFFFF..FFFFFFFF.FFFFFFFFFFFF.FFF..FFFFFFFFFF.FFF. 420 / 596 (70%)
-..F..FFFFFFFFFFFFFFF.FFF.F.F.F.FFF..FF...F.F...FFFFFFFFF.FFF 480 / 596 (81%)
-FF.FFFFFFFFFFFFFFF.FFF.FF.F.FF.FF.FF.FFFFFFFFFFFFFFFF..FF..F 540 / 596 (91%)
-
+EFFFFFFFFFFFFF.FFFFFFFFFF.FFF.FFFFFFFFFFFFFFFFF.FFFFF 360 / 601 (60%)
+FFFFFF..FF....FFFFFFF..FFFFFFFF.FFFFFFFFFFFF.FFF..FFFFFFFFFF 420 / 601 (70%)
+.FFF...F..FFFFFFFFFFFFFFF.FFF.F.F.F.FFF..FF...F.F...FFFFFFFF 480 / 601 (80%)
+F.FFFFF.FFFFFFFFFFFFFFF.FFF.FF.F.FF.FF.FF.FFFFFFFFFFFFFFFF.. 540 / 601 (90%)
+FF..F
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\File\GetMethodPropertiesTest.inc
@@ -87,7 +87,8 @@ array (
   2 => 'PSR2.Classes.PropertyDeclaration',
   3 => 'Squiz.WhiteSpace.SuperfluousWhitespace',
 )==================================================
-EFF.FFF..FFFFFFFFFFFF..FFFFFFFF     596 / 596 (100%)
+EFF.FFF..FFFFFFFFFFFF..FFFFFFF 600 / 601 (100%)
+F                                                            601 / 601 (100%)
 
 
 
@@ -359,6 +360,7 @@ src\Standards\Squiz\Tests\Arrays\ArrayBracketSpacingUnitTest.inc                
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.1.inc                                   63     4
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.2.inc                                   75     4
 src\Standards\Squiz\Tests\Classes\ClassDeclarationUnitTest.inc                                    58     73
+src\Standards\Squiz\Tests\Classes\ClassFileName Spaces In FilenameUnitTest.inc                    2      1
 src\Standards\Squiz\Tests\Classes\ClassFileNameUnitTest.inc                                       68     73
 src\Standards\Squiz\Tests\Classes\LowercaseClassKeywordsUnitTest.inc                              32     16
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                                 30     39
@@ -533,16 +535,16 @@ tests\Core\Tokenizers\Tokenizer\CreateTokenMapArrayParenthesesTest.inc          
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                      13     18
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                   33     4
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapIfKeywordConditionsTest.inc                        3      0
-tests\Core\Tokenizers\Tokenizer\RecurseScopeMapSwitchTokenScopeTest.inc                           7      0
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapSwitchTokenScopeTest.inc                           15     1
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapWithNamespaceOperatorTest.inc                      12     4
 tests\Core\Tokenizers\Tokenizer\ReplaceTabsInTokenTest.inc                                        6      0
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 11963 ERRORS WERE FIXED IN 441 FILES
+A TOTAL OF 11973 ERRORS WERE FIXED IN 442 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 7 FILES
 ------------------------------------------------------------------------------------------------------------------
 
-Time: 44.77 secs; Memory: 24MB
+Time: 44.36 secs; Memory: 24MB
 
 
 

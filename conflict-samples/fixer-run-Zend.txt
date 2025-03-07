@@ -4,8 +4,8 @@ Zend Engine v4.4.4, Copyright (c) Zend Technologies
     with Zend OPcache v8.4.4, Copyright (c), by Zend Technologies
     with Xdebug v3.4.1, Copyright (c) 2002-2025, by Derick Rethans
 PHP_CodeSniffer version 3.12.0 (stable) by Squiz and PHPCSStandards
-FF..FFFFFFFFFFF...FF.....F.F...F..F......F.F..F.FFFFF...FF..  60 / 596 (10%)
-..FFF.........FFF.FF.F...FF..FF.F.....FFF..FFF.FFFFFF.F.F.FF 120 / 596 (20%)
+FF..FFFFFFFFFFF...FF.....F.F...F..F......F.F..F.FFFFF...FF..  60 / 601 (10%)
+..FFF.........FFF.FF.F...FF..FF.F.....FFF..FFF.FFFFFF.F.F.FF 120 / 601 (20%)
 ..
 
 FAILED TO FIX FILE: 
@@ -26,14 +26,15 @@ array (
   0 => 'PEAR.Functions.FunctionCallSignature',
   1 => 'PEAR.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFF.F.F...F.F...F....FF.....FF.FF........ 180 / 596 (30%)
-........F.FF......FFFFF.FF...F.FFFFF.FFFFFFFFFFFFFF..FF.FFFF 240 / 596 (40%)
-FF...F.FFF.FFFFFF..........FFF...FFFFF.FF.....FF............ 300 / 596 (50%)
-F.....FF..F..FFFFFFFF.FFFFF..FFFF........FFF.F.F....FF.F..FF 360 / 596 (60%)
-...FFF..FFFFFFFF..FFFFFF....FF.FFFFFFFF..FF..FFFFFFFFFF.F... 420 / 596 (70%)
-..F..FFFFFFFF.FFFFFF.FFF.F.FFFFF..F.F....FFF.F.FFF.FFFFF.FFF 480 / 596 (81%)
-F...FFFF......FFFF.FF..FF...FFFFF.FF.FFFFFFFFFFFFFFFF..FF..F 540 / 596 (91%)
-FFFF....F..FFFF..FF.FFFFFFFF.FFF..F.FFF.FFFFFF..FFFF..FF     596 / 596 (100%)
+EFF.F.F...F.F...F....FF.....FF.FF........ 180 / 601 (30%)
+........F.FF......FFFFF.FF...F.FFFFF.FFFFFFFFFFFFFF..FF.FFFF 240 / 601 (40%)
+FF...F.FFF.FFFFFF..........FFF...FFFFF.FF.....FF............ 300 / 601 (50%)
+F.....FF..F..FFFFFFFF.FFFFF..FFFF........FFF.F.F....FF.F..FF 360 / 601 (60%)
+...FFF..FF....FFFFFFF..FFFFFF....FF.FFFFFFFF..FF..FFFFFFFFFF 420 / 601 (70%)
+.F.....F..FFFFFFFF.FFFFFF.FFF.F.FFFFF..F.F....FFF.F.FFF.FFFF 480 / 601 (80%)
+F.FFFF...FFFF......FFFF.FF..FF...FFFFF.FF.FFFFFFFFFFFFFFFF.. 540 / 601 (90%)
+FF..FFFFF....F..FFFF..FF.FFFFFFFF.FFF..F.FFF.FFFFFF..FFFF..F 600 / 601 (100%)
+F                                                            601 / 601 (100%)
 
 
 
@@ -218,7 +219,8 @@ src\Standards\Squiz\Tests\Arrays\ArrayBracketSpacingUnitTest.inc                
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.1.inc                              8      9
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.2.inc                              11     9
 src\Standards\Squiz\Tests\Classes\ClassDeclarationUnitTest.inc                               20     9
-src\Standards\Squiz\Tests\Classes\ClassFileNameUnitTest.inc                                  67     0
+src\Standards\Squiz\Tests\Classes\ClassFileName Spaces In FilenameUnitTest.inc               2      3
+src\Standards\Squiz\Tests\Classes\ClassFileNameUnitTest.inc                                  66     0
 src\Standards\Squiz\Tests\Classes\LowercaseClassKeywordsUnitTest.inc                         12     0
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                            17     5
 src\Standards\Squiz\Tests\Classes\ValidClassNameUnitTest.inc                                 124    4
@@ -373,12 +375,12 @@ tests\Core\Tokenizers\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc 
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapWithNamespaceOperatorTest.inc                 8      1
 tests\Core\Tokenizers\Tokenizer\ReplaceTabsInTokenTest.inc                                   6      0
 -------------------------------------------------------------------------------------------------------------
-A TOTAL OF 6581 ERRORS WERE FIXED IN 331 FILES
+A TOTAL OF 6582 ERRORS WERE FIXED IN 332 FILES
 -------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 2 FILES
 -------------------------------------------------------------------------------------------------------------
 
-Time: 26.07 secs; Memory: 20MB
+Time: 26.05 secs; Memory: 20MB
 
 
 

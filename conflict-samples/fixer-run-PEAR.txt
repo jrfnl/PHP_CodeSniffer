@@ -28,9 +28,9 @@ array (
   2 => 'PEAR.ControlStructures.MultiLineCondition',
   3 => 'PEAR.WhiteSpace.ScopeClosingBrace',
 )==================================================
-E..  60 / 596 (10%)
-..F.F.........FFF.F......FF..FF.......FFF..F.F.FFFFFF.F.F.FF 120 / 596 (20%)
-..F.FFF.F..F..F.FF.FFF.F.F...F.F...F.....F....FFFFFFF....... 180 / 596 (30%)
+E..  60 / 601 (10%)
+..F.F.........FFF.F......FF..FF.......FFF..F.F.FFFFFF.F.F.FF 120 / 601 (20%)
+..F.FFF.F..F..F.FF.FFF.F.F...F.F...F.....F....FFFFFFF....... 180 / 601 (30%)
 ........F.FF......FFFFF.FF...F.
 
 FAILED TO FIX FILE: 
@@ -51,7 +51,7 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'PEAR.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFFF.FFFF..F.F.FFFF..FFFFFF. 240 / 596 (40%)
+EFFF.FFFF..F.F.FFFF..FFFFFF. 240 / 601 (40%)
 FF..FF.FF
 
 FAILED TO FIX FILE: 
@@ -73,7 +73,7 @@ array (
   1 => 'PEAR.Functions.FunctionCallSignature',
   2 => 'PEAR.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFFFFF........F.F.F...FFFFFFFF...F.F............F 300 / 596 (50%)
+EFFFFF........F.F.F...FFFFFFFF...F.F............F 300 / 601 (50%)
 F.....F
 
 FAILED TO FIX FILE: 
@@ -94,8 +94,8 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'PEAR.WhiteSpace.ScopeClosingBrace',
 )==================================================
-E.FF.F....FFFF........FFF.F.F....FF....F. 360 / 596 (60%)
-...FFF..FFFFFFFF..FFF.FF....FF.FFFF
+E.FF.F....FFFF........FFF.F.F....FF....F. 360 / 601 (60%)
+...FFF..FF....FFFFFFF..FFF.FF....FF.FFFF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\Commenting\LongConditionClosingCommentUnitTest.inc
@@ -105,8 +105,8 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'PEAR.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFFF..FF..FFFFFFFFFF.F... 420 / 596 (70%)
-..F..FFFFFFFF.FFFFFF.FFF.F.F...FFF..FF...FFF.F.F...FF
+EFFF..FF..FFFFFFFFFF 420 / 601 (70%)
+.F.....F..FFFFFFFF.FFFFFF.FFF.F.F...FFF..FF...FFF.F.F...FF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\src\Standards\Squiz\Tests\PHP\NonExecutableCodeUnitTest.1.inc
@@ -116,8 +116,8 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'PEAR.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFF.FFF 480 / 596 (81%)
-F...FFFF......FFFF.FF..FF...FF.FF.F.FFFF..FFFFF
+EF 480 / 601 (80%)
+F.FFFF...FFFF......FFFF.FF..FF...FF.FF.F.FFFF..FFFFF
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\File\FindEndOfStatementTest.inc
@@ -137,8 +137,8 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'PEAR.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFF..FF..F 540 / 596 (91%)
-
+EFF.. 540 / 601 (90%)
+FF..F
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\File\GetMethodPropertiesTest.inc
@@ -198,7 +198,8 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'PEAR.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFFFF     596 / 596 (100%)
+EFFF 600 / 601 (100%)
+F                                                            601 / 601 (100%)
 
 
 
@@ -376,6 +377,7 @@ src\Standards\Squiz\Tests\Arrays\ArrayBracketSpacingUnitTest.inc                
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.1.inc                                   26     10
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.2.inc                                   47     11
 src\Standards\Squiz\Tests\Classes\ClassDeclarationUnitTest.inc                                    26     37
+src\Standards\Squiz\Tests\Classes\ClassFileName Spaces In FilenameUnitTest.inc                    2      4
 src\Standards\Squiz\Tests\Classes\ClassFileNameUnitTest.inc                                       66     42
 src\Standards\Squiz\Tests\Classes\LowercaseClassKeywordsUnitTest.inc                              12     8
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                                 19     34
@@ -524,16 +526,16 @@ tests\Core\Tokenizers\Tokenizer\CreateTokenMapArrayParenthesesTest.inc          
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                      FAILED TO FIX
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                   FAILED TO FIX
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapIfKeywordConditionsTest.inc                        3      1
-tests\Core\Tokenizers\Tokenizer\RecurseScopeMapSwitchTokenScopeTest.inc                           5      1
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapSwitchTokenScopeTest.inc                           8      5
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapWithNamespaceOperatorTest.inc                      8      4
 tests\Core\Tokenizers\Tokenizer\ReplaceTabsInTokenTest.inc                                        6      1
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 10154 ERRORS WERE FIXED IN 321 FILES
+A TOTAL OF 10159 ERRORS WERE FIXED IN 322 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 18 FILES
 ------------------------------------------------------------------------------------------------------------------
 
-Time: 1 mins, 22.67 secs; Memory: 22MB
+Time: 1 mins, 21.39 secs; Memory: 22MB
 
 
 

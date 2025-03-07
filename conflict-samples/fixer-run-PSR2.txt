@@ -14,10 +14,10 @@ array (
   0 => 'Squiz.ControlStructures.ControlSignature',
   1 => 'Squiz.WhiteSpace.ScopeClosingBrace',
 )==================================================
-EFFFF.F..FFFFFFFF..FFF.  60 / 596 (10%)
-F.F.F....F.FF.FF.FFFFFF.F......FF.....FFF..FF..FFFFFF.F.F.FF 120 / 596 (20%)
-..F.FFF.F..F..F.FF.FFF.F.F...F.FFF......F.....FFFFFFFF...... 180 / 596 (30%)
-........F.FF......FFFFF.FF..FF.FFFFF.FFFFFFFFFFFFFF..FFFFFFF 240 / 596 (40%)
+EFFFF.F..FFFFFFFF..FFF.  60 / 601 (10%)
+F.F.F....F.FF.FF.FFFFFF.F......FF.....FFF..FF..FFFFFF.F.F.FF 120 / 601 (20%)
+..F.FFF.F..F..F.FF.FFF.F.F...F.FFF......F.....FFFFFFFF...... 180 / 601 (30%)
+........F.FF......FFFFF.FF..FF.FFFFF.FFFFFFFFFFFFFF..FFFFFFF 240 / 601 (40%)
 
 
 FAILED TO FIX FILE: 
@@ -28,7 +28,7 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'PEAR.Functions.FunctionCallSignature',
 )==================================================
-EF..FF.FFF.FFFFFF...FF.....FFF...FFF.FFFF.F...F....FFFF..... 300 / 596 (50%)
+EF..FF.FFF.FFFFFF...FF.....FFF...FFF.FFFF.F...F....FFFF..... 300 / 601 (50%)
 F.....F
 
 FAILED TO FIX FILE: 
@@ -39,11 +39,11 @@ array (
   0 => 'Generic.Functions.OpeningFunctionBraceBsdAllman',
   1 => 'Generic.WhiteSpace.ScopeIndent',
 )==================================================
-E.FF.FFFFFFFFF..FFFFFFFFF..F..FF.FFFFFFFFFFFFFF.FF.FF 360 / 596 (60%)
-...FFF..FFFFFFFF..FFFFFFF...FF.FFFFFFFF.FFF..FFFFFFFFFF.FF.. 420 / 596 (70%)
-..F..FFFFFFFF.FFFFFF.FFF........FF...F...F.F....FF.FFFFF.FFF 480 / 596 (81%)
-F...FFFF......FFFF.FF..FF.F.FF.FF.FF.FFFFFFFFFFFFFFFF..FF..F 540 / 596 (91%)
-
+E.FF.FFFFFFFFF..FFFFFFFFF..F..FF.FFFFFFFFFFFFFF.FF.FF 360 / 601 (60%)
+...FFF..FF....FFFFFFF..FFFFFFF...FF.FFFFFFFF.FFF..FFFFFFFFFF 420 / 601 (70%)
+.FF....F..FFFFFFFF.FFFFFF.FFF........FF...F...F.F....FF.FFFF 480 / 601 (80%)
+F.FFFF...FFFF......FFFF.FF..FF.F.FF.FF.FF.FFFFFFFFFFFFFFFF.. 540 / 601 (90%)
+FF..F
 
 FAILED TO FIX FILE: 
 D:\000_GitHub\PHPCS\PHP_CodeSniffer\tests\Core\File\GetMethodPropertiesTest.inc
@@ -63,7 +63,8 @@ array (
   0 => 'Generic.WhiteSpace.ScopeIndent',
   1 => 'PEAR.Functions.FunctionDeclaration',
 )==================================================
-EFFF.FFF..F.FFFFFFFFFF..FFFFFFFF     596 / 596 (100%)
+EFFF.FFF..F.FFFFFFFFFF..FFFFFFF 600 / 601 (100%)
+F                                                            601 / 601 (100%)
 
 
 
@@ -289,6 +290,7 @@ src\Standards\Squiz\Tests\Arrays\ArrayBracketSpacingUnitTest.inc                
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.1.inc                                   32     3
 src\Standards\Squiz\Tests\Arrays\ArrayDeclarationUnitTest.2.inc                                   44     3
 src\Standards\Squiz\Tests\Classes\ClassDeclarationUnitTest.inc                                    43     63
+src\Standards\Squiz\Tests\Classes\ClassFileName Spaces In FilenameUnitTest.inc                    2      1
 src\Standards\Squiz\Tests\Classes\ClassFileNameUnitTest.inc                                       67     73
 src\Standards\Squiz\Tests\Classes\LowercaseClassKeywordsUnitTest.inc                              29     15
 src\Standards\Squiz\Tests\Classes\SelfMemberReferenceUnitTest.inc                                 24     34
@@ -441,16 +443,16 @@ tests\Core\Tokenizers\Tokenizer\CreateTokenMapArrayParenthesesTest.inc          
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapCaseKeywordConditionsTest.inc                      13     17
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapDefaultKeywordConditionsTest.inc                   33     3
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapIfKeywordConditionsTest.inc                        3      0
-tests\Core\Tokenizers\Tokenizer\RecurseScopeMapSwitchTokenScopeTest.inc                           4      0
+tests\Core\Tokenizers\Tokenizer\RecurseScopeMapSwitchTokenScopeTest.inc                           9      1
 tests\Core\Tokenizers\Tokenizer\RecurseScopeMapWithNamespaceOperatorTest.inc                      8      4
 tests\Core\Tokenizers\Tokenizer\ReplaceTabsInTokenTest.inc                                        6      0
 ------------------------------------------------------------------------------------------------------------------
-A TOTAL OF 10021 ERRORS WERE FIXED IN 373 FILES
+A TOTAL OF 10028 ERRORS WERE FIXED IN 374 FILES
 ------------------------------------------------------------------------------------------------------------------
 PHPCBF FAILED TO FIX 5 FILES
 ------------------------------------------------------------------------------------------------------------------
 
-Time: 41.51 secs; Memory: 24MB
+Time: 41.52 secs; Memory: 24MB
 
 
 
